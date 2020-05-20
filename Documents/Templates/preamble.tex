@@ -1,19 +1,14 @@
-% ____  ____  _____    _    __  __ ____  _     _____
-%|  _ \|  _ \| ____|  / \  |  \/  | __ )| |   | ____|
 %| |_) | |_) |  _|   / _ \ | |\/| |  _ \| |   |  _|
 %|  __/|  _ <| |___ / ___ \| |  | | |_) | |___| |___
 %|_|   |_| \_\_____/_/   \_\_|  |_|____/|_____|_____|
-%
-% last updated: May 2020
+% Jasper Runco
+% last updated: 2020-05-20
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% PACKAGES
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 \pdfminorversion=7						% to prevent errors when building pdf
-
 % some basic packages
-
+\usepackage{amsthm, amsmath}
 \usepackage{url}						% to format hyperlink text
 \usepackage{float}						% for custom figure/table environment
 \usepackage{xifthen}					% to handle tests
@@ -32,7 +27,6 @@
 \usepackage{ragged2e} 					% to undo \centering
 \usepackage{hyperref} 					% to make references hyperlinks
 \usepackage{glossaries}
-
 % for figures
 \usepackage{import}						% for file control
 \usepackage{pdfpages}					% for pdf, graphics, and hypertext
@@ -41,14 +35,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Commands
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 % to make a new figure
 \newcommand{\incfig}[2][1]{%
 	\def\svgwidth{#1\columnwidth}
 	\import{./figures/}{#2.pdf_tex}
 }
 \pdfsuppresswarningpagegroup=1
-
 % define list of equations
 \newcommand{\listequationsname}{\Large{List of Equations}}
 \newlistof{myequations}{equ}{\listequationsname}
@@ -57,9 +49,15 @@
 }
 \setlength{\cftmyequationsnumwidth}{2.3em}
 \setlength{\cftmyequationsindent}{1.5em}
-
 % command to box, label, refference, and include
 % noteworthy equations in list of equations
 \newcommand{\noteworthy}[2]{
 \begin{align} \label{#2} \ensuremath{\boxed{#1}} \end{align}
 \myequations{#2} \centering \small \textit{#2} \normalsize \justify }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Theorems
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
