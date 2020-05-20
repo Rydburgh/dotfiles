@@ -42,6 +42,9 @@ bar {
 	modifier None
 }
 
+# #---Apps Assigned Workspace---# #
+assign [class="(?i)inkscape"] $WS3
+
 # #---Basic Bindings---# #
 bindsym $mod+Return 		exec $term
 bindsym $mod+Shift+Return	exec --no-startup-id samedir
