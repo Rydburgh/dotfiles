@@ -137,6 +137,5 @@ ex ()
     echo "'$1' is not a valid file"
   fi
 }
-
 # use 'config' command to add dotfiles to bare git 'dotfiles' directory
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
