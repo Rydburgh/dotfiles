@@ -12,7 +12,6 @@ alias \
 	yt="youtube-dl --add-metadata -i" \
 	yta="yt -x -f bestaudio/best" \
 	ffmpeg="ffmpeg -hide_banner" \
-	cd="cd && ls"
 
 # Colorize commands when possible.
 alias \
@@ -35,7 +34,8 @@ alias \
 	xi="sudo xbps-install" \
 	xr="sudo xbps-remove -R" \
 	xq="xbps-query" \
-	z="zathura"
+	z="zathura"\
+
 alias \
 	magit="nvim -c MagitOnly" \
 	ref="shortcuts >/dev/null; source ${XDG_CONFIG_HOME:-$HOME/.config}/shortcutrc ; source ${XDG_CONFIG_HOME:-$HOME/.config}/zshnameddirrc" \
@@ -43,3 +43,5 @@ alias \
 	tmux="tmux -f ${XDG_CONFIG_HOME:-$HOME/.config}/tmux/tmux.conf" \
 	cal="calcurse" \
  	config="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"\
+	ragner="ranger" \
+	ran="ranger"

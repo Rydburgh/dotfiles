@@ -365,3 +365,6 @@ bindsym XF86Documents		exec $term -e lf ~/Documents
 ##bindsym XF86Battery		exec
 ##bindsym XF86Bluetooth		exec
 bindsym XF86WLAN		exec $netrefresh
+
+
+exec_always --no-startup-id "sleep 30 && python3 ~/.local/bin/run_ccursereminders.py 30"

@@ -7,16 +7,17 @@ Plug 'ap/vim-css-color'
 Plug 'junegunn/goyo.vim'
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-surround'
+Plug 'preservim/nerdtree'
 Plug 'justinmk/vim-sneak'
 Plug 'kovetskiy/sxhkd-vim'
 Plug 'tpope/vim-commentary'
 Plug 'vim-airline/vim-airline'
+Plug 'ThePrimeagen/vim-be-good'
 Plug 'KeitaNakamura/tex-conceal.vim'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'https://github.com/SirVer/ultisnips.git'
 "Plug 'PotatoesMaster/i3-vim-syntax'
 "Plug 'lukesmithxyz/vimling'
-"Plug 'preservim/nerdtree'
 call plug#end()
 	set nocompatible
 	set hidden
@@ -37,12 +38,14 @@ call plug#end()
 	syntax enable
 	nnoremap c "_c
 	filetype plugin on
-"	set nowrap
+	set nowrap
 
-" -------------------------------------------------------------------------------
-" Leader Maps
-" -------------------------------------------------------------------------------
-
+"------------------------------=+  Leader Maps  +=-----------------------------"
+" Quickly close by jamming w+q
+	inoremap wq <Esc>:wq<CR>
+	nnoremap wq :wq<CR>
+	inoremap qw <Esc>:wq<CR>
+	nnoremap qw :wq<CR>
 
 " Spell-check set to <leader>o, 'o' for 'orthography' and C-o corrects last error
 	map <leader>o :setlocal spell! spelllang=en_us<CR>
@@ -75,9 +78,9 @@ call plug#end()
 	map <leader>L :g/%%%/norm 3ld$jp<CR>
 
 
-" -------------------------------------------------------------------------------
+"-------------------------------=+ Other Maps +=------------------------------"
 " Airline theme
-let g:airline_theme='biogoo'
+	let g:airline_theme='biogoo'
 " Stop highlighting _
 	let g:tex_no_error=1
 " Jump to next markter in templates
@@ -130,9 +133,7 @@ let g:airline_theme='biogoo'
 if &diff
 	highlight! link DiffText MatchParen
 endif
-" -------------------------------------------------------------------------------
-" UltiSnips
-" -------------------------------------------------------------------------------
+"--------------------------------=+ UltiSnips +=-------------------------------"
 	let g:UltiSnipsSnippetDir="/home/j/.config/nvim/plugged/ultisnips/"
 	let g:UltiSnipsSnippetDirectories= ["UltiSnips"]
 	let g:UltiSnipsExpandTrigger="<M-Space>" "AKA Alt-Space
@@ -140,14 +141,10 @@ endif
 	let g:UltiSnipsJumpBackwardTrigger="<M-tab>"
 	let g:UltiSnipsEditSplit="horizontal"
 	cnoremap :: UltiSnipsEdit<CR>
-" -------------------------------------------------------------------------------
-" Tex-Conceal
-" -------------------------------------------------------------------------------
+"-------------------------------=+ Tex-Conceal +=------------------------------"
 	set conceallevel=2
 	let g:tex_conceal="abdgm"
-" -------------------------------------------------------------------------------
-" Vim-Sneak
-" -------------------------------------------------------------------------------
+"-------------------------------=+ Vim-Sneak +=--------------------------------"
 let g:sneak#label = 1
 map f <Plug>Sneak_s
 map F <Plug>Sneak_S
@@ -156,8 +153,6 @@ map gs <Plug>Sneak_;
 highlight Sneak guifg=black guibg=#00C7DF ctermfg=black ctermbg=cyan
 highlight SneakScope guifg=yellow ctermfg=red ctermbg=yellow
 let g:sneak#prompt = '🎆'
-" -------------------------------------------------------------------------------
-" Inkscape-Figures
-" -------------------------------------------------------------------------------
+"----------------------------=+ Inkscape-Figures +=----------------------------"
 inoremap <C-f> <Esc>: silent exec '.!inkscape-figures create "'.getline('.').'" "'.b:vimtex.root.'/figures/"'<CR><CR>:w<CR>
 nnoremap <C-f> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/" > /dev/null 2>&1 &'<CR><CR>:redraw!<CR>
