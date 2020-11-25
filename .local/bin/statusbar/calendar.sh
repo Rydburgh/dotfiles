@@ -26,13 +26,13 @@ for i in "${start_ary[@]}" ; do
 	then
 		CURRENT_COURSE="${course_ary[$(IndexOf $i ${start_ary[@]})]}"
 	else
-		# if class starts later today, it's attributes are put into future arrays.
+		# if class starts later today, its attributes are put into future arrays.
 		if [ $i -gt $TIME ];
 		then
 			future_start+=(${start_ary[$(IndexOf $i ${start_ary[@]})]})
 			future_course+=(${course_ary[$(IndexOf $i ${start_ary[@]})]})
 			COURSE=(${course_ary[$(IndexOf $i ${start_ary[@]})]})
-			future_room+=("$(grep room ~/Documents/university/bachelor_1/semester_1/"$COURSE"/info.yaml)")
+			future_room+=("$(grep room ~/Documents/university/bachelor_1/semester_2/"$COURSE"/info.yaml)")
 		fi;
 	fi;
 done
@@ -41,6 +41,9 @@ for i in "${future_start[@]}" ; do
 	echo "${future_course[$(IndexOf $i ${future_start[@]})]} at ${future_start[$(IndexOf $i ${future_start[@]})]} in ${future_room[$(IndexOf $i ${future_start[@]})]}"
 done
 
-# change symlink
-rm -rf ~/current_course/*
-ln -sf ~/Documents/university/bachelor_1/semester_1/$CURRENT_COURSE ~/current_course
+# change symlink only if CURRENT_COURSE is set to a non empty string
+if [ -n "$CURRENT_COURSE" ];
+then
+	rm -rf ~/current_course/*
+	ln -sf ~/Documents/university/bachelor_1/semester_2/$CURRENT_COURSE ~/current_course
+fi
