@@ -1,0 +1,129 @@
+%%%\documentclass[a4paper,11pt,twoside]{report}
+
+%%%\input{../preamble.tex}
+
+%%%\begin{document}
+
+\LARGE\textsc{Date: 2020-09-11} \\ \\ \LARGE\textsc{Announcements:} \\
+\small
+
+Test on Wednesday, 8:50
+
+\textbf{Assignment: due Monday 4:00 PM}
+
+
+\paragraph \hrule \paragraph \\ \fancyhead[R]{Lesson 11} \fancyhead[L]{Week 4}
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\section{(1.7) Definitions of Matrices}%
+\label{sec:_1_7_}
+
+\begin{definition}[Diagonal Matrix]
+	A square matrix where all the entries off of the main diagonal are zero.
+	\[\begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix} \]
+	\[\begin{bmatrix} 1 & 0 & 0 \\ 0 & 3 & 0 \\ 0 & 0 & 5 \end{bmatrix} \]
+	\[\begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\0 & 0 & 5 & 0 \\ 0 & 0 & 0 & 6 \end{bmatrix} \]
+\end{definition}
+
+\subsubsection{Properties of diagonal matrices}%
+\label{ssub:properties_of_diagonal_matrices}
+
+\begin{itemize}
+	\item Multiplication is easy. Multiplying a matrix by a diagonal from the left gives the entry
+		in the diagonal times the row:
+		\[\begin{bmatrix} 1 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 3 \end{bmatrix}
+		\begin{bmatrix} 4 & 0 & 0 \\ 0 & 5 & 0 \\ 0 & 0 & 6 \end{bmatrix} =
+		\begin{bmatrix} 4 & 0 & 0 \\ 0 & 10 & 0 \\ 0 & 0 & 18 \end{bmatrix} \]
+
+		\[ \begin{bmatrix} -1 & 0 & 0 & \\ 0 & 2 & 0 \\ 0 & 0 & 3 \end{bmatrix}
+		\begin{bmatrix} 1 & 2 \\ 3 & 4 \\ 5 & 6 \end{bmatrix} =
+		\begin{bmatrix} -1 & -2 \\ 6 & 8 \\15 & 18 \end{bmatrix} \]
+
+	\item Multiplying from the right gives the diagonal entry times the column.
+		\[\begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix}
+		\begin{bmatrix} -1 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 3 \end{bmatrix} =
+		\begin{bmatrix}  -1 & 4 & 9 \\ -4 & 10 & 18 \end{bmatrix} \]
+	\item Square a diagonal squares the entries.
+
+		\[D = \begin{bmatrix} 2 & 0 & 0 \\ 0 & 3 & 0 \\ 0 & 0 & 4 \end{bmatrix} \]
+		\[D^2 = \begin{bmatrix} 2 & 0 & 0 \\ 0 & 3 & 0 \\ 0 & 0 & 4 \end{bmatrix}
+		\begin{bmatrix} 2 & 0 & 0 \\ 0 & 3 & 0 \\ 0 & 0 & 4 \end{bmatrix}=
+		\begin{bmatrix} 4 & 0 & 0 \\ 0 & 9 & 0 \\ 0 & 0 & 16 \end{bmatrix} \]
+
+	\item Inverting the diagonal gives the reciprical of the entries
+
+		\[D = \begin{bmatrix} 2 & 0 & 0 \\ 0 & 3 & 0 \\ 0 & 0 & 4 \end{bmatrix} \]
+
+		\[\begin{bmatrix} 2 & 0 & 0 \\ 0 & 3 & 0 \\ 0 & 0 & 4 \end{bmatrix} D^{-1}	= \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix} \]
+		\[\begin{bmatrix} 2 & 0 & 0 & | & 1 & 0 & 0  \\ 0 & 3 & 0 & | & 0 & 1 & 0 \\ 0 & 0 & 4 & | & 0 & 0 & 1 \end{bmatrix} =\]
+		\[\begin{bmatrix} 1 & 0 & 0 & | & \frac{1}{2} & 0 & 0  \\ 0 & 1 & 0 & | & 0 & \frac{1}{3} & 0 \\ 0 & 0 & 1 & | & 0 & 0 & \frac{1}{4} \end{bmatrix} \]
+	\item If it is invertible
+		\[D = \begin{bmatrix}  3 & 0 & 0 \\ 0 & 5 & 0 \\ 0 & 0 & 0 \end{bmatrix} \]
+		$D^{-1}$ (D is not invertible.)
+\end{itemize}
+
+\begin{definition}[Triangular Matrices]
+	\begin{description}
+		\item[Upper Triangular] All non-zero entries are on the main diagonal or above.
+		\item[Lower Triangular] All non-zero entries are on the main diagonal or below.
+	\end{description}
+\end{definition}
+
+\begin{example}[Upper triangular matrix]
+	\[\begin{bmatrix}  1 & 3 & 4 \\ 0 & 4 & 5 \\ 0 & 0 & 6 \end{bmatrix} \]
+\end{example}
+
+\begin{example}[Lower triangular matrix]
+	\[\begin{bmatrix}  1 & 0 & 0 \\ 2 & 3 & 0 \\ 4 & 5 & 6 \end{bmatrix} \]
+\end{example}
+
+
+\begin{theorem}[1.7.1] .
+
+	\begin{enumerate}
+		\item The \textbf{transpose} of a \textbf{lower} triangular is \textbf{upper} triangular and the transpose of
+			an upper triangular matrix is lower triangular.
+		\item The \textbf{product} of  \textbf{two lower} triangular matrices is \textbf{lower} triangular and
+			the product of two upper triangular matrices is upper triangular.
+		\item A triangular matrix is \textbf{invertible if }and only if it's \textbf{diagonal} entries
+			are all \textbf{non-zero}.
+		\item The \textbf{inverse} of an invertible \textbf{lower} triangular matrix \textbf{is lower}
+			triangular and the inverse of an invertible \textbf{upper} triangular matrix
+			\textbf{is upper} triangular.
+\end{enumerate}
+\end{theorem}
+
+\subsection{Symmetric Matrix}%
+\label{sub:symmetric_matrix}
+
+\begin{definition}[Symmetric Matrix]
+	A square matrix where $A = A^{T}$.
+
+	\[(A)_{ij} = (A)_{ji}\]
+\end{definition}
+
+\begin{example}[Symmetric matrix]
+	\[A = \begin{bmatrix} 1 & 2 & 3 \\ 2 & 5 & 4 \\ 3 & 4 & 6 \end{bmatrix} \]
+	\[A^{T} = \begin{bmatrix} 1 & 2 & 3 \\ 2 & 5 & 4 \\ 3 & 4 & 6 \end{bmatrix} \]
+$\bullet$\end{example}
+
+\begin{theorem}[]
+	If A and B are symmetric matrices with the same size, and if k is any scalar,
+	then
+	\begin{enumerate}
+		\item $A^{T}$ is symmetric.
+			\item $A+B$ and $A-B$ are symmetric.
+				\item kA is symmetric.
+	\end{enumerate}
+$\bullet$\end{theorem}
+
+\begin{theorem}[]
+	The product of tow symmetric matrices is symmetric if and only if the matrices commute.
+ \smallskip\hfill$\bullet$\end{theorem}
+
+
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\newpage
+%%%		\end{document}
+
+
+		%LEAVE EMPTY ROW ABOVE THIS ONE

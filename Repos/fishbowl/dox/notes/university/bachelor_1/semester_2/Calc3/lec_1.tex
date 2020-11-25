@@ -1,0 +1,147 @@
+%%%\documentclass[a4paper,11pt,twoside]{report}
+
+%%%\input{../preamble.tex}
+
+%%%\begin{document}
+
+\chapter{Vectors and the Geometry of Space}%
+\label{cha:vectors_and_the_geometry_of_space}
+
+
+\LARGE\textsc{Date: 2020-09-01} \\ \\ \LARGE\textsc{Announcements:} \\
+\small
+Review chapter 12.1 to 12.5 and complete assignments
+
+
+\paragraph \hrule \paragraph \\ \fancyhead[R]{Lesson 1} \fancyhead[L]{Week 1}
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\section{Three-Diensional Coordinate Systems}%
+\label{sec:three_diensional_coordinate_systems}
+
+\noteworthy{
+\left| P_1P_2 \right| = \sqrt{(x_1-x_1)^2 + ( y_2 - y_2)^2 + (z_2 - z_1)^2}
+}{Dinstance Formula in Three Dimensions}
+
+\noteworthy{
+(x - h)^2 + (y -k)^2 + (z-l)^2 = r^2
+}{Equation of a sphere with a center $C(h,k,l)$ and a radius $r$}
+
+\noteworthy{
+\left| \overline{a} \right| = \sqrt{a_1^2 + a_2^2}
+}{}
+
+\noteworthy{
+\left| \overline{a} \right| = \sqrt{a_1^2 + a_2^2 + a_3^2}
+}{Length of a Vector}
+
+\noteworthy{
+\overline{a} + \overline{b} = \left< a_1 + b_1, a_2+b_2 \right>
+}{Vector Addition}
+
+\noteworthy{
+\overline{a} - \overline{b} = \left< a_1 - b_1, a_2 - b_2 \right>
+}{Vector Subtraction}
+
+\noteworthy{
+c \overline{a} = \left< ca_1, ca_2 \right>
+}{Scalar Multiplication}
+
+
+\noteworthy{
+\overline{a} \cdot \overline{b} = a_1b_1 +a_2b_2 + a_3b_3
+}{Dot Product}
+
+\begin{align*}
+	\overline{a} \cdot \overline{a} &=  \left| \overline{a} \right|^2\\
+	\overline{a} \cdot \overline{b} &= \overline{b} \cdot \overline{a} \\
+	\overline{a} \cdot (\overline{b} + \overline{c}) &= \overline{a} \cdot \overline{b} + \overline{a} \cdot \overline{c} \\
+	(c\overline{a}) \cdot \overline{b} &=  c(\overline{a} \cdot \overline{b} = \overline{a} \cdot (c \overline{b}) \\
+	0 \cdot \overline{a} &=  0 \\
+\end{align*}
+
+\begin{theorem}[Dot product]
+$	\overline{a} \cdot \overline{b} = \left| a \right| \left| b \right| \cos \theta $
+\end{theorem}
+
+\begin{corollary}[]
+	$\cos \theta = \frac{\overline{a} \cdot\overline{b}}{\left| \overline{a} \right| \left| \overline{b} \right| }$
+\end{corollary}
+
+\subsubsection{Direction Angles}%
+\label{ssub:direction_angles}
+
+\begin{align*}
+	\cos \alpha &=  \frac{a_1}{\left| \overline{a} \right| } \\
+	\cos \beta &= \frac{a_2}{\left| \overline{a} \right| } \\
+	\cos \gamma &= \frac{a_3}{\left| \overline{a} \right| } \\
+\end{align*}
+
+\subsubsection{Projections}%
+\label{ssub:projections}
+
+\noteworthy{
+comp_{a}\overline{b} = \frac{\overline{a} \cdot \overline{b}}{\left| \overline{a} \right| }
+}{Scalar projection of b onto a}
+
+\noteworthy{
+proj_{a} \overline{b} = \left( \frac{\overline{a} \cdot \overline{b}}{\left| \overline{a} \right| } \right) \frac{\overline{a}}{\left| \overline{a} \right| } = \frac{\overline{a} \cdot \overline{b}}{\left| \overline{a} \right| } \overline{a}
+}{Vector projection of b onto a}
+
+\noteworthy{
+\overline{a} \times  \overline{b} = \left<a_2b_3 - a_3b_2, a_3b_1 -a_1b_3, a_1b_2 -a_2b_1 \right>
+}{Cross product}
+
+\begin{theorem}[]
+	$\left| \overline{a} \times  \overline{b} \right|  = \left| \overline{a} \right| \left| \overline{b} \right| \sin \theta $
+\end{theorem}
+
+\begin{theorem}[parallel]
+	$\overline{a} \times \overline{b} = 0 \implies$ a and b are parallel
+\end{theorem}
+
+\begin{align*}
+	\overline{a} \times  \overline{b} &=  - \overline{b} \times  \overline{a} \\
+	(c \overline{a}) \times \overline{b} &=  c(\overline{a} \times \overline{b}) = \overline{a} \times  (c \overline{b}) \\
+	\overline{a} \times  ( \overline{b} + \overline{c}) &=  \overline{a} \times  \overline{b} + \overline{a} \times \overline{c}\\
+\end{align*}
+
+
+\section{Equations of Lines and Planes}%
+\label{sec:equations_of_lines_and_planes}
+
+\subsection{Lines}%
+\label{sub:lines}
+
+\noteworthy{
+\overline{r} = \overline{r}_0 + t\overline{v}
+}{Vector equation of a line}
+
+\begin{description}
+	\item[r] vector that traces the line
+	\item[$\overline{r}_0$] given point on the line $(\overline{r}_{0}= \left<x_0,y_0,z_0 \right>)$
+		\item[$\overline{v}$] vector in the direction of $\overline{r}$
+			\item[t] parameter
+\end{description}
+
+
+\[\implies \left<x,y,z \right> = \left<x_0 + ta, y_0 + tb, z_0 + tc \right>\]
+
+\paragraph{Parametric equations for a line through a point $(x_0,y_0,z_0)$ parallel to the vector $\overline{v} = \left<a,b,c \right>$}
+
+
+\begin{align*}
+	x &=  x_0 + at \\
+	y &=  y_0 +bt \\
+	z &=  z_0 + ct \\
+\end{align*}
+
+
+
+
+
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\newpage
+%%%\end{document}
+
+
+%LEAVE EMPTY ROW ABOVE THIS ONE

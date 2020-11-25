@@ -1,0 +1,149 @@
+%%%
+\documentclass[a4paper,11pt,twoside]{report}
+%%%
+\input{../preamble.tex}
+%%%
+\begin{document}
+\fancyhead[R]{2020-08-28} \fancyhead[C]{MAT-253-AC01}\fancyhead[L]{Jasper Runco}
+\begin{table}[htpb]
+	\centering
+	\large
+	\begin{tabular}{| p{7.6cm} | p{3.9cm} | p{3cm} |}
+		\hline
+	Assignment: Homework 1 &	Assigned: 2020-08-28   & Due: 2020-09-03 \\
+	\hline
+	\end{tabular}
+\end{table}
+\small
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+
+\noindent Question 1: form augmented matrix and solve using row operations. \\ \hrule
+
+\begin{align*}
+	x + y - z &= -1 \\
+	4x -3y +2z &= 16 \\
+	2x - 2y -3z &= 5 \\
+\end{align*}
+
+\[\begin{bmatrix} 1 & 1 & -1 & -1 \\ 4 & -3 & 2 & 16 \\ 2 & -2 & -3 & 5 \end{bmatrix} \]
+
+$-4E_1 + E_2 \to E_2$
+
+$-2E_1 + E_3 \to E_3$
+
+\[\begin{bmatrix} 1 & 1 & -1 & -1 \\ 0 & -7 & 6 & 20 \\ 0 & -4 & -1 & 7 \end{bmatrix} \]
+
+$-\frac{1}{4}E_3 \to E_3$
+
+$E_2 \leftrightarrow E_3$
+
+\[\begin{bmatrix} 1 & 1 & -1 & -1 \\ 0 & 1 & \frac{1}{4} & -\frac{7}{4}\\ 0 & -7 & 6 & 20  \end{bmatrix} \]
+
+$7E_2 + E_3 \to E_3$
+
+\[\begin{bmatrix} 1 & 1 & -1 & -1 \\ 0 & 1 & \frac{1}{4} & -\frac{7}{4}\\ 0 & 0 & \frac{24+7}{4} & \frac{80-49}{4}  \end{bmatrix} \]
+
+\[\begin{bmatrix} 1 & 1 & -1 & -1 \\ 0 & 1 & \frac{1}{4} & -\frac{7}{4}\\ 0 & 0 & \frac{31}{4} & \frac{31}{4}  \end{bmatrix} \]
+
+$\frac{4}{31}E_3 \to E_3$
+
+\[\begin{bmatrix} 1 & 1 & -1 & -1 \\ 0 & 1 & \frac{1}{4} & -\frac{7}{4}\\ 0 & 0 & 1 & 1  \end{bmatrix} \]
+
+$-\frac{1}{4}E_3 + E_2 \to E_2$
+
+$E_3 + E_1 \to E_1$
+
+\[\begin{bmatrix} 1 & 1 & 0 & 0 \\ 0 & 1 & 0 & -2\\ 0 & 0 & 1 & 1  \end{bmatrix} \]
+
+$-E_2 + E_1 \to E_1$
+
+\[\begin{bmatrix} 1 & 0 & 0 & 2 \\ 0 & 1 & 0 & -2\\ 0 & 0 & 1 & 1  \end{bmatrix} \]
+
+\[\boxed{(2, -2, 1)}\]
+
+\break
+
+\noindent Question 2: find the solution, or breifly explain why "No Solution". \\ \hrule
+
+\paragraph{2(a)} $\begin{bmatrix} 1 & 1 & 0 & 4 & 9 \\ 0 & 0 & 1 & 7 & 7 \\ 0 & 0 & 0 & 0 & 4 \end{bmatrix} $
+
+\[E_3: \:\text{False Statement}\:0=4 \implies \boxed{\:\text{"No Solution"}\:} \]
+
+\paragraph{2(b)} $\begin{bmatrix} 1 & 0 & 3 & 2 \\ 0 & 1 & 9 & 5 \\ 0 & 0 & 0 & 0 \end{bmatrix} $
+
+\begin{align*}
+	x_1 + 3 x_3 &= 2 \\
+	x_2 + 9x_3 &= 5 \\
+\end{align*}
+\[\boxed{(2 - 3x_3, 5 - 9x_3, x_3)}\]
+
+\noindent Question 3: scalar, matrix (size), or not defined. \\ \hrule
+\
+
+A $3\times 3$
+
+B $4 \times 5$
+
+C $5 \times 5$
+
+D $4 \times 2$
+
+E $3 \times 4$
+
+\paragraph{3(a)} $tr(C)$
+\[C_{11}+ C_{22}+C_{33}\]
+\[\boxed{\:\text{Scalar}\:}\]
+
+\paragraph{3(b)} $E^{T}$
+\[(3\times 4)^{T}\]
+\[\boxed{\:\text{Matrix}\:(4\times 3)}\]
+
+\paragraph{3(c)}$tr(A)B$
+\[(A_{11}+A_{22}+A_{33})B\]
+\[\boxed{\:\text{Matrix}\:(4\times 5)}\]
+
+\paragraph{3(d)}$A-E$
+
+Matrix addition is only defined for matrices of the same size. \[\implies\boxed{\:\text{Not defined}\:}\]
+
+\paragraph{3(e)}$AE$
+
+\[(3\times 3)(3\times 4)\]
+\[\boxed{\:\text{Matrix}\:(3\times 4)}\]
+
+\paragraph{3(f)}$B^{T}D$
+
+\[(4\times 5)^{T}(4\times 2)\]
+\[(5\times 4)(4\times 2)\]
+\[\boxed{\:\text{Matrix}\:(5\times 2)}\]
+
+
+\paragraph{3(g)} $B-C$
+
+\[(4\times 5)-(5\times 5)\]
+Matrix addition is only defined for matrices of the same size. \[\implies\boxed{\:\text{Not defined}\:}\]
+
+\paragraph{3(h)} $E+3A$
+
+\[(3\times 4) + (3\times 3)\]
+Matrix addition is only defined for matrices of the same size. \[\implies\boxed{\:\text{Not defined}\:}\]
+
+\noindent Question 4: Find $p(A)$ for the polynomial $p(x) = 2x^{3}-4x+2$ and the matrix $A = \begin{pmatrix} -2 & 3 \\ 4 & 1 \end{pmatrix} $. \\ \hrule
+
+\begin{align*}
+	2\left[ \begin{pmatrix} -2 & 3 \\ 4 & 1 \end{pmatrix}\begin{pmatrix} -2 & 3 \\ 4 & 1 \end{pmatrix}\begin{pmatrix} -2 & 3 \\ 4 & 1 \end{pmatrix} \right] - 4 \begin{pmatrix} -2 & 3 \\ 4 & 1 \end{pmatrix} + 2 \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}&=  \\
+	2\left[ \begin{pmatrix} 16 & -3 \\ -4 & 13 \end{pmatrix}\begin{pmatrix} -2 & 3 \\ 4 & 1 \end{pmatrix} \right] - 4 \begin{pmatrix} -2 & 3 \\ 4 & 1 \end{pmatrix} + 2 \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}&=  \\
+	2\begin{pmatrix} -44 & 45 \\ 60 & 1 \end{pmatrix} - 4 \begin{pmatrix} -2 & 3 \\ 4 & 1 \end{pmatrix} + 2 \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}&=  \\
+	\begin{pmatrix} -88 & 90 \\ 120 & 2 \end{pmatrix} + \begin{pmatrix} 8 & -12 \\ -16 & -4 \end{pmatrix} +  \begin{pmatrix} 2 & 0 \\ 0 & 2 \end{pmatrix}&=  \\
+	\begin{pmatrix} -88 + 8 + 2 & 90 - 12 \\120 -16 & 2 - 4 + 2 \end{pmatrix}&=  \\
+	\boxed{\begin{pmatrix} -78 & 78 \\104 & 0 \end{pmatrix} }
+\end{align*}
+
+
+
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\newpage
+%%%
+\end{document}
+
+%LEAVE EMPTY ROW ABOVE THIS ONE

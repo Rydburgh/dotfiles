@@ -1,0 +1,132 @@
+%%%\documentclass[a4paper,11pt,twoside]{report}
+
+%%%\input{../preamble.tex}
+
+%%%\begin{document}
+
+\LARGE\textsc{Date: 2020-09-12} \\ \\ \LARGE\textsc{Announcements:} \\
+\small
+
+
+
+\paragraph \hrule \paragraph \\ \fancyhead[R]{Lesson 8} \fancyhead[L]{Week 2}
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\subsection{Another formula for curvature}%
+\label{sub:another_formula_for_curvature}
+
+\[\kappa = \frac{\left| \overline{T}' \right| }{\left| \overline{r}' \right| }\]
+
+\[\overline{T} = \frac{1}{\left| \overline{r}' \right| } \overline{r}' \to \overline{r}' = \left| \overline{r}' \right| \overline{T}\]
+\[\overline{r}''(t) = \left| \overline{r}' \right| \overline{T}' + \left| \overline{r}' \right|' \overline{T}\]
+
+\[\overline{r}' \times  \overline{r}'' = \overline{r}' \times \left( \left| \overline{r}' \right| \overline{T}' + \left| \overline{r}' \right| ' \overline{T} \right) \]
+\[= \left| \overline{r}' \right| \left( \overline{r}' \times \overline{T}' \right)  + \left| \overline{r}' \right|' \left( \overline{r}' \times  \overline{T} \right) \]
+
+Second term is equivalent to a scallar times $(\overline{r}' \times \overline{r}')$, evaluates to zero vector.
+
+\[\overline{r}' \times  \overline{r}'' = \left| \overline{r}' \right| (\overline{r}' \times \overline{T}')\]
+
+Multiply by one: $\frac{\left| \overline{r}' \right| }{\left| \overline{r}' \right| }$
+
+\[\overline{r}' \times  \overline{r}'' = \left| \overline{r}' \right|^2 (\overline{T} \times \overline{T}')\]
+\[\left| \overline{r}' \times  \overline{r}''  \right| = \left| \overline{r}' \right|^2 \left|  \overline{T} \times \overline{T}' \right|\]
+
+$\left| \overline{a} \times  \overline{b}  \right|  = \left| \overline{a} \right| \left| \overline{b} \right| \sin \theta$
+
+$\overline{T}$ and $\overline{T}'$ are $\perp$
+
+\[\left| \overline{r}' \times  \overline{r}''  \right| = \left| \overline{r}' \right|^2 \left|  \overline{T}\right|\left|    \overline{T}' \right|\sin 90\]
+
+$\overline{T}$ is a unit vector and $\sin 90$ is 1
+
+\[\left| \overline{r}' \times  \overline{r}''  \right| = \left| \overline{r}' \right|^2 \left|    \overline{T}' \right|\]
+
+\[\left| \overline{T}' \right| = \frac{\left| \overline{r}' \times \overline{r}''\right| }{\left| \overline{r}' \right|^2}\]
+
+\[\kappa = \frac{\overline{T}'}{\overline{r}'} = \frac{\left| \overline{r}' \times  \overline{r} '' \right| }{\left| \overline{r}^{3} \right| }\]
+
+
+\[\boxed{\kappa = \frac{\left| \overline{r}' \times \overline{r}'' \right| }{\left| \overline{r}' \right|^3}}\]
+
+
+\begin{example}[Curvature]
+	Given $ \overline{r} = \left< 2t, t^2, \frac{1}{3}t^3 \right>$, find $\kappa$
+\smallskip\hfill$\bullet$\end{example}
+
+\begin{solution}[Curvature]
+
+	\[\overline{r}' = \left< 2, 2t, t^2 \right>\]
+	\[\left| \overline{r}' \right| = \sqrt{4 + 4t^2 + t^{4}} \]
+	\[= 2 + t^2\]
+	\[\overline{r}'' = \left<0, 2, 2t \right>\]
+	\[\overline{r}' \times  \overline{r}'' = \begin{bmatrix} \hat{i} & \hat{j} & \hat{k} \\ 2 & 2t & t^2 \\ 0 & 2 & 2t \end{bmatrix} \]
+	\[= \left<2t^2, -4t, 4 \right>\]
+	\[\left| \overline{r}' \times \overline{r}'' \right| = \sqrt{4t^{4} + 16 t^2 + 4}  \]
+	\[= 2(t^2+1)\]
+	\[\kappa = \frac{2(t^2+1)}{(2+t^2)^3}\]
+
+\smallskip\hfill$\bullet$\end{solution}
+
+
+\subsection{Curvature of a plane curve (2-D)}%
+\label{sub:curvature_of_a_plane_curve_2_d_}
+
+\begin{definition}[Curvature of a plane curve]
+	\[\kappa(x) = \frac{\left| f'(x) \right| }{\left[ 1 + (f'(x))^2 \right] ^{\frac{3}{2}}}\]
+\smallskip\hfill$\bullet$\end{definition}
+
+
+\begin{proof}[Curvature of a plane curve]
+\[\boxed{\kappa = \frac{\left| \overline{r}' \times \overline{r}'' \right| }{\left| \overline{r}' \right|^3}}\]
+
+\[y = f(x)\]
+\[\overline{r}(t) = \left<t, f(t), 0 \right>\]
+\[\overline{r}'(t) = \left<1, f'(t), 0 \right>\]
+\[\overline{r}''(t) = \left<0, f''(t), 0 \right>\]
+\[\left| \overline{r}' \right| = \sqrt{1 + (f'(t))^2} \]
+\[\overline{r}' \times  \overline{r}'' = \begin{bmatrix}    \hat{i} & \hat{j} & \hat{k} \\ 1 & f'(t) & 0 \\ 0 & f''(t) & 0 \end{bmatrix}\]
+\[= \left<0, 0, f''(t) \right>\]
+\[\left|   \overline{r}' \times \overline{r}''\right| = \left| f''(t) \right| \]
+	\[\kappa(x) = \frac{\left| f'(x) \right| }{\left[ 1 + (f'(x))^2 \right] ^{\frac{3}{2}}}\]
+\end{proof}
+
+\begin{example}[Finding plane curvature with derivation of fromula]
+	Given $y = 4-x^2$, find curvature.
+\smallskip\hfill$\bullet$\end{example}
+
+\begin{solution}[Finding plane curvature with derivation of fromula]
+
+	\begin{align*}
+		\overline{r}(t) &=  \left<t, 4-t^2, 0 \right> \\
+		\overline{r}'(t) &=  \left<1, -2t, 0 \right> \\
+		\overline{r}''(t) &=  \left<0, -2, 0 \right> \\
+		\left| \overline{r}'(t) \right| &= \sqrt{1+4ts^2}  \\
+	\overline{r}' \times \overline{r}'' &= \begin{bmatrix} \hat{i} & \hat{j} & \hat{k} \\ 1 & -2t & 0 \\ 0 & -2 & 0 \end{bmatrix}  \\
+	&= \left<0, 0, -2 \right> \\
+	\left| \overline{r}' \times \overline{r}'' \right|&= \sqrt{(-2)s^2} = 2  \\
+	k &= \frac{2}{(\sqrt{1 + 4t^2} )^3} \\
+	\end{align*}
+
+	\[ k = \boxed{\frac{2}{(\sqrt{1 + 4t^2} )^3}} \]
+\smallskip\hfill$\bullet$\end{solution}
+
+\subsection{Review equation of a plane}%
+\label{sub:review_equation_of_a_plane}
+
+\begin{enumerate}
+	\item need point on plane \[(x_0,y_0,z_0)\]
+		\item vector normal to plane \[\overline{n} = \left<a, b, c \right>\]
+\end{enumerate}
+
+\begin{enumerate}
+	\item turn point into generic vector in plane \[\left< x-x_0, y-y_0, z-z_0 \right>\]
+		\item $\overline{n}$ is perpendicular to every vector in plane so \[
+			\left<a, b, c \right> \cdot \left<x-x_0, y-y_0, z-z_0 \right> = 0\]
+\end{enumerate}
+
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\newpage
+%%%\end{document}
+
+
+%LEAVE EMPTY ROW ABOVE THIS ONE

@@ -1,0 +1,199 @@
+%%%\documentclass[a4paper,11pt,twoside]{report}
+
+%%%\input{../preamble.tex}
+
+%%%\begin{document}
+
+ \chapter{Gauss's Law}%
+ \label{cha:gauss_s_law}
+
+
+\LARGE\textsc{Date: 2020-08-31} \\ \\ \LARGE\textsc{Announcements:} \\
+\small
+Work on homework, reading quiz, and Lab 2
+
+
+\paragraph \hrule \paragraph \\ \fancyhead[R]{Lesson 3} \fancyhead[L]{Week 3}
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+
+\noteworthy{
+	\Phi _{E} = \oint \overline{E} \cdot d\overline{A} = Q_{encl}\frac{Q_{encl}}{\epsilon_{0}}
+}{Flux Equation}
+
+\begin{description}
+	\item[$\Phi_{E}$ -] Electric flux through a closed surface of area A = surface integral of $\overline{E}$
+	\item[$Q_{encl}$ -] Total charge enclosed by surface
+	\item[$\epsilon_{0}$ -] Electric constant
+\end{description}
+
+\begin{example}[Simplest case: Spherical symmetry]
+	Use Gauss's Law to calculate electric field due to a point charge \[\overline{E} = \frac{kq}{r^2}\hat{r}\]
+\end{example}
+
+\begin{solution}[]
+	$\left| E \right| $ same at all points on Gaussian surface
+
+	\[
+		\oint \overline{E}\cdot d\overline{A} = \frac{q_{enc}}{\epsilon_{0}}
+	\]
+
+	\[
+		\oint E \cos \phi  d\overline{A} = \frac{q_{enc}}{\epsilon_{0}}
+	\]
+
+	\[
+		d \overline{A}
+	\]
+
+	points normal and out from Gaussian surface
+
+
+	Because $\overline{E}$ and $d \overline{A}$ are both normal to the round surface, their angle is 0
+
+	\[
+		\oint E dA = \frac{q}{\epsilon_0}
+	\]
+
+	E constant on Gaussian surface
+	\[
+		E\oint  dA = \frac{q}{\epsilon_0}
+	\]
+	\[
+		E 4\pi r^2 = \frac{q}{\epsilon_0}
+	\]
+	\[
+	E = \frac{1}{4\pi \epsilon_0} \frac{q}{r^2} = \frac{kq}{r^2}\] radially outward.
+\end{solution}
+
+\subsection{Applications}%
+\label{sub:applications}
+
+
+\paragraph{Conductor}
+
+\begin{itemize}
+	\item Suppose we construct a Gaussian surface inside a conductor.
+	\item Because $\overline{E}=0$ everywhere on the surface, Gauss's law
+		requires the net charge inside the surface be zero.
+	\item Under \textbf{electrostatic} conditions (charges not in motion), any
+		excess charge on a solid conductor resides entirely on the conductor's surface.
+	\item \textbf{Therefore, the electric field inside a conductor is always zero}
+\end{itemize}
+\paragraph{Conductor with cavity}
+
+
+\begin{itemize}
+	\item Cavity inside a conductor
+	\item If a charge of $1nC$ resides inside the cavity, and the field inside the conductor
+		is always zero, then there must be a $-1nC$ charge distributed around the surface
+		of the cavity.
+\end{itemize}
+
+\paragraph{Review}
+\begin{itemize}
+	\item Electric field due to a point charge: $\overline{E} = \frac{kq}{r^2}\hat{r}$
+	\item Electric field due to an infinite line of charge: $\overline{E} = \frac{\lambda}{2\pi \epsilon_0 r} \hat{r}$
+		($\lambda $ linear charge density)
+	\item Electric field due to an infinite sheet of charge: $\overline{E} = \frac{\sigma}{2 \epsilon_0}$ uniform field
+		($\sigma$ surface charge density)
+\end{itemize}
+
+\paragraph{Field of a charged conducting sphere}
+\begin{itemize}
+	\item Positive charge Q is distributed on spherical conductor with radius R. Find magnitude of
+		electric field at point P and distance r from the center of the sphere.
+	\item for $r<R$, we have symetry so we chose a Gaussian surface that is spherical with radus r.
+		\[ E = 0\]
+	\item for r>R, we construct a Gaussian surface enclosing the charged sphere.
+		\[\oint \overline{E} \cdot d\overline{A} = \frac{q_{enc}}{\epsilon_0}\]
+		\[\oint E dA \cos \phi = q_{enc}/\epsilon_0\]
+		\[\oint E dA \cos 0 = q_{enc}/\epsilon_0\]
+		\[\oint E dA  = Q/\epsilon_0\]
+		\[E\oint  dA  = Q/\epsilon_0\]
+		\[E 4\pi r^2  = Q/\epsilon_0\]
+		\[E = Q/4\pi r^2  \epsilon_0\]
+		\[E = kQ/ r^2  \]
+	\item The result is the same as for a point charge.
+\end{itemize}
+
+\paragraph{Field of uniformly charged sphere (insulator)}
+\begin{itemize}
+	\item Positive charge Q uniformly throughtout volume of \textbf{insulating} sphere with radius R.
+		Find magnitude of field at point P a distance r from center.
+
+		\[ \rho_{\:\text{sphere}\:} = \:\text{folume charge density, charge/volume}\:\]
+	\item r<R
+		\[\oint \overline{E} \cdot d\overline{A} = q_{enc}/\epsilon_0\]
+	\item The symmetry says the E-field points out and is constant across a gaussian surface.
+		\[\oint E d A \cos \phi = q_{enc}/\epsilon_0\]
+		\[\oint E d A = q_{enc}/\epsilon_0\]
+		\[E\oint  d A = q_{enc}/\epsilon_0\]
+		\[E 4 \pi r^2 = q_{enc}/\epsilon_0\]
+		\[E 4 \pi r^2 = q_{enc}/\epsilon_0\]
+		\item the question: what is $q_{enc}$?
+			\[q_{enc} = \rho V_{enc} = \frac{Q}{\frac{4}{3}\pi R^3}\frac{4}{3}\pi r^3\]
+			\[q_{enc} = \frac{Qr^3}{R^3}\]
+
+		\[E = \frac{1}{4 \pi r^2 \epsilon_0 }\frac{Qr}{R^3}\:\text{radially out}\:\]
+	\item Now, what is the field outside?
+		\[\oint \overline{E} \cdot d \overline{A} = q_{enc}/\epsilon_0 \]
+		\[E 4 \pi r^2 = \frac{Q}{\epsilon_0}\]
+		\[E = \frac{kQ}{r^2}\:\text{radially out}\:\]
+\end{itemize}
+
+		\paragraph{Field of a Uniform Line Charge}
+
+		\begin{itemize}
+		\item We need to chose a Gaussian surface that is symetrical, so use a \textbf{cylinder}
+		\[ \oint \overline{E} \cdot d \overline{A} = q_{enc}/\epsilon_0\]
+		\item This has three components, the end caps and the round
+			\[\int_{end} \overline{E} d \overline{A} +\int_{end} \overline{E} d \overline{A} +\int_{round} \overline{E} d \overline{A} \]
+		\item For the end caps, the field lines perpendicular to the area, so they contribute nothing to the flux
+
+			\[\int E dA \cos \phi  = q_{enc}/\epsilon_0\]
+			\[E\int  dA = q_{enc}/\epsilon_0\]
+			\[q_{enc} = \lambda l\]
+			\[E \cdot 2\pi r l = \lambda \frac{l}{\epsilon_0}\]
+
+		\end{itemize}
+		\paragraph{Infinite plane of charge}
+		\begin{itemize}
+			\item planar symmetry
+				\[ \sigma = \:\text{charge}\:/\:\text{area}\:\]
+				\item the Gaussian surface that takes advantage of this symmetry is a cylinder bisecting the plane
+					\item cylinder: endcaps area A
+						\[\oint  \overline{E} \cdot d \overline{A} = q_{enc}/\epsilon_0\]
+						\[\int_{end}  \overline{E} \cdot d \overline{A}+ \int_{end}  \overline{E} \cdot d \overline{A} + \int_{round}  \overline{E} \cdot d \overline{A} = q_{enc}/\epsilon_0\]
+						\[\int  \overline{E} \cdot d \overline{A} \cos \phi   + \int E dA \cos \phi = q_{enc}/\epsilon_0\]
+						\[2\int E dA= q_{enc}/\epsilon_0\]
+						\[2E A= \sigma A/\epsilon_0\]
+						\[E = \sigma / 2\epsilon_0 \:\text{uniform outward from plane}\:\]
+		\end{itemize}
+
+		\subsection{Conductors}%
+		\label{sub:conductors}
+
+		\noteworthy{
+		E_{\perp} = \frac{\sigma}{\epsilon_0}
+	}{Electric field at surface of a conductor}
+
+\textbf{Electrostatic shielding}
+\begin{itemize}
+	\item A conducting box immersed in uniform field
+	\item the field of induced charges combines with the uniform field to give \textbf{zero} total field
+\end{itemize}
+
+
+
+
+
+
+
+
+
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\newpage
+%%%\end{document}
+
+
+%LEAVE EMPTY ROW ABOVE THIS ONE

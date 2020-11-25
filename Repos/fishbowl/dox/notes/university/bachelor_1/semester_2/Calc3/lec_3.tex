@@ -1,0 +1,153 @@
+%%%\documentclass[a4paper,11pt,twoside]{report}
+
+%%%\input{../preamble.tex}
+
+%%%\begin{document}
+
+\chapter{Vector Functions}%
+\label{cha:vector_functions}
+
+
+\LARGE\textsc{Date: 2020-09-06} \\ \\ \LARGE\textsc{Announcements:} \\
+\small
+
+
+
+\paragraph \hrule \paragraph \\ \fancyhead[R]{Lesson 2} \fancyhead[L]{Week 1}
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\section{Vector Functions and Space Curves}%
+\label{sec:vector_functions_and_space_curves}
+
+
+\subsubsection{Vectors}%
+\label{ssub:vectors}
+
+\begin{align*}
+	\overline{r(t)} &= \left<f(t), g(t), h(t) \right> \\
+					&= f(t)\hat{i} + g(t)\hat{j} + h(t)\hat{k} \\
+					\overline{r(t)} &= \left<t^2 + 1, \frac{1}{t-1}, \sqrt{t + 3}  \right> \\
+					\overline{r(2)} &=   \left<5,1,\sqrt{5}  \right>\\
+\end{align*}
+\subsubsection{Domain}%
+\label{ssub:domain}
+
+\begin{align*}
+	t^2 + 1 &\to \:\text{polonomial, Domain:}\: (-\infty, \infty) \\
+	\frac{1}{t+	1} &\to \:\text{Rational, Domain:}\: (-\infty,1)\cup(1,\infty) \\
+	\sqrt{t+3} &\to \:\text{Radical, Domain:}\: [-3,\infty)\\
+\:\text{Domain of }\:\overline{r(t)}&=  [-3,1)\cup(1,\infty) \\
+\end{align*}
+
+\begin{example}[Domain]
+	\[\overline{r(t)} = \left< \cos t, \ln(t+r), \frac{t}{t^2-23} \right>\]
+\end{example}
+
+\begin{align*}
+	\cos t &\to (-\infty,\infty) \\
+	\ln(t+4) &\to (-4, \infty) \\
+	\frac{t}{t^2-25} &\to (-\infty,-5) \cup (-5,5) \cup(5,\infty)\\
+	\:\text{Domain}\: &= (-4,5)\cup(5,\infty) \\
+\end{align*}
+
+\subsubsection{Graphs}%
+\label{ssub:graphs}
+
+\begin{description}
+	\item[2-D] plane curve
+		\item[3-D] space curve
+\end{description}
+
+\subsubsection{Plane curve}%
+\label{ssub:plane_curve}
+
+
+\[\overline{r(t)} = \left<t-3, t^2 \right>\]
+
+\begin{table}[htpb]
+	\centering
+	\label{tab:label}
+	\begin{tabular}{l | r}
+		$\ldots$ \\
+	$t=-2$ & \ $\left<-5,4 \right>$ \\
+	$t=-1$ & \ $\left<-4,1 \right>$ \\
+	$t=0$ & \ $\left<-3,0 \right>$ \\
+	$t=1$ & \ $\left<-2, 1 \right>$ \\
+	$t=2$ & \ $\left<-1, 4 \right>$ \\
+		$\ldots$ \\
+	\end{tabular}
+\end{table}
+\begin{figure}[ht]
+    \centering
+    \incfig{2-d-vector-graph}
+    \caption{2-D vector graph}
+    \label{fig:2-d-vector-graph}
+\end{figure}
+
+\subsubsection{Space Curve}%
+\label{ssub:space_curve}
+
+
+\[\overline{r(t)} = \left<3+t, 4-2t, t-5 \right>\]
+
+\begin{align*}
+	x &=  3 + t \\
+	y &=  4 - 2t \\
+	z &=  t-5 \\
+\end{align*}
+\[\:\text{(Parametric form)}\:\]
+
+\[\overline{r(t)} = \left<3, 4t, -5 \right> + \left<t, -2t, t \right>\]
+\[\left(   \overline{r(t)} = \left<3, 4t, -5 \right> + t\left<1, -2, 1 \right>\right)\:\text{}\:\]
+\[\:\text{(Equation of line in 3-D)}\:\]
+
+\[x-3 =\frac{y-4}{-2} = z+5\]
+\[\left( \:\text{Symetric form}\: \right) \]
+
+\subsection{Limit}%
+\label{sub:limit}
+
+\begin{definition}[Limit of a Vector]
+	If $\overline{r(t)} = \left<f(t), g(t), h(t), \right>$, then
+	\[\lim_{t \to a} \overline{r(t)} = \left<\lim_{t \to a} f(t), \lim_{t \to a}g(t), \lim_{t \to a}h(t) \right> \]
+
+	provided the limits of the component functions exist.
+\end{definition}
+
+\begin{example}[Limit of a Vector]
+	\[\overline{r(t)} = \left< \frac{\sin^2 t}{t^2}, t e^{-t}, t^2+1 \right>\]
+
+	\begin{align*}
+	\lim_{t \to 0}\overline{r(t)} &=  \lim_{t \to 0}\left< \frac{\sin^2 t}{t^2}, t e^{-t}, t^2+1 \right> \\
+	&=  \left< \lim_{t \to 0} \frac{\sin^2 t}{t^2}, \lim_{t \to 0}t e^{-t}, \lim_{t \to 0}t^2+1 \right> \\
+	&=  \left< a, b ,c \right> \\
+	\end{align*}
+	\begin{align*}
+		a &=  \frac{0}{0}(\:\text{L'H Rule}\:) \\
+		a &= \lim_{t \to 0}\frac{2 \sin t \cos t}{2 t} \\
+		a &= \lim_{t \to 0}\frac{\sin t \cos t}{t} \\
+		a &=  \frac{0}{0}(\:\text{L'H Rule}\:) \\
+		a &=  \lim_{t \to 0 \frac{-\sin^2 t + \cos^2 t}{1}} \\
+		a &=  1 \\
+		b &=  0 \\
+		c &=  1 \implies\\
+	\end{align*}
+	\[ = \boxed{ \left<1,0,1 \right>}\]
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\newpage
+%%%\end{document}
+
+
+%LEAVE EMPTY ROW ABOVE THIS ONE

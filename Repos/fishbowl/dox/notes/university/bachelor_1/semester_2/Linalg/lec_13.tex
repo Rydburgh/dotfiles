@@ -1,0 +1,73 @@
+%%%\documentclass[a4paper,11pt,twoside]{report}
+
+%%%\input{../preamble.tex}
+
+%%%\begin{document}
+
+\chapter{Determinants}%
+\label{cha:determinants}
+
+
+\LARGE\textsc{Date: 2020-09-18} \\ \\ \LARGE\textsc{Announcements:} \\
+\small
+
+
+
+\paragraph \hrule \paragraph \\ \fancyhead[R]{Lesson 13} \fancyhead[L]{Week 5}
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+
+Consider the set $\{  j_1,j_2,\ldots jn \} $ where each $j_{i}$ is a positive integer.
+
+Each possible ordering of the set (standard order) is called a permutation set
+
+	A set with n elements has $n!$ permutation sets.
+
+	In each permutation set, define a number $\alpha_{i}$ for each number.
+
+$ \alpha_{i} = $ the entries following $j_{i}$ that are less than $j_{i}$.
+
+\begin{example}[set $\{1,2,3\} $]
+	permutations:
+	\[\begin{matrix}
+	1, & 2, &3 \\
+	1, & 3, &2 \\
+	2, & 1, &3 \\
+	2, & 3, &1 \\
+	3, & 1, &2 \\
+	3, & 2, &1 \\
+\end{matrix} \]
+	\[\begin{matrix}
+	\alpha_1 = 0, & \alpha_2 = 0, & \alpha_3 = 0 \\
+	\alpha_1 = 0, & \alpha_2 = 1, & \alpha_3 = 0 \\
+	\alpha_1 = 1, & \alpha_2 = 0, & \alpha_3 = 0 \\
+	\alpha_1 = 1, & \alpha_2 = 1, & \alpha_3 = 0 \\
+	\alpha_1 = 2, & \alpha_2 = 0, & \alpha_3 = 0 \\
+	\alpha_1 = 2, & \alpha_2 = 1, & \alpha_3 = 0 \\
+\end{matrix} \]
+\smallskip\hfill$\bullet$\end{example}
+
+$\alpha_1 + \alpha_2 + \ldots + \alpha_{n}$ = total number of inversions in permutation set $=$ parity
+
+Parity is either even or odd.
+
+Define a function
+
+\[\delta(j_1,j_2,\ldots j_{n}) = \left\{ 1 , -1 \right\}  \]
+
+Form all possible products of the form $a_{1j_{1}} a_{2j_{2}} a_{2j_{3}} \ldots a_{nj_{n}}$.
+
+Determinant of $A = det(A)$
+\[= \sum_{\:\text{all possible permutation sets}\:} \delta(j_1,j_2,\ldots,jn)a_{1j_{1}} a_{2j_{2}} a_{2j_{3}} \ldots a_{nj_{n}}\]
+
+
+
+
+
+
+
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\newpage
+%%%\end{document}
+
+
+%LEAVE EMPTY ROW ABOVE THIS ONE

@@ -1,0 +1,182 @@
+%%%\documentclass[a4paper,11pt,twoside]{report}
+
+%%%\input{../preamble.tex}
+
+%%%\begin{document}
+
+\chapter{Currents, Resistance, and Electromotive Force}%
+\label{cha:currents_resistance_and_electromotive_force}
+
+
+\LARGE\textsc{Date: 2020-09-21} \\ \\ \LARGE\textsc{Announcements:} \\
+\small
+
+
+
+\paragraph \hrule \paragraph \\ \fancyhead[R]{Lesson 6} \fancyhead[L]{Week 6}
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+
+\section{Current}%
+\label{sec:current}
+
+\begin{definition}[Current]
+	A current is any motion of charge form one region to another.
+\smallskip\hfill$\bullet$\end{definition}
+\subsubsection{Quantifying Current}%
+\label{ssub:quantifying_current}
+
+
+\begin{itemize}
+	\item Model a wire as a cylinder:
+		\item $n = \frac{\:\text{\# of moving charges}\:}{\:\text{volume}\:}$
+			\item $\:\text{Volume}\: = dx A$
+			\item $\:\text{Volume}\: = (\overline{v}_{d}dt)A$
+				\item Amount of charge that folows through cylinder:
+					\[dQ = q \cdot \:\text{number of charges}\: = q \cdot n \cdot V\]
+					\[dQ = q n \overline{v}_{d}dt A\]
+					\[\frac{dQ}{dt} = I = q n \overline{v}_{d} A\]
+\end{itemize}
+
+\noteworthy{
+I =  n |q| v_{d} A
+}{Current}
+
+\begin{description}
+	\item[I] Current
+	\item[q] charge per particle
+	\item[n] \# of moving Charges
+	\item[$v_{d}$] Drift velocity
+	\item[A] Cross sectional area of conductor
+	\item[units] Ampers, Amps, A
+	\item Scalar quantity, cw or ccw in a curcuit
+\end{description}
+
+\noteworthy{
+	\overline{J} = \frac{I}{A} = \left| q \right| n \overline{v}_d
+}{Vector Current Density}
+\begin{description}
+	\item[I] Current
+	\item[A] Cross sectional area
+	\item[units] $\frac{A}{m^2}$
+\end{description}
+
+\subsection{Direction of Current Flow}%
+\label{sub:direction_of_current_flow}
+
+\begin{itemize}
+	\item \textbf{Conventional Current} is treated as a flow of positive charges.
+	\item I a metallic conductor, the charges moving are electrons, but the
+		conventional current points in the opposite direction.
+	\item The vector \textbf{Current Density} is always in the same direction
+		as the electric field.
+\end{itemize}
+
+\section{Resistivity}%
+\label{sec:resistivity}
+
+\begin{definition}[Resistivity]
+	The resistivity of a material is the ratio of the electric field in the material to the
+	current density it causes. A measure of a materia's opposition to flow. Depends on
+	material and temperature. \textbf{Conductivity} is the recipricol of resistivity
+\smallskip\hfill$\bullet$\end{definition}
+
+\noteworthy{
+\rho = \frac{E}{J}
+}{Resistivity}
+
+\begin{description}
+	\item[rho] Resistivity
+	\item[E] Electric field
+		\item[J] Current densityCurrent density
+\end{description}
+
+\noteworthy{
+\rho (T)v = \rho_0 [1 + \alpha(T-T_0)]
+}{Temperature dependence of resistivity}
+
+\section{Resistance}%
+\label{sec:resistance}
+
+\subsection{Resistance and Ohm's Law}%
+\label{sub:resistance_and_ohm_s_law}
+
+The \textbf{resistance} of a conductor is $R = \rho \frac{L}{A}$.
+
+The potential across a conductor is given by Ohm's Law:
+
+\noteworthy{
+V = IR
+}{Ohm's Law}
+
+\noteworthy{
+R = \frac{\rho L}{A}
+}{Resistance Equation}
+\begin{description}
+	\item[L] Length of conductor
+		\item[A] Cross sectional  area
+\end{description}
+
+\section{Electromotive Froce and Circuits}%
+\label{sec:electromotive_froce_and_circuits}
+
+Electromotive force (emf) makes current flow from low to high potential. A circuit that
+provides emf is called a \textbf{source of emf}. SI units of $1 V = 1 \frac{J}{C}$.
+A flashlight battery has an emf of 1.5V; it does 1.5 J of work on every coulomb of charge that
+passes through it.
+Use symbol $\mathcal{E}$ (cursive E) for emf.
+
+
+When a battery is connected, electrons must reach the positive charge. When they do:
+\[W_{net} = W_{b} - W_{c} = \Delta KE = 0 (\:\text{steady state}\:)\]
+\[W_{b} = W_{e}\]
+\[q \mathcal{E} = q V_{ab}\]
+\[\mathcal{E} = V_{ab}\]
+
+$U_{i} \implies$ powering circuit elements. Rise in PE = loss in potential energy.
+
+\[\mathcal{E} = V_{ab} = IR\]
+
+This is energy balance, what ever emf is put in is used by the resistors.
+
+\subsection{Internal Resistance}%
+\label{sub:internal_resistance}
+
+Real sources contain some \textbf{internal resistance, r}.
+
+\noteworthy{
+V_{ab} = \mathcal{E} - Ir
+}{Potential of source with internal resistance}
+
+\begin{description}
+	\item[V] Terminal voltage, source with internal resistance.
+	\item[$\mathcal{E}$] emf of source.
+	\item[I] Current through source.
+	\item[r] Internal resistance of source.
+	\item[-Ir] Loss of potential in battery.
+\end{description}
+
+\section{Energy and Power in Electric Circuits}%
+\label{sec:energy_and_power_in_electric_circuits}
+
+\begin{itemize}
+	\item A circuit element causes a net transfer of energy into or out of the circuit.
+		\item the time rate of energy transfer is power, denoted by P
+\end{itemize}
+
+\noteworthy{
+P = V_{ab} I = I^2 R = \frac{V_{ab}^2}{R}
+}{Power delivered to or extracted from a circuit element}
+
+\begin{description}
+	\item[V] Voltage across circuit element.
+		\item[I] Current in circuit element.
+			\item[Unit] Watts, W
+\end{description}
+
+
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\newpage
+%%%\end{document}
+
+
+%LEAVE EMPTY ROW ABOVE THIS ONE

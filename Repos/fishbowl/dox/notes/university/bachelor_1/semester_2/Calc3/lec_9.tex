@@ -1,0 +1,141 @@
+%%%\documentclass[a4paper,11pt,twoside]{report}
+
+%%%\input{../preamble.tex}
+
+%%%\begin{document}
+
+\LARGE\textsc{Date: 2020-09-12} \\ \\ \LARGE\textsc{Announcements:} \\
+\small
+
+
+
+\paragraph \hrule \paragraph \\ \fancyhead[R]{Lesson 9} \fancyhead[L]{Week 2}
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\section{Planes on a Space Curve}%
+\label{sec:planes_on_a_space_curve}
+
+\begin{definition}[Normal Plane].
+
+	Determined by Normal and Binormal vectors, $\overline{N}$ and $\overline{B}$
+	where $\overline{T}$ is normal vector to normal plane.
+
+	The normal plane contains all lines orthogonal to $\overline{T}$
+\smallskip\hfill$\bullet$\end{definition}
+
+\begin{definition}[Oscilating Plane].
+
+	Determined by $\overline{T}$ and $\overline{N}\to$ $\overline{B}$ is normal vector to
+	oscilating plane.
+
+	The oscilating plane lies closest to the space curve $\overline{r}(x)$ in 3-D space.
+\smallskip\hfill$\bullet$\end{definition}
+
+\begin{definition}[Rectifying Plane].
+
+	Contains tangent $\overline{T}$ and binormal $\overline{B}$ vectors so that the normal vector
+	$\overline{N}$ is normal to the rectifying plane.
+
+\smallskip\hfill$\bullet$\end{definition}
+
+\begin{table}[htpb]
+	\centering
+	\caption{Vectors of 3 Planes}
+	\label{tab:label}
+	\begin{tabular}{| c | c | c |}
+		\cline{1-3}
+		Plane  & Vectors contained & Orthogonal to\\
+	\cline{1-3}
+	Normal & $\overline{N}$ $\overline{B}$ & $\overline{T}$\\
+	\cline{2-3}
+	Oscilating & $\overline{T}$ $\overline{N}$ & $\overline{B}$ \\
+	\cline{2-3}
+	Rectifying & $\overline{T}$ $\overline{B}$ & $\overline{N}$ \\
+	\cline{1-3}
+	\end{tabular}
+\end{table}
+
+
+\begin{example}[Find 3 planes at a point].
+
+	let $\overline{r}(t) = \left<\cos(3t), t, \sin(3t) \right>$, find the equation of the Normal
+	plane, Oscilating plane, and Rectifying plane at $t=\frac{\pi}{2}$
+\smallskip\hfill$\bullet$\end{example}
+
+
+\begin{solution}[Find 3 planes at a point].
+
+	A) Normal Plane: Find Unit Tangent Vector
+
+	point: $t = \frac{\pi}{2}$
+	\[\overline{r}(\frac{\pi}{2}) = \left<\cos(\frac{3\pi}{2}), \frac{\pi}{2}, \sin(\frac{3\pi}{2}) \right>\]
+	\[= \left<0, \frac{\pi}{2}, -1 \right>\]
+
+	generic vector $\left<x, y-\frac{\pi}{2}, z+1 \right>$
+
+	\[\overline{r}'(t) = \left< -3 \sin (3t), 1, 3\cos(3t) \right>\]
+	\[\left|  \overline{r}'(t) \right| = \sqrt{9\sin^2(3t) + 1 + 9\cos^2(3t)} \]
+	\[\left|  \overline{r}'(t) \right| = \sqrt{9\left(  \sin^2(3t) + \cos^2(3t) \right)+ 1 } \]
+	\[=\sqrt{10} \]
+	\[\overline{T} = \frac{1}{\left| r'(t) \right| }r'(t)\]
+	\[\overline{T}(t) = \frac{1}{\sqrt{10}} \left<-3\sin(3t), 1, 3 \cos(3t) \right>\]
+	\[ \overline{T}(\frac{\pi}{2} )= \frac{1}{\sqrt{10} }\left<0, 0, -3 \right>\]
+	\[= \left<0, 0, -\frac{3}{\sqrt{10} } \right>\]
+	\[\overline{N}(\frac{3}{2}) :  \left< 0, 0, -\frac{3}{\sqrt{10} } \right> \cdot \left<x, y-\frac{\pi}{2}, z+1 \right> = 0\]
+	\[ -\frac{3}{\sqrt{10}} z - \frac{3}{\sqrt{10}}= 0\]
+	Normal Plane: \[\boxed{z = -1}\]
+
+	B) Rectifying Plane: Find Normal Tangent Vector
+
+
+	\[\overline{T}'(t) = \frac{1}{\sqrt{10}} \left<-9\cos(3t), 0, -9 \sin(3t) \right>\]
+	\[\left| \overline{T}'(t) \right| = \frac{1}{\sqrt{10}}\sqrt{81\cos^2(3t) + 0 + 81\sin^2(3t)}\]
+	\[ = \frac{1}{\sqrt{10} } \sqrt{91} \]
+	\[ = \frac{9}{\sqrt{10} }\]
+	\[\overline{N}(t) = \frac{1}{\frac{9}{\sqrt{10} }}\frac{1}{\sqrt{10}} \left<-9\cos(3t), 0, -9 \sin(3t) \right>\]
+	\[\overline{N}(t) = \frac{1}{9} \left<-9\cos(3t), 0, -9\sin(3t) \right>  \]
+	\[= \left<-\cos(3t), 0, -\sin(3t) \right>\]
+	\[\overline{N}(\frac{\pi}{2}) = \left< 0, 0, 1 \right> \]
+	\[\:\text{Rectifying plane}\: = \left<0, 0, -1 \right> \cdot \left<x, y-\frac{\pi}{2}, z+1 \right> = 0\]
+
+	\[0x + 0(y-\frac{\pi}{2}) +1(z+1)= 0\]
+	\[z + 1 = 0\]
+	\[\:\text{Rectifying Plane:}\:\boxed{z = -1}\]
+
+	C) Oscilating Plane: Find Binormal Unit Vector
+
+	\[\overline{B}(\frac{\pi}{2}) = \overline{T}(\frac{\pi}{2}) \times  \overline{N}(\frac{\pi}{2})\]
+	\[= \begin{bmatrix} \hat{i} & \hat{j} & \hat{k} \\
+		\frac{3}{\sqrt{10}} & \frac{1}{\sqrt{10}} & 0 \\
+		0 & 0 & -1 \end{bmatrix} \]
+
+		\[= \left<-\frac{1}{\sqrt{10} }, \frac{3}{\sqrt{10} }, 0 \right>\]
+
+		Oscilating Plane $ \left< -\frac{1}{\sqrt{10} }, \frac{3}{\sqrt{10} }, 0\right> \cdot
+		\left< x, y-\frac{\pi}{2}, z+1 \right>= 0$
+		\[-\frac{1}{\sqrt{10} }x + \frac{3}{\sqrt{10}} y - \frac{3}{2\sqrt{10}} + 0 = 0\]
+		C) \[\boxed{-2x + 6y - 3 = 0}\]
+
+
+
+\smallskip\hfill$\bullet$\end{solution}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\newpage
+%%%\end{document}
+
+
+%LEAVE EMPTY ROW ABOVE THIS ONE

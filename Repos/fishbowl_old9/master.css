@@ -1,0 +1,302 @@
+/* color scheme */
+/* dark: #040C0E */
+/* dark charcoal: #142428 */
+/* dark charcoal: 132226 */
+/* charcoal: #525B56 */
+/* t a n: #BE9063 */
+/* g r e y: #b9b9b9 */
+
+
+body, ul, li, h1, h2, h3, h4, a{
+	margin: 0;
+	padding: 0;
+	font-family: palatino;
+	color: #B9B9B9 ;
+}
+
+header{
+	background-color: #142428 ;
+	position: absolute;
+	left: 180px;
+	/* left = main-nav width */
+	width: calc(100% - 180px);
+	/* width = 100% - main-nav width */
+	height: 50px;
+	text-align: center;
+	z-index: 1;
+	border-style: none none solid none;
+	border-color: #B9B9B9;
+}
+
+
+header a{
+	text-decoration: none;
+}
+
+nav{
+	background-color: #142428;
+	position: fixed;
+	left: 0;
+	width: 180px;
+	top: 0;
+	height:100%;
+	z-index: 2;
+	font-size: 34px;
+	padding: 20px 0px;
+	border-style: none solid none none;
+	border-color: #B9B9B9;
+}
+
+nav li a {
+	text-decoration: none;
+}
+
+nav ul li{
+	list-style: none;
+}
+
+nav ul li a{
+	display: block;
+	padding: 11px 24px;
+}
+
+nav ul li ul{
+	position: absolute;
+	display: none;
+	background-color: #142428;
+	padding: 20px;
+}
+
+nav ul li:hover ul{
+	display: block;
+}
+
+
+nav ul li ul li a{
+	font-size: 28px;
+	padding: 5px 5px 5px 10px;
+}
+
+nav ul li ul li a:hover{
+	color: #BE9063;
+	background-color: #525B56;
+}
+
+main.index{
+	background-color:#142428;
+	position: absolute;
+	left: 180px;
+	/* left = main-nav width */
+	top: 50px;
+	width: calc(100% - 180px);
+	/* width = 100% - main-nav width */
+}
+
+main.notes{
+	background-color:#142428;
+	position: absolute;
+	left: 180px;
+	/* left = main-nav width */
+	top: 50px;
+	width: calc(100% - 180px);
+	/* width = 100% - main-nav width */
+	margin-bottom: 50px;
+	/* bottom margin = footer height */
+	padding-top:45px;
+}
+
+
+footer.notes{
+	background-color: #040C0E;
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	z-index: 1;
+	bottom:0;
+	left: 0;
+}
+
+/* this div id gets centering to work for ul's*/
+.table {
+	display: table;
+	margin: 0 auto;
+}
+
+footer.notes ul li{
+	display: inline;
+}
+
+aside.notes{
+	background-color: #142428;
+	position: relative;
+	float: left;
+	clear: right;
+	width: 19%;
+	padding-top: 45px;
+}
+
+aside.notes ul{
+	list-style: none;
+	text-align: center;
+	padding: 30px 0px 0px 0px;
+}
+
+article.notes{
+	position: relative;
+	float: right;
+	right: 8%;
+	width: 73%;
+	/* width = 100% - description width */
+}
+
+article.notes img{
+	width:100%;
+	margin: 45px 0px;
+	/* border: 5px; */
+	border-color: #142428;
+	border-radius: 10px;
+}
+
+.solid{
+	position: relative;
+	border: 1.5px solid;
+	width: 199.6%;
+	left: -100%;
+}
+
+.dashed{
+	border-style: dotted;
+	border-width: 2px 0mm 0mm 0mm;
+}
+
+
+@media screen and (max-width: 800px){
+
+	header.index{
+		left: 0;
+		width: 100%;
+		height: 100px;
+	}
+
+	header.notes{
+		display: none;
+	}
+
+	nav.index{
+		position: absolute;
+		width: 100%;
+		top: 50px;
+		/* top = half header.index height */
+		height:50px;
+		/* height = header.index height - nav height */
+		font-size: 24px;
+	}
+
+	nav.notes{
+		position: absolute;
+		width: 100%;
+		height:50px;
+		/* height = header.index height - nav height */
+		font-size: 24px;
+		border: none;
+	}
+
+
+	nav ul{
+		float: left;
+		width: 100%;
+	}
+
+	nav ul li{
+		list-style: none;
+		position: relative;
+		display: inline;
+		float: left;
+		font-size: 20pt;
+		width: 25%;
+	}
+
+	nav ul li a{
+		display: block;
+		padding: 11px 24px;
+		text-align:center;
+	}
+
+	nav ul li ul{
+		position: absolute;
+		display: none;
+		background-color: #142428 ;
+		padding: 0;
+		border-radius: 0px 0px 8px 8px;
+	}
+
+
+	nav ul li:hover {
+		background-color: #525B56;
+		border-radius: 3px;
+	}
+
+	nav ul li ul li{
+		width: 100%;
+		border-radius: 6px;
+	}
+
+	nav ul li ul li a{
+		/* padding: 7px 0px 0px 15px; */
+		font-size: 15pt;
+	}
+
+	nav ul li ul li a:hover{
+		color: #BE9063;
+		background-color: #525B56;
+		border-radius: 3px;
+	}
+
+	main.index{
+		left: 0;
+		top: 100px;
+		/* top = header.index height */
+		width: 100%;
+		margin-bottom: 0;
+	}
+
+	main.notes{
+		left: 0;
+		top: 50px;
+		width: 100%;
+		margin-bottom: 0;
+	}
+
+	footer.notes{
+		position: relative;
+		top: 90px;
+		z-index: 1;
+	}
+
+	article.notes{
+		position: static;
+		float: none;
+		width: 100%;
+		right: 0;
+		/* width = 100% - description width */
+	}
+
+	article.notes img{
+		width:100%;
+		margin: 45px 0px;
+		/* border: 5px; */
+		border-color: #142428;
+		border-radius: 10px;
+	}
+
+	aside.notes{
+		position: static;
+		float: none;
+		width: 100%;
+	}
+
+	aside.notes ul li{
+		display: inline;
+	}
+
+}

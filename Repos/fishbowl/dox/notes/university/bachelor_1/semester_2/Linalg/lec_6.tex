@@ -1,0 +1,112 @@
+%%%\documentclass[a4paper,11pt,twoside]{report}
+
+%%%\input{../preamble.tex}
+
+%%%\begin{document}
+
+% cha
+\LARGE\textsc{Date: 2020-08-31} \\ \\ \LARGE\textsc{Announcements:} \\
+\small
+\textbf{Test: Friday, September 11th, or moved to Monday 14th if still catching up.}
+
+\textbf{Assignment: Sec 1.4 (1-4, 51-58)}
+
+
+\paragraph \hrule \paragraph \\ \fancyhead[R]{Lesson 6} \fancyhead[L]{Week 3}
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+
+\subsection{Matrix Arithmetic}%
+\label{sub:matrix_arithmetic}
+
+
+
+
+\begin{theorem}[1.4.1 Properties of matrix arithmetic]
+	Assuming that the sizes of the matrices are such that the indicated operations can be performed,
+	the following rules of matrix arithmetic are valid.
+	\begin{itemize}
+		\item $A + B = B + A$
+		\item $A + ( B + C ) = ( A + B ) + C$
+		\item $A(BC) = (AB)C$ \[ A_{m\times n}B_{n\times r}C_{r\times w}\] "Operations must be valid"
+		\item $A ( B + C) = AB + AC$
+		\item $(B+C)A = BA + CA$
+		\item $A(B-C) = AB -AC$
+		\item $(B-C)A = BA - CA$
+		\item $a(A+B) = aA + aB$
+		\item $a(A-B) = aA - aB$
+		\item $(a+b)A = aA + bA$
+		\item $(a-b)A = aA - bA$
+		\item $a(bC) = (ab)C$
+		\item $a ( BC) = (aB)C = B(aC)$
+	\end{itemize}
+\end{theorem}
+
+\subsubsection{How to Verify $a(A+B) = aA + aB$:}%
+\label{ssub:verify_}
+\begin{enumerate}
+	\item Must show that each side produces a matrix of the same size:
+
+let A be an $m\times n$ matrix.
+
+let B be an $m\times n$ matrix
+
+A+B is defined as an $m\times n$ matrix
+
+a(A+B) is defined and is an $m\times n$ matrix
+
+Let A be an $m\times n$ matrix. Let B be an $m\times n$ matrix
+
+$aA$ is an $m\times n$ matrix.
+
+ $aB$ is an $m\times n$ matrix.
+
+ $\boxed{aA + aB \:\text{is defined and is an }\:m\times n \:\text{matrix.}\:}$
+\item Show that the corresponding entries of each side are equal:
+
+	$a(A+B)$
+
+	$(a(A+B))_{ij} = a ( a_{ij}+ b_{ij})$ \{ALL SCALARS $\implies$
+
+		$= aa_{ij} + ab_{ij}$
+
+		$= a(A)_{ij} + a (B)_{ij}$
+
+		$= aA + aB$
+\end{enumerate}
+
+
+\begin{example}[Theorem 1.4.1]
+	Example to be done outside class. Prove 1.4.1 Theorems. 1.4.1c is the hardest.
+
+	Same thing with 1.4.2
+\end{example}
+
+\subsubsection{Inverse of a Matrix}%
+\label{ssub:inverse_of_a_matrix}
+
+\begin{definition}[Inverse Matrix]
+	If A is a square matrix, and if a matrix B of the same size can be found
+	such that $AB = BA = I$,
+	then A is said to be invertible (or nonsingular) and B is called the inverse
+	of A. If no such B can be found, then A is said to be not invertible or
+	singular.
+\end{definition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\newpage
+%%%\end{document}
+
+
+%LEAVE EMPTY ROW ABOVE THIS ONE

@@ -1,0 +1,147 @@
+%%%\documentclass[a4paper,11pt,twoside]{report}
+
+%%%\input{../preamble.tex}
+
+%%%\begin{document}
+
+\chapter{Average atomic mass}%
+\label{cha:average_atomic_mass}
+
+
+\LARGE\textsc{Date: 2020-05-19} \\ \LARGE\textsc{Anouncements:}
+
+make inkscape always open in workspace 3 \checkmark
+
+get inkscape shortcut manager configured
+
+\paragraph \hrule \paragraph \\ \fancyhead[R]{Lesson 2} \fancyhead[L]{Week 1}
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+
+\section{Introduction}%
+\label{sec:introduction}
+
+
+The periodic table we take for granted is the result of thousands of years of
+work trying to sort out the complexity of the physical world. How do you make
+sense of it?
+
+At the end of the day, we realized that the building blocks, elements, that
+make up matter are of a limited number, and they are disproportionately present.
+They have different properties and are themselves made up of other building blocks.
+
+With chemistry, we can start to make use of the math and physics to understand the
+world. On top of that, we build biology, based on molecular interactions.
+
+\section*{Elements and atoms}%
+\label{sec:Elements and atoms}
+Observe that different substances have different properties and they react with
+each other differently. Certain types of air particles\ldots it leads to a question
+. If we break down carbon to the smallest possible size that it would still have
+the properties of carbon. We call this an atom, the most basic unit of any
+element. They are unimaginably small. One hair is one million carbon atoms wide.
+
+\subsubsection*{The elements are related to each other}%
+\label{sec:The elements are related to eachother}
+A carbon atom is made up of the same subatomic particles as a gold atom.
+
+
+\subsubsection*{Proton}%
+\label{sec:Proton}
+
+The elements are written in order of atomic number, which is the number of
+protons in it's nucleus. Protons define the element.
+
+\subsubsection*{Neutrons}%
+\label{sec:section name{Neutrons}}
+Neutrons are in the nucleus and their number can change without changing the
+element. Example: \ce{^{12}_{6}C} and \ce{^{14}_{6}C}.
+\subsubsection{Electrons}%
+\label{ssub:electrons}
+
+These buzz around the nucleus and determine the net charge of the atom.
+
+
+
+To operate at such a small scale, we need to have some units of measurement.
+How to we define mass at the atomic scale. Historically, scientists have used the
+\textbf{unified atomic mass unit (amu)} and is defined as \[
+	u = 1.660540 \times 10^{-27} \text{kg}
+.\]
+
+This seems like a strange number. In fact, this deffinition makes it cleaner when
+talking about the mass of atoms. The mass of a proton is approximately $1u$ and
+a neutron is approximately $1u$
+
+The electron mass is almost $\frac{1}{2000}$ the mass of the proton and neutron.
+\section{Periodic table}%
+\label{sec:periodic_table}
+
+The number on top is the elements atomic number, i.e. the number of protons in the
+nucleus. But what would the mass of hydrogen be? There are different \textbf{isotopes}
+of hydrogen, the most common form has 1 proton, 0 neutrons, and 1 electron. It's mass
+is $\approx 1.008 u$. But the periodic table takes the weighted average of all isotopes
+to give the \textbf{average atomic mass}. Because they don't put units in, it's really the
+relative atomic mass.
+
+\section{Worked example: Atomic weight calculation}%
+\label{sec:worked_example_atomic_weight_calculation}
+
+If we look at this table, we see carbon-12 is the most common isotope on earth.
+\begin{table}[htpb]
+	\centering
+	\caption{Atomic mass}
+	\label{tab:Atomic mass}
+	\begin{tabular}{c l r}
+	$\ce{^{12}_{}C}$ $98.89\%$ & $12.0000$ amu \\
+	$\ce{^{13}_{}C}$ $1.110\%$ & $13.0034$ amu
+	\end{tabular}
+\end{table}
+
+The periodic table reports the atomic weight of carbon as 12.01. It is callculated
+by taking the weighted average of these two isotopes: \[
+0.9889 \cdot 12 + 0.0111 \cdot 13.0034 = 12.0111374 \approx 12.01
+.\]
+The difference in atomic mass is from the number of neutrons the isotope has.
+
+\section{The mole and Avogadro's number}%
+\label{sec:the_mole_and_avogadro_s_number}
+
+Here we connect the avg. atomic mass to the masses we will likely handle in a lab.
+The chemistry community has come up with the following tool, take Lithium for example:
+it has $6.94 \frac{u}{atom Li}$. How many atoms would a sample have it it had the mass
+$ 6.94 g$Li. This number, named Avogadro's number, is
+\noteworthy{
+\approx 6.022 \times 10^{23}
+}{Constant: Avogadro's number}
+
+One \textbf{mole} of an element is this many atoms of the element. In chemistry practice
+finding the number of moles is a useful thing, and finding the number of atoms is
+simply multiplying the number of moles by Avogadro's number. So to go from mass to
+moles, devide by molar mass. Then multiply by Avogadr's number if you want to know the
+number of atoms.
+
+\section{Atomic number, mass number, and isotopes}%
+\label{sec:atomic_number_mass_number_and_isotopes}
+
+\begin{definition}[atomic number (Z)]
+	The number of protons in a nucleus, the number of
+	electrons (in a neutral atom)
+\end{definition}
+\begin{definition}[isotope]
+	atoms of a single element (same atomic number) that differ
+	in the number of neutrons in their nuclei (different masses)
+\end{definition}
+
+
+
+
+
+
+
+
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\newpage
+%%%\end{document}
+
+
+%LEAVE EMPTY ROW ABOVE THIS ONE

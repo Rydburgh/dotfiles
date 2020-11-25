@@ -1,0 +1,92 @@
+%%%\documentclass[a4paper,11pt,twoside]{report}
+
+%%%\input{../preamble.tex}
+
+%%%\begin{document}
+
+\LARGE\textsc{Date: 2020-09-12} \\ \\ \LARGE\textsc{Announcements:} \\
+\small
+
+
+
+\paragraph \hrule \paragraph \\ \fancyhead[R]{Lesson 10} \fancyhead[L]{Week 2}
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+
+\subsection{Oscilating Circle}%
+\label{sub:oscilating_circle}
+
+\begin{definition}[Oscilating Circle]
+	The circle that lies in the oscilating plane of the curve at a point and has
+	the same tangent, lies on the concave side of the curve and has a radius of $\frac{1}{\kappa}$
+\smallskip\hfill$\bullet$\end{definition}
+
+To find a circle, you would need a center and the Radius. We know the radius is $\frac{1}{\kappa}$.
+To find the center, we must move the radius distance to the center from the edge touching the curve.
+This is in the direction of the unit normal vector.
+
+Scale the unit normal vector by the length of the radius:
+\[\frac{1}{\kappa}\overline{N}(t)\]
+
+So, the vector from the origin to the center is the vector from the origin to the point on the curve + $\frac{1}{\kappa} \overline{N}$
+
+
+\begin{example}[oscilating circle]
+	Given $y=4-x^2$, $\overline{r}(t) 0 \left<t, 4-t^2, 0 \right>$, find
+	the equation of the oscilating circle when t=0, at $(0,4)$
+\smallskip\hfill$\bullet$\end{example}
+
+\begin{solution}[oscilating circle]
+	\[\overline{r}(t) = \left<t, 4-t^2, 0 \right>\]
+	\[\kappa = \frac{\left| \overline{r}' \times  \overline{r}'' \right| }{\left| \overline{r}' \right|^3 }\]
+	\[\overline{r}' = \left< 1, -2t, 0 \right>\]
+	\[\overline{r}'' = \left< 0, -2, 0 \right>\]
+	\[\overline{r}' \times  \overline{r}'' = \begin{bmatrix} \hat{i} & \hat{j} & \hat{k} \\ 1 & -2t & 0 \\ 0 & -2 & 0\end{bmatrix} \]
+	\[= \left<0, 0, -2 \right>\]
+	\[\left| \overline{r}' \times \overline{r}'' \right| = 2\]
+	\[\left| \overline{r}'(t) \right| = \sqrt{1+4t^2} \]
+	\[\kappa = \frac{2}{(\sqrt{1+4t^2} )^3}\]
+	\[\kappa(0) = 2\]
+	\[\:\text{radius}\:= \frac{1}{2}\]
+	We know the normal vector is in the negative-y direction because this is a prabola centered on the axis.
+	\[\left<0, -1, 0 \right>\]
+
+	\[\left<0,4,0 \right> + \frac{1}{2}\left<0, -1, 0 \right> = \left<0, \frac{7}{2}, 0 \right>\]
+	\[(0,\frac{7}{2})\]
+	\[(x-h)^2 + (y-k)^2 = r^2\]
+	\[\boxed{x^2 + (y-\frac{7}{2})^2 = \frac{1}{4}}\]
+
+\smallskip\hfill$\bullet$\end{solution}
+
+\begin{example}[oscilating circle]
+	Given same as above, find oscilating circle at $(2, 0)$
+\smallskip\hfill$\bullet$\end{example}
+\begin{solution}[oscilating circle]
+	\[\kappa(2) = \frac{2}{(\sqrt{1+4(2)^2} )^3}\]
+	\[\frac{17\sqrt{17} }{2}\]
+	Center: $\left<2, 0, 0 \right> + \frac{17\sqrt{17} }{2}\overline{N}(t)$
+	We need principal normal unit vector at t=2.
+	\[\overline{T}(t) = \frac{1}{\sqrt{1+4t^2} }\left<1, -2t, 0 \right>\]
+	\[\overline{T}'(t) = \frac{1}{\sqrt{1+4t^2} }\left< 0, -2, 0 \right> - \frac{1}{2} ({1+4t^2})^{-\frac{3}{2}}(8t)\left< 1, -2t, 0 \right>\]
+	\[\overline{T}'(t) = \left<0,-\frac{2}{\sqrt{1+4t^2} }, 0 \right> + \frac{-4t}{\left( \sqrt{1+4t^2}  \right)^{3} }\left<1, -2t, 0 \right>\]
+	\[\overline{T}'(2) = \left<0,-\frac{2}{\sqrt{1+4(2)^2} }, 0 \right> + \frac{-4(2)}{\left( \sqrt{1+4(2)^2}  \right)^{3} }\left<1, -2(2), 0 \right>\]
+	\[\overline{T}'(2) = \left<-\frac{8}{17\sqrt{17} }, \frac{-2}{17\sqrt{17} }, 0 \right>\]
+	\[\left| \overline{T}'(2) \right| = \sqrt{\frac{64}{17^2*17} + \frac{4}{17^2*17}} = \frac{2}{17}\]
+	\[\overline{N}(2) = \frac{1}{\frac{2}{17}} \left<-\frac{8}{17\sqrt{17} }, -\frac{2}{17\sqrt{17} }, 0 \right>\]
+	\[\left<-\frac{4}{\sqrt{17} }, -\frac{1}{\sqrt{17} }, 0 \right>\]
+	Center: $\left<2,0,0 \right> + \frac{17\sqrt{17} }{2} \left<-\frac{4}{\sqrt{17} }, -\frac{1}{\sqrt{17} }, 0 \right>$
+	\[=\left<2, 0, 0 \right>+ \left<-34, -\frac{17}{2}, 0 \right>\]
+	\[=\left<-32, -\frac{17}{2}, 0 \right>\]
+	\[(x-h)^2 + (y-k)^2 = r^2\]
+	\[\boxed{(x+32)^2 + (y +\frac{17}{2})^2 = \frac{4913}{2}}\]
+
+\smallskip\hfill$\bullet$\end{solution}
+
+
+
+
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\newpage
+%%%\end{document}
+
+
+%LEAVE EMPTY ROW ABOVE THIS ONE

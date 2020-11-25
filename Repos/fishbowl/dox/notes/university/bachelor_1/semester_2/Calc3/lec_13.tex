@@ -1,0 +1,181 @@
+%%%\documentclass[a4paper,11pt,twoside]{report}
+
+%%%\input{../preamble.tex}
+
+%%%\begin{document}
+
+
+\LARGE\textsc{Date: 2020-09-20} \\ \\ \LARGE\textsc{Announcements:} \\
+\small
+
+
+
+\paragraph \hrule \paragraph \\ \fancyhead[R]{Lesson 13} \fancyhead[L]{Week 3}
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\section{Limits and Continuity}%
+\label{sec:limits_and_continuity}
+
+
+\[\lim_{(x,y) \to (a,b)}f(x,y) = L \]
+
+The limit either exists, or does not. But if it exists, the limit must be
+the same value from every direction in the Domain.
+
+
+\begin{example}[Limit - hard DNE]
+	\[\lim_{(x,y) \to (0,0)} \left(  \frac{2x^2y}{x^{4}y^2} \right)\]
+
+	At $(0,0)$ the function evaluates to $\frac{0}{0}$
+
+	\begin{itemize}
+		\item x axis $\to y = 0$
+
+		\[\lim_{x \to 0} \frac{2x^2 \cdot 0}{x^{4}+ 0}\]
+		\[= \lim_{x \to 0}  \frac{0}{x^{4}} = 0\]
+
+		\item y axis $\to x = 0$
+			\[\lim_{y \to 0} \frac{2 \cdot 0^2 \cdot y}{0^{4} + y^{2}}\]
+			\[= \lim_{y \to 0} \frac{0}{y^2} = 0\]
+
+			\item $y=kx$, k constant $\neq 0$
+				\[\lim_{x \to 0} \frac{2x^2 (kx)}{x^{4}+(kx)^2}\]
+				\[=\lim_{x \to 0} \frac{2kx^3}{x^{4}+k^2 x^2}\]
+				\[=\lim_{x \to 0} \frac{2kx}{x^{2}+k^2 }\]
+				\[=\lim_{x \to 0} \frac{0}{k^2 } = 0\]
+				\item $y = kx^2$
+					\[\lim_{x \to 0} \frac{2x^2(kx^2)}{x^{4}+(kx^2)^{2}}\]
+					\[\lim_{x \to 0} \frac{2kx^4}{x^{4}+k^2x^4}\]
+					\[\lim_{x \to 0} \frac{2k}{1+k^2} = \frac{2k}{1+k^2}\]
+
+
+	\end{itemize}
+					This breaks it. The z values approach differnt values, $\boxed{DNE}$
+\smallskip\hfill$\bullet$\end{example}
+
+\begin{example}[Limit - easy DNE]
+	\[\lim_{(x,y) \to (0,0)}\left( \frac{2x^2+y^2}{x^2+y^2} \right) \]
+	\begin{itemize}
+		\item x- axis $\to y = o$
+	\[\lim_{(x) \to 0}\left( \frac{2x^2+0^2}{x^2+0^2} \right) \]
+	\[=\lim_{(x) \to 0}\left( \frac{2x^2}{x^2} \right)  = 2\]
+	\item y axis $\to x = 0$
+		\[\lim_{y \to 0}\left( \frac{2(0)^2+y^2}{(0)^2+y^2} \right) \]
+		\[\lim_{y \to 0}\left( \frac{y^2}{y^2} \right) \]
+		\[\lim_{y \to 0}1 = 1 \]
+	\end{itemize}
+					This breaks it. The z values approach differnt values, $\boxed{DNE}$
+\smallskip\hfill$\bullet$\end{example}
+
+\begin{example}[Limit Exists - solution requires algebraic technique]
+	\[\lim_{(x,y) \to (0,0) }\left( \frac{x^2-xy}{\sqrt{x} -\sqrt{y} } \right) \]
+	Conjugate
+	\[=\lim_{(x,y) \to (0,0) }\left( \frac{(x^2-xy)(\sqrt{x} +\sqrt{y}) }{(\sqrt{x} -\sqrt{y}) (\sqrt{x} +\sqrt{y})} \right) \]
+	\[=\lim_{(x,y) \to (0,0) }\left( \frac{x(x-y))(\sqrt{x} +\sqrt{y}) }{x-y} \right) \]
+\[=\lim_{(x,y) \to (0,0) }\left(x(\sqrt{x} +\sqrt{y})\right) = \boxed{0} \]
+\smallskip\hfill$\bullet$\end{example}
+
+\begin{example}[Limit (Does Exist)]
+	\[\lim_{(x,y) \to (0,0)}\left( \frac{4xy^2}{x^2+y^2} \right) \]
+	\begin{itemize}
+		\item y-axis $\to x=0$
+	\[=\lim_{y \to 0}\left( \frac{0}{y^2} \right) = 0\]
+		\item x-axis $\to y=0$
+	\[=\lim_{y \to 0}\left( \frac{0}{x^2} \right) = 0\]
+		\item lines $y=kx$,$k\neq 0$
+	\[=\lim_{x \to 0}\left( \frac{4xk^2x^2}{x^2+k^2x^2} \right) \]
+	\[=\lim_{x \to 0}\left( \frac{4xk^2}{1+k^2} \right)  \]
+	\[=\lim_{x \to 0}\left( \frac{0}{1+k^2} \right) = 0 \]
+	\item $y=kx^2$, $k\neq 0$
+	\[=\lim_{x \to 0}\left( \frac{4xk^2x^4}{x^2+k^2x^4} \right) \]
+	\[=\lim_{x \to 0}\left( \frac{4k^2x^5}{x^2(1+k^2x^2)} \right) \]
+	\[=\lim_{x \to 0}\left( \frac{4k^2x^3}{1+k^2x^2} \right) = 0\]
+	In the interest of time, this limit does go towards zero, but can't be proven with this method.
+	\end{itemize}
+\smallskip\hfill$\bullet$\end{example}
+
+\subsection{Going Polar}%
+\label{sub:going_polar}
+
+
+\begin{example}[Limit (Same problem)]
+	\[\lim_{(x,y) \to (0,0)}\left( \frac{4xy^2}{x^2+y^2} \right) \]
+
+	\textbf{You can try to change the problem to Polar Coordinates}
+
+	This helps, because you only need r to go to 0
+
+	\[(x,y)\to(r,\theta)\]
+	\[x = r \cos \theta a\]
+	\[y = r \sin \theta a\]
+
+	\[\lim_{r \to 0}\left( \frac{4r \cos \theta (r \sin \theta )^2}{r^2 \cos^2 \theta +r^2 \sin^2 \theta } \right) \]
+	\[\lim_{r \to 0}\left( \frac{4r^3 \cos \theta \sin^2 \theta }{r^2 (\cos^2 \theta \sin^2 \theta) } \right) \]
+	\[\lim_{r \to 0}\left( \frac{4r^3 \cos \theta \sin^2 \theta }{r^2 } \right) \]
+	\[\lim_{r \to 0} 4r \cos \theta \sin^2 \theta = 4*0 * \:\text{finite}\: * \:\text{finite}\: = \boxed{0} \]
+
+\smallskip\hfill$\bullet$\end{example}
+
+\begin{definition}[Squeeze Theorem]
+	if $g(x)\le f(x) \le h(x)$ everywhere close to $a$,
+
+	except possibly at $a$.
+
+	and if $\lim_{x \to a g(x)}$ and $\lim_{x \to a} h(x)$ both exist and are equal, then
+
+	$\lim_{x \to a} f(x) $ must exist and equal the same value.
+\smallskip\hfill$\bullet$\end{definition}
+
+\subsection{Squeezing}%
+\label{sub:squeezing}
+
+
+\begin{example}[Limit (same problem)]
+	\[\lim_{(x,y) \to (0,0)}\left( \frac{4xy^2}{x^2+y^2} \right) \]
+
+	We suspect from previous attempts that the limit goes to zero.
+
+	If the absolute value goes to zero, $|\ldots| \to 0$, then $\ldots \to 0$
+
+	\[0 \le \left| \frac{4xy^2}{x^2+y^2} \right| = \left| 4x \cdot \frac{y^2}{x^2+y^2} \right| \]
+
+	$\frac{y^2}{x^2 + y^2}$ is always going to be less than or equal to one.
+
+	\[0 \le \left| \frac{4xy^2}{x^2+y^2} \right| = \left| 4x \cdot \frac{y^2}{x^2+y^2} \right| \le \left| 4x \right| \]
+	\[0 \le \left| \frac{4xy^2}{x^2+y^2} \right|  \le \left| 4x \right| \]
+
+	\[\lim_{(x,y) \to (0,0)} 0 = 0\]
+	\[\lim_{(x,y) \to (0,0)} \left| 4x \right|  = 0\]
+	\[\implies_{(\:\text{squeeze theorem}\:)} \lim_{(x,y) \to (0,0)} \left| \frac{4xy^2}{x^2+y^2} \right| = 0\]
+	therefore, \[\lim_{(x,y) \to (0,0)} \frac{4xy^2}{x^2+y^2}  = \boxed{ 0}\]
+
+\smallskip\hfill$\bullet$\end{example}
+
+\subsection{Continuous}%
+\label{sub:continuous}
+
+\begin{definition}[Continuous]
+	A function of two variables is called continuous at $(a,b)$ if \[
+	\lim_{(x,y) \to (a,b)} f(x,y) = f(a,b)\]
+	We say that $f$ is continuous on $D$ if it is continous at every point $(a,b)$ in D.
+	"If you know it is continuous, then you can interpret it this way"
+\smallskip\hfill$\bullet$\end{definition}
+\subsubsection{The followin are continuous on their domain}%
+\begin{enumerate}
+	\item Polynomial
+		\item Rational
+			\item Root
+				\item Trig
+					\item Inverse Trig
+						\item Exponential
+							\item Log
+\end{enumerate}
+\label{ssub:the_followin_are_continuous_on_their_domain}
+
+
+
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\newpage
+%%%\end{document}
+
+
+%LEAVE EMPTY ROW ABOVE THIS ONE

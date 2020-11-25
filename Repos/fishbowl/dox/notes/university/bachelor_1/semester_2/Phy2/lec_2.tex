@@ -1,0 +1,303 @@
+%%%\documentclass[a4paper,11pt,twoside]{report}
+
+%%%\input{../preamble.tex}
+
+
+%%%\begin{document}
+
+\chapter{Electric Fields Cont'd}%
+\label{cha:electric_fields_cont_d}
+
+
+\LARGE\textsc{Date: 2020-08-24} \\ \\ \LARGE\textsc{Announcements:} \\
+\small
+
+\paragraph \hrule \paragraph \\ \fancyhead[R]{Lesson 2} \fancyhead[L]{Week 2}
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+
+\section{Electric field lines}%
+\label{sec:electric_field_lines}
+
+\begin{definition}[Electric field line]
+	An imaginary line or curve whose tangent at any point is the direction of the electric field vector
+	at that point.
+\end{definition}
+
+% \begin{figure}[ht]
+%     \centering
+%     \incfig{electric-field-line}
+%     \caption{electric field line}
+%     \label{fig:electric-field-line}
+% \end{figure}
+
+\begin{itemize}
+	\item  Field lines always start at a positive charge and end at a negative charge and can never cross.
+	\item Show the direction of the electric field at each point.
+	\item Spacing gives idea of magnitude of field at each point.
+\end{itemize}
+
+\subsection{Electric field lines of a dipole}%
+\label{sub:electric_field_lines_of_a_dipole}
+
+\begin{definition}[Electric dipole]
+	A pair of equal and opposite electric charges.
+\end{definition}
+
+\begin{itemize}
+	\item The field radiates outward from the positive and towards the negative.
+\end{itemize}
+
+\begin{figure}[ht]
+	\centering
+	\incfig{dipole}
+	\caption{Dipole}
+	\label{fig:dipole}
+\end{figure}
+
+\begin{example}[1]
+	A positive point charge +Q is released from rest in an electric field. At any later time, the velocity
+	of the point charge
+
+	A. in the direction of the electric field?
+	B. opposite the direction of the electric field?
+	C. not enough information.
+\end{example}
+\begin{solution}[1]
+	The question does not state a uniform electric field, and remember field lines are not trajectories. C.
+\end{solution}
+
+\begin{example}[2]
+	What happens when I place an electric dipole in a uniform electric field pointing to the right.
+
+	Net Force? Net Torque?
+\end{example}
+
+\begin{solution}[2]
+	A.
+	The force on the positive point charge is $F_{+} = q E $ right.
+
+	The force on the negative point charge pole is $F_{-} = qE$ left.
+
+	$\implies F_{net} = 0$
+
+	B.
+	$ \tau = \overline{r} \times \overline{F} = r F \sin \theta $
+
+	$\tau_{+} = \left( \frac{d}{2} \right) (qE) \sin \theta $ into page
+
+	$\tau_{-}= \overline{r} \times \overline{F} = \left( \frac{d}{2} \right) (qE) \sin \theta$ into page
+
+	$\tau_{net}= qdE \sin \theta $ into page
+
+	\begin{definition}[Electric dipole moment]
+		\[\boxed{p = qd}\]
+		$\overline{p}$ points from $\boxed{-}$ to $\boxed{+}$
+
+		$\overline{p} \perp \overline{E}$ , max torque
+
+		$\overline{p} \parallel \overline{E}$ , minimum torque
+	\end{definition}
+
+\end{solution}
+
+$\tau _{net} = \overline{p} \times  \overline{E}$
+
+\subsection{Electric field due to a charge distribution}%
+\label{sub:electric_field_due_to_a_charge_distribution}
+
+\begin{itemize}
+	\item line of charge
+	\item ring of charge
+	\item disk of charge
+\end{itemize}
+
+\subsubsection{Line of charge}%
+\label{ssub:line_of_charge}
+
+\begin{figure}[ht]
+	\centering
+	\incfig{line-of-charge}
+	\caption{line of charge}
+	\label{fig:line-of-charge}
+\end{figure}
+
+\begin{example}[3]
+	What is the e-field? at point P?
+\end{example}
+
+\begin{solution}[3]
+	\begin{align*}
+		dE &=  \frac{k d Q}{r^2} \\
+		\int dE_{y} &= 0 \:\text{(symetry)}\: \\
+		dE_{x} &=  \frac{kdQ}{r^2} \cos \alpha \\
+		E_{x} &=  \int \frac{kdQ}{r^2} \cos \alpha \\
+		r^2 &=  x^2 + y^2 \\
+		\cos \alpha &= \frac{x}{r}  = \frac{x}{\sqrt{x^2 + y^2} }\\
+		\:\text{define linear charge density}\: \lambda &= \:\text{charge/length}\: \\
+		\lambda &= \frac{Q}{2a} \\
+		dQ &= \lambda dy \\
+		E_{x} &= \int \frac{k \lambda dy x}{(x^2+y^2)\sqrt{x^2+y^2} } \\
+			  &= \int_{-a}^{a}   \frac{k \lambda  x dy}{(x^2 + y^2)^{\frac{3}{2}}} \\
+		E_{x}&= \boxed{\frac{KQ}{x \sqrt{a^2+x^2} }} \\
+	\end{align*}
+
+\end{solution}
+
+\begin{figure}[ht]
+	\centering
+	\incfig{ring-of-charge}
+	\caption{ring of charge}
+	\label{fig:ring-of-charge}
+\end{figure}
+\begin{example}[4]
+	Ring of charge
+\end{example}
+
+\begin{solution}[4]
+	Practice problem.
+\end{solution}
+
+\begin{figure}[ht]
+	\centering
+	\incfig{disk-of-charge}
+	\caption{disk of charge}
+	\label{fig:disk-of-charge}
+\end{figure}
+
+\begin{example}[Disk of charge]
+
+	Find the electric field at point P.
+\end{example}
+
+\begin{solution}[Disk of charge]
+	\begin{align*}
+		dE_{x}&=  \frac{kdQ}{r^2} \cos \theta \\
+		r'^2 &= r^2 + x^2 \\
+		\cos \theta = \frac{x}{r'} &= \frac{x}{\sqrt{r^2  + x^2} } \\
+		\:\text{surface charge density}\: \sigma &=\frac{\:\text{charge}\:}{\:\text{area}\:} \\
+		dQ &= \sigma dA = \sigma 2\pi r dr \\
+		dA &= 2\pi r dr \\
+		\int d E_{x} &= \int_{0}^{R} \frac{k \sigma 2 \pi r dr}{r^2 + x ^2} \frac{x}{\sqrt{r^2 + x^2} }  \\
+		E_{x}&= \frac{\sigma}{2 \epsilon_{0}}\left[ 1 - \frac{1}{\sqrt{\frac{R^2}{x^2}+1} } \right]  \\
+	\end{align*}
+	further: think about R>>x
+\end{solution}
+
+\break
+\section{Chapter 22: Gauss's Law}%
+\label{sec:chapter_22_gauss_s_law}
+
+\subsection{Objectives}%
+\label{sub:objectives}
+
+\begin{itemize}
+	\item Define electric flux and calculate through surfaces
+	\item Define gauss's law
+		\begin{itemize}
+			\item used to determine charge distribution given known e-field
+			\item to determine field given charge distribution
+		\end{itemize}
+	\item know when Gauss's law can be used
+	\item Do calculations with Gauss's law
+\end{itemize}
+
+\subsubsection{Electric field due to a charged conducting sphere}%
+\label{ssub:electric_field_due_to_a_charged_conducting_sphere}
+
+We could use the electric field equations, but things get messy. Gauss's Law gives simplicity through symetry.
+
+\subsection{Intro to Gauss's law}%
+\label{sub:intro_to_gauss_s_law}
+
+\begin{itemize}
+	\item Given any general charge distribution, we surround it with an imaginary surface
+	\item We look at the field at various points on imaginary surface
+	\item GL is a relationship between the field at all points and total charge enclosed. it helps find the field
+		for symmetric charge distributions.
+\end{itemize}
+
+\subsection{Charge and electric flux}%
+\label{sub:charge_and_electric_flux}
+
+In boxes, there are positive charges within producing outward electric flux.
+
+When boxes have negative charge inside, there is an inward electric flux.
+
+When $\overline{E} = 0$ there is no electric flux in or out of the box.
+
+What happens if there is no net charge inside the box?
+\begin{itemize}
+	\item There is an electric field, but it flows in and out on either half
+	\item Thus no net electric flux into or out of box.
+\end{itemize}
+
+What happens if there is charge near the box, but not inside?
+
+\begin{itemize}
+	\item The net electric flux through the box is zero.
+	\end{itemize}\begin{figure}[ht]
+	\centering
+	\incfig{zero-net-flux}
+	\caption{zero net flux}
+	\label{fig:zero-net-flux}
+\end{figure}
+
+\subsubsection{Quantifying electric flux}%
+\label{ssub:quantifying_electric_flux}
+
+Net electric flux is \textbf{directly proportional} to net amount of charge within surface.
+
+Net electric flux is \textbf{independent} of the size of the closed surface.
+
+\begin{example}[]
+	Suppose a Gaussian surface with rectangular sides and positive point charge +q at it's center,
+	and the surface doubles, but charge remains +q, what happens to the flux?
+\end{example}
+
+\begin{solution}[]
+	Remains the same
+\end{solution}
+
+\begin{example}[]
+	Spherical Gaussian surface 1 has +q at it's center. Spherical Gaussian surface 2, same size encloses
+	the charge but is not centered on it. Compare flux through surface 1 and 2.
+\end{example}
+
+\begin{solution}[]
+	The same
+\end{solution}
+
+\subsubsection{Calculating electric flux}%
+\label{ssub:calculating_electric_flux}
+
+\begin{itemize}
+	\item Consider a surface
+	\item What affects amount of flux passing through surface?
+	\item "net" analogy
+\end{itemize}
+
+\begin{definition}[Electric flux]
+	\begin{align*}
+		\Phi_{E} &= \Sigma \overline{E}_{i}\cdot d \overline{A}_{i} \\
+				 &= \int E \cos \phi dA \\
+				 &= \int E_{\perp}dA \\
+				 &= \int \overline{E} \cdot d\overline{A}\\
+				 &\to \int \overline{E} \cdot d \overline{A} \left( \frac{Nm^2}{C} \right) \\
+	\end{align*}
+	\begin{description}
+		\item[$\Phi_{E}$ -] Electric flux through a surface
+		\item[$E$ -] Magnitude of Electric Field
+		\item[$\phi$ -] Angle between $\overline{E}$ and normal to surface
+			\item[$dA$ -] Element of surface area
+				\item[$E_{\perp}$ -] Component of $\overline{E}$ perpendicular to surface
+					\item[$d\overline{A}$ -] Vector element of surface area
+	\end{description}
+\end{definition}
+
+
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\newpage
+%%%\end{document}
+
+
+%LEAVE EMPTY ROW ABOVE THIS ONE

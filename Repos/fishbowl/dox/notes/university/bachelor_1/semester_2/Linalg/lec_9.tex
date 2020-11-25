@@ -1,0 +1,58 @@
+%%%\documentclass[a4paper,11pt,twoside]{report}
+
+%%%\input{../preamble.tex}
+
+%%%\begin{document}
+
+\LARGE\textsc{Date: 2020-09-09} \\ \\ \LARGE\textsc{Announcements:} \\
+\small
+
+
+
+\paragraph \hrule \paragraph \\ \fancyhead[R]{Lesson 9} \fancyhead[L]{Week 4}
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\subsection{Inversion Algorithm}%
+\label{sub:inversion_algorithm}
+
+To find the inverse of an invertible matrix A, find a sequence of Elementary row operations
+that reduce A to the Identity and then perform that same sequence of operations on
+$I_{n}$ to obtain $A^{-1}$
+
+\begin{example}[Inversion Algorithm]
+	\[A = \begin{bmatrix} 1 & 1 & 0 \\ -1 & 3 & 4 \\ 0 & 4 & 3 \end{bmatrix}  \]
+	\[R_1+R_2 \to R_1\]
+	\[A = \begin{bmatrix} 1 & 1 & 0 & | & 1 & 0 & 0\\ -1 & 3 & 4 & | & 0 & 1 & 1 \\ 0 & 4 & 3 & | & 0 & 0 & 1 \end{bmatrix}  \]
+	\[\to \begin{bmatrix} 1 & 1 & 0 & | & 1 & 0 & 0\\ 0 & 4 & 4 & | & 1 & 1 & 0 \\ 0 & 4 & 3 & | & 0 & 0 & 1 \end{bmatrix}  \]
+	\[\frac{1}{4} R_2 \to R_2\]
+	\[\to \begin{bmatrix} 1 & 1 & 0 & | & 1 & 0 & 0\\ 0 & 1 & 1 & | & \frac{1}{4} & \frac{1}{4} & 0 \\ 0 & 4 & 3 & | & 0 & 0 & 1 \end{bmatrix}  \]
+	\[-4 R_2 + R_3 \to R_3\]
+	\[\to \begin{bmatrix} 1 & 1 & 0 & | & 1 & 0 & 0\\ 0 & 1 & 1 & | & \frac{1}{4} & \frac{1}{4} & 0 \\ 0 & 0 & -1 & | & -1 & -1 & 1 \end{bmatrix}  \]
+	\[-R_3 \to R_3\]
+	\[\to \begin{bmatrix} 1 & 1 & 0 & | & 1 & 0 & 0\\ 0 & 1 & 1 & | & \frac{1}{4} & \frac{1}{4} & 0 \\ 0 & 0 & 1 & | & 1 & 1 & -1 \end{bmatrix}  \]
+	If a zero results in the main diagonal of the matrix you are inverting, it is not invertible.
+	\[-R_3 + R_2 \to R_2\]
+	\[\to \begin{bmatrix} 1 & 1 & 0 & | & 1 & 0 & 0\\ 0 & 1 & 0 & | & \frac{-3}{4} & \frac{-3}{4} & 1 \\ 0 & 0 & 1 & | & 1 & 1 & -1 \end{bmatrix}  \]
+	\[-R_2 + R_1 \to R_1\]
+	\[\to \begin{bmatrix} 1 & 0 & 0 & | & \frac{7}{4} & \frac{3}{4} & 1\\ 0 & 1 & 0 & | & \frac{-3}{4} & \frac{-3}{4} & 1 \\ 0 & 0 & 1 & | & 1 & 1 & -1 \end{bmatrix}  \]
+	\[\boxed{A^{-1} = \begin{bmatrix} \frac{7}{4} & \frac{3}{4} & 1\\ \frac{-3}{4} & \frac{-3}{4} & 1 \\ 1 & 1 & -1 \end{bmatrix} }\]
+	To prove it, multiply the origional by the inverse to get the identity:
+	\[A A^{-1} = I\]
+	\[A^{-1} A = I\]
+	\[A A^{-1} = \begin{bmatrix} 1 & 1 & 0 \\ -1 & 3 & 4 \\ 0 & 4 & 3 \end{bmatrix}\begin{bmatrix} \frac{7}{4} & \frac{3}{4} & 1\\ \frac{-3}{4} & \frac{-3}{4} & 1 \\ 1 & 1 & -1 \end{bmatrix} = \begin{bmatrix} 1& 0 & 0 \\ 0 1 & 0 \\ 0 & 0 & 1 \end{bmatrix} \]
+	\[ A^{-1} A= \begin{bmatrix} \frac{7}{4} & \frac{3}{4} & 1\\ \frac{-3}{4} & \frac{-3}{4} & 1 \\ 1 & 1 & -1 \end{bmatrix}\begin{bmatrix} 1 & 1 & 0 \\ -1 & 3 & 4 \\ 0 & 4 & 3 \end{bmatrix} = \begin{bmatrix} 1& 0 & 0 \\ 0 1 & 0 \\ 0 & 0 & 1 \end{bmatrix} \]
+\end{example}
+
+
+
+
+
+
+
+
+
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\newpage
+%%%\end{document}
+
+
+%LEAVE EMPTY ROW ABOVE THIS ONE

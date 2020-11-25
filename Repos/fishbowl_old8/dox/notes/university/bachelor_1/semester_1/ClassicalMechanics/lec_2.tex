@@ -1,0 +1,268 @@
+%%%\documentclass[a4paper,11pt,twoside]{report}o
+
+%%%\input{../preamble.tex}o
+
+%%%\begin{document}o
+
+\chapter{Kinematic formulas}%
+\label{cha:kinematic_formulas}
+
+\LARGE\textsc{Date: 2020-05-21} \\ \LARGE\textsc{Announcements:}
+
+\paragraph \hrule \paragraph \\ \fancyhead[R]{Lesson 2} \fancyhead[L]{Week 1}
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\section{What are the kinematic formulas?}%
+\label{sec:what_are_the_kinematic_formulas_}
+The kinematic formulas are how we relate the five kinematic (constant acceleration)
+variables below.
+\begin{table}[htpb]
+	\centering
+	\caption{Kinematic variables}
+	\label{tab:label}
+	\begin{tabular}{l l}
+		$\Delta x$ & Displacement \\
+		$t$ & Time interval \\
+		$v_0$ & Initial velocity \\
+		$v$ & Final velocity \\
+		$a$ & Constant acceleration
+	\end{tabular}
+\end{table}
+
+If acceleration is constant, we can use a kinematic formula to solve for the unknown. The
+kinematic formulas are written as the following four equations:
+\begin{align*}
+	v &= v_0 + at \\
+	\Delta x &= \left( \frac{v + v_0}{2} t \right) \\
+	\Delta x &= v_0 t + \frac{1}{2} a t^2 \\
+	v^2 &= v_0^2 + 2a \Delta x
+.\end{align*}
+
+\begin{definition}[Free flying object]
+	All free flying objects -- also called projectiles -- on Earth, regardless of mass,
+	have a constant downward acceleration due to gravity
+\end{definition}
+
+\begin{constant}[Acceleration due to gravity]
+	$g = 9.81 \frac{m}{s^2}$
+\end{constant}
+
+\section{Selecting kinematic formula}%
+\label{sec:selecting_kinematic_formula}
+
+Each formula is missing one variable, so we choose the one that has three variables we
+already know and the one we are looking for.
+\subsection{Problem solving tip:}%
+\label{sub:problem_solving_tip_}
+
+Note that each of the formulas is missing one of the variables:
+\begin{table}[htpb]
+	\centering
+	\caption{}
+	\label{tab:label}
+	\begin{tabular}{l c c}
+		1. & $v = v_0 + at$ & (This formula is missing $\Delta x$.)  \\
+		2. & $\Delta x = \left( \frac{v + v_0}{2} \right) t $ & (This formula is missing $a$.)   \\
+		3. & $\Delta x = v_0 t + \frac{1}{2} a t^2$   & (This formula is missing $v$.)  \\
+		4. & $v^2 = v_0^2 + 2a \Delta x$  &  (This formula is missing $t$.)\\
+	\end{tabular}
+\end{table}
+\section{Deriving the first kinematic formula, $v = v_0 + at$}%
+\label{sec:deriving_the_first_kinematic_formula_v_v_0_at_}
+
+This one is just a rearranged version of the definition of acceleration, \[
+	a = \frac{\Delta v}{\Delta t}
+	.\] Now we replace $\Delta v$ with the definition of the change in velocity. \[
+	a = \frac{v - v_0}{\Delta t}
+	.\] Finally solve for $v$ to get \[
+	v = v_0 + a \Delta t
+.\] and $\Delta t$ just becomes $t$ to arrive at the \textbf{first kinematic formula}
+\noteworthy{
+	v = v_0 +at
+}{first kinematic formula}
+
+\section{Deriving the second kinematic formula, $\Delta x = \left( \frac{v + v_0}{2} \right) t$}%
+\label{sec:deriving_the_second_kinematic_formula_delta_x_left_v + v_0_2_right_t_}
+
+Visualize this kinematic formula by looking at a velocity graph for an object
+with constant acceleration (constant slope) with some initial velocity. See figure \ref{fig:velocity-graph}
+
+\begin{figure}[ht]
+	\centering
+	\incfig{velocity-graph}
+	\caption{Velocity graph}
+	\label{fig:velocity-graph}
+\end{figure}
+
+The area under the graph gives displacement $\Delta x$. We can break this down into
+a rectangle and a triangle. The height of the blue rectangle is $v_0$, so its
+area is $v_0t$. The base of the red triangle is $t$ and its height
+is $v-v_0$, so the are of the triangle is $\frac{1}{2}t \left( v - v_0 \right) $.
+The total area will be \[
+	\Delta x = v_0t + \frac{1}{2} v t - \frac{1}{2} v_0 t
+	.\] We can simplify to get \[
+	\Delta x = \frac{1}{2} v t + \frac{1}{2} v_0 t
+.\] And finally rewrite the right side to get the \textbf{second kinematic formula}
+\noteworthy{
+	\Delta x = \left( \frac{v + v_0}{2} \right) t
+}{Second kinematic formula}
+
+\section{Deriving the third kinematic formula, $\Delta x = v_0t + \frac{1}{2} a t^2$}%
+\label{sec:deriving_the_third_kinematic_formula_delta_x_v_0t_1_2_a_t_2_}
+
+Reconsider the figure \ref{fig:velocity-graph}, since the area under the graph is
+the displacement, we can again use geometry to derive the following:
+\noteworthy{
+	\Delta x = v_0 t + a t^2
+}{Third kinematic formula}
+
+\section{Deriving the fourth kinematic formula, $v^2 = v_0^2 + 2a \Delta x$}%
+\label{sec:deriving_the_fourth_kinematic_formula_v_2_v_0_2_2a_delta_x_}
+
+To derive this formula, we start with the second kinematic formula: \[
+	\Delta x = \left( \frac{v + v_0}{2} \right) t
+.\] Then we eliminate $t$ from this formula by solving the first kinematic
+equation for $t$ to get $t = \frac{v -v_0}{a}$, then substituting this
+into the second formula: \[
+	\Delta x = \left( \frac{v + v_0}{2} \right) \left( \frac{v - v_0}{a} \right)
+	.\] Multiplying the fractions gives \[
+	\Delta x = \left( \frac{v^2-v_0^2}{2a} \right)
+.\] And now solve for $v^2$ to get the fourth kinematic equation.
+\noteworthy{
+	v^2 = v_0^2 +2a\Delta x
+}{Fourth kinematic formula}
+
+\section{Common confusion}%
+\label{sec:common_confusion}
+
+\paragraph{Don't forget}%
+\label{par:don_t_forget}
+\begin{itemize}
+	\item  These equations are only true when acceleration is constant.
+	\item Sometimes the known variables will not be explicitly given, but rather
+		implied by \textbf{codewords} like "starts from rest" or "comes to a stop"
+	\item All the variables but $t$ can be negative.
+	\item  The third kinematic formula, equation \ref{Third kinematic formula}, might
+		require the use of the \textbf{quadratic formula}.
+\end{itemize}
+
+\section{Examples}%
+\label{sec:examples}
+
+\begin{example}[First kinematic formula, $v = v_0 + at$]
+	A water balloon filled with Kool-Aid is dropped from the
+	top of a building. What is the velocity of the watter balloon
+	after falling for $t = 2.35$ s?
+\end{example}
+
+\begin{solution}[]
+	Assuming upward is the positive direction, our known variables are
+	\begin{table}[htpb]
+		\centering
+		\caption{}
+		\label{tab:label}
+		\begin{tabular}{l r}
+			$v_0 = 0$ & (Since the water balloon was dropped from rest.) \\
+			$t = 2.35 s$ & (This is the time interval after which we want the velocity.) \\
+			$a_g = -9.81 \frac{m}{s^2}$ & (This is implied by freely falling.)
+		\end{tabular}
+	\end{table}
+\end{solution}
+
+Use $y$ as the position variable because the motion is vertical. Since we don't know the
+displacement and weren't asked to find displacement, use the first kinematic formula, which
+is missing $\Delta y$.
+\begin{align*}
+	v &= v_0 +at \\
+	v &= 0 \frac{m}{s} + (-9.81 \frac{m}{s^2}(2.35 s) \\
+	v &=  -23.1 \frac{m}{s}
+\end{align*}
+
+\begin{note}[]
+	The final velocity was negative since the water balloon was heading downward.
+\end{note}
+
+\begin{example}[Second kinematic formula, $\Delta x = \left( \frac{v + v_0}{2} \right) t$]
+	A leopard is running at $6.20 \frac{m}{s}$ and then speeds up to $23.1 \frac{m}{s}$
+	in a time of $3.3 s$. How much ground did it cover?
+\end{example}
+\begin{solution}[]
+	Assume the initial direction is positive, our known variables are
+	\begin{align*}
+		v_0 &=  6.20 \frac{m}{s} \\
+		v &= 23.1 \frac{m}{s} \\
+		t &= 3.30 s
+	.\end{align*}
+	Since we don't know and aren't asked for acceleration, we use the second kinematic
+	formula for the horizontal direction, which is missing $a$.
+	\begin{align*}
+		\Delta x &=  \left( \frac{v + v_0}{2} \right) t \\
+		\Delta x &=  \left( \frac{23.1 \frac{m}{s} + 6.20 \frac{m}{s}}{2} \right) (3.30 s) \\
+		\Delta x &= 48.3 m
+	\end{align*}
+\end{solution}
+
+\begin{example}[third kinematic formula, $\Delta x = v_0t + \frac{1}{2} a t^2$]
+	A student throws her pencil straight up at $18.3 \frac{m}{s}$. How long
+	does it take the pencil to reach a point $12.2m$ higher than where
+	it was thrown?
+\end{example}
+\begin{solution}[]
+	Assuming upward is the positive direction, our known variables are
+	\begin{align*}
+		v_0 &=  18.3 \frac{m}{s} \\
+		\Delta y &=  12.2 m \\
+		a &= -9.81 \frac{m}{s}
+	.\end{align*}
+
+	Since we don't know and aren't asked for the final velocity, use the third
+	kinematic formula for the vertical direction:
+	\begin{align*}
+		\Delta y &=  v_{0_y} t + \frac{1}{2}a_y t^2 \\
+		\Delta y &= v_{0_y}t + \frac{1}{2}a_yt^2 \\
+	.\end{align*}
+\end{solution}
+
+\begin{note}[]
+	We cannot solve this algebraically if none of the terms are zero because it is a
+	quadratic equation, so we substitute the known values and solve with the quadratic equation:
+\end{note}
+\begin{align*}
+	0 &= \frac{1}{2}(-9.81 \frac{m}{s^2} + (18.3 \frac{m}{s}t - 12.2 m \\
+	t &= \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \\
+	t &= \frac{-18.3 \frac{m}{s} \pm \sqrt{(18.3 \frac{m}{s})^2 - 4 \left[ \frac{1}{2}(-9.81 \frac{m}{s^2})(-12.2m)\right]  }}{2\left[ \frac{1}{2}(-9.81 \frac{m}{s^2} \right] } \\
+	t &= 0.869s \:\text{and}\:t = 2.86 s
+.\end{align*}
+
+There are two answers, which tells us that the pencil reaches this height twice in it's trajectory. We will chose
+the smaller time $t = 0.869 s$
+
+\begin{example}[fourth kinematic formula, $v^2 = v_0^2 + 2a \Delta x$]
+A motorcyclist starts with a speed of $23.4 \frac{m}{s}$ and slows down over a length of $50.2 m$
+with a constant deceleration of magnitude $3.20 \frac{m}{s^2}$. Assume the it is moving forward
+the entire trip. What is the new velocity of the motorcycle after slowing down through the $50.2 m$?
+\end{example}
+\begin{solution}[]
+	Assume the initial direction of travel is the positive direction, our known variables are
+	\begin{align*}
+		v_0 &=  23.4 \frac{m}{s} \\
+		a &=  -3.20 \frac{m}{s^2} \\
+		\Delta x &= 50.2 m
+	.\end{align*}
+	Since we don't know and aren't asked to find the time, we use the fourth kinematic formula
+	for the horizontal direction
+	\begin{align*}
+		v_x^2 &=  v_{0x}^2 +2a_x\Delta x \\
+		v_{x} &=  \pm \sqrt{v_{0x}^2 + 2a_{x}\Delta x}  \\
+			  &\:\text{We will assume the positive answer}\: \\
+		v_{x} &=  \sqrt{v_{0x}^2 + 2a_{x}\Delta x}  \\
+		v_{x} &= \sqrt{(23.4 \frac{m}{s})^2 + 2(-3.20 \frac{m}{s^2})(50.2m)} \\
+		v_{x} &= 15.0 \frac{m}{s}
+	\end{align*}
+\end{solution}
+
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\newpage
+%%%\end{document}o
+
+
+%LEAVE EMPTY ROW ABOVE THIS ONE

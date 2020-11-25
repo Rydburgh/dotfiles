@@ -1,0 +1,152 @@
+%%%\documentclass[a4paper,11pt,twoside]{report}
+
+%%%\input{../preamble.tex}
+
+%%%\begin{document}
+
+% cha
+\LARGE\textsc{Date: 2020-09-02} \\ \\ \LARGE\textsc{Announcements:} \\
+\small
+
+As an exercise for the reader, theorems 1.4.7 - 1.4.9 should be examined.
+
+\textbf{Assignment: 1.4 (1-22, 25-28, 29-31, 39, 40, 45, 49, 50)}
+
+
+\paragraph \hrule \paragraph \\ \fancyhead[R]{Lesson 7} \fancyhead[L]{Week 3}
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+
+\section{Inverse}%
+\label{sec:inverse}
+
+\subsection{$4\times 4$ Example}%
+\label{sub:_4times_4_example}
+
+
+The matrix $A = \begin{bmatrix} a & b \\ c & d \end{bmatrix} $ is invertible
+if and only if $ad - bc$ $/= 0 $, in which case the inverse is given by the formula \[
+	A^{-1} \neq \frac{1}{ad-bc}\begin{bmatrix} d & -b \\ -c & a \end{bmatrix} \]
+
+	\begin{itemize}
+		\item $ad - bc$ is called the determinant of A, $det(A)$.
+	\end{itemize}
+
+\subsubsection{Identity Proof}%
+\label{ssub:identity_proof}
+
+\[ A A^{-1} = I\] \[A^{-1}A = I\]
+
+\[ \begin{bmatrix} a &b \\ c & d \end{bmatrix} \frac{1}{ad-bc}\begin{bmatrix} d & -b \\ -c & a \end{bmatrix} \]
+
+\[ \frac{1}{ad-bc}\begin{bmatrix} a &b \\ c & d \end{bmatrix} \begin{bmatrix} d & -b \\ -c & a \end{bmatrix} \]
+
+\[ \frac{1}{ad-bc}\begin{bmatrix} ad -bc & 0 \\ 0 & -bc + ad \end{bmatrix} \]
+
+\[ \frac{1}{ad-bc}\begin{bmatrix} ad -bc & 0 \\ 0 & -bc + ad \end{bmatrix} \]
+
+\[= \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} \]
+
+\begin{example}[]
+	Solve
+	\begin{align*}
+		2x + 3y &= 5 \\
+		-x + 7y &=  12 \\
+	\end{align*}
+
+	\[\begin{bmatrix} 2 & 3 \\ -1 & 7 \end{bmatrix}_{2\times 2} \begin{bmatrix} x \\ y \end{bmatrix}_{2\times 1} = \begin{bmatrix} 5 \\ 12 \end{bmatrix}_{2\times 1}  \]
+	\[ [A] [x] = b\]
+
+	If A is invertible:
+
+	\[A^{-1}Ax = A^{-1}b\]
+
+	The inverse must be a left side multiplication on both sides of equations.
+
+	\[x = A^{-1}b\]
+
+	\[\begin{bmatrix} x \\ y  \end{bmatrix} = \begin{bmatrix} \\ \end{bmatrix} \]
+
+	\begin{align*}
+	\begin{bmatrix} 2 & 3 \\ -1 & 7 \end{bmatrix}_{2\times 2} \begin{bmatrix} x \\ y \end{bmatrix}_{2\times 1} &= \begin{bmatrix} 5 \\ 12 \end{bmatrix}_{2\times 1}  \\
+	A^{-1} &=  \frac{1}{17}\begin{bmatrix} 7 & -3 \\ 1 & 2 \end{bmatrix} \\
+	\frac{1}{17}\begin{bmatrix} 7 & -3 \\ 1 & 2 \end{bmatrix} \begin{bmatrix} 2 & 3 \\ -1 & 7 \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} &= \frac{1}{17}\begin{bmatrix} 7 & -3 \\ 1 & 2  \end{bmatrix} \begin{bmatrix} 5 \\ 12 \end{bmatrix}  \\
+	\frac{1}{17}\begin{bmatrix} 17 & 0 \\ 0 & 17 \end{bmatrix} \begin{bmatrix} x \\ 7 \end{bmatrix} &= \frac{1}{17}\begin{bmatrix} -1 \\29 \end{bmatrix}  \\
+	\begin{bmatrix} x \\ y \end{bmatrix} &=  \begin{bmatrix} -\frac{1}{17} \\ \frac{29}{17} \end{bmatrix}
+	\end{align*}
+
+\end{example}
+
+\begin{theorem}[]
+	If B and C are both inverses of A, then $B = C$
+\end{theorem}
+
+\paragraph{Proof}
+	If B is an inverse of A, $AB = BA = I$
+
+	If C is an inverse of A, $AC = CA = I$
+
+	\[(BA)C = IC = C\]
+	\[B(AC) = BI = B\] \qed
+
+\begin{theorem}[]
+	If A and B are invertible matrices with the same size, then AB is invertible and
+	\[(AB)^{-1} = B^{-1}A^{-1}\]
+\end{theorem}
+
+\paragraph{proof}
+\[(AB)(AB)^{-1} = (AB) B^{-1}A^{-1} = (AI)A^{-1} = A A^{-1} = I\]
+\[(AB)^{-1}(AB) = B^{-1}A^{-1}AB = B^{-1}IB = I\]
+
+\begin{corollary}[]
+\[A_1,A_2,\ldots,A_{n}\] are all invertible matrices of the same size, then
+\[(A_1A_2 \ldots A_{n})\] is invertible and
+\[(A_1A_2 \ldots A_{n})^{-1}= A_{n}^{-1}A_{n-1}^{-1}\ldots A_{2}^{-1}A_1^{-1}\]
+\end{corollary}
+
+\begin{definition}[]
+	If A is a square matrix, then \[A^{n} = A A A \ldots A \{n factors\]
+
+		\[A^{0} = I\]
+
+		\[A^{-n} = (A^{-1})^{n} = A^{-1}A^{-1}\ldots A^{-1}\]
+\end{definition}
+
+\begin{theorem}[]
+	If A is invertible and n is a nonnegative integer, then:
+
+	$A^{-1}$ is invertible and $(A^{-1})^{-1} = A$.
+
+	$A^{n}$ is invertible and $(A^{n})^{-1} = A^{-n} = (A^{-1})^{n}$
+
+	$kA$ is invertible for any nonzero scalar $k$, and $(kA)^{-1} = k^{-1}A^{-1}$
+\end{theorem}
+
+\begin{theorem}[]
+	If the sizes of the matrices are such that the stated operations can be performed, then:
+	\begin{table}[htpb]
+		\centering
+		\caption{caption}
+		\label{tab:label}
+		\begin{tabular}{l l}
+			(a)	 &  $(A^{T})^{T} = A$ \\
+			(b)	 &  $(A+B)^{T} = A^{T} + B^{T}$ \\
+			(c)	 &  $(A-B)^{T} = A^{T} - B^{T}$ \\
+			(d)	 &  $(kA)^{T} =kA^{T}$ \\
+			(e)	 &  $(AB)^{T} = A^{T}B^{T}$ \\
+		\end{tabular}
+	\end{table}
+\end{theorem}
+
+\begin{theorem}[]
+	If A is an invertible matrix, then $A^{T}$ is also invertible and
+	\[(A^{T})^{-1} = (A^{-1})^{T}\]
+\end{theorem}
+
+
+
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\newpage
+%%%\end{document}
+
+
+%LEAVE EMPTY ROW ABOVE THIS ONE

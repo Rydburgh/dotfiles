@@ -1,0 +1,126 @@
+%%%\documentclass[a4paper,11pt,twoside]{report}
+
+%%%\input{../preamble.tex}
+
+%%%\begin{document}
+
+% cha
+\LARGE\textsc{Date: 2020-09-14} \\ \\ \LARGE\textsc{Announcements:} \\
+\small
+
+\textbf{Assignment: 1.8 1,3,5,7,9,11,15,17,19}
+
+
+\paragraph \hrule \paragraph \\ \fancyhead[R]{Lesson 12} \fancyhead[L]{Week 4}
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\section{(1.8) Matrix Transformations}%
+\label{sec:_1_8_matrix_transformations}
+
+\begin{definition}[Transformations]
+
+If $f$ is a function with Domain $\mathbb{R}^{n}$ and codomain $\mathbb{R}^{m}$, then we say that
+$f$ is a transformation from $\mathbb{R}^{n} \to \mathbb{R}^{m}$ or that $f$ maps from $\mathbb{R}^{n}$ to
+$\mathbb{R}^{m}$ which we denote by writing \[f: \mathbb{R}^{n} \to \mathbb{R}^{m}\]
+
+If $m=n$, then the transformation is sometimes called an operator on $\mathbb{R}^{n}$.
+\smallskip\hfill$\bullet$\end{definition}
+
+\begin{example}[transformations]
+	\begin{align*}
+		3x_1 + 4x_2 - 5x_3 + x_4 &= w_1 \\
+		7x_1 - 9x_2 + 3x_3 - x_4 &= w_2 \\
+		\implies \begin{bmatrix} w_1 \\ w_2 \end{bmatrix} &=
+		\begin{bmatrix} 3 & 4 & -5 & 1 \\ 7 & -9 & 3 & -1 \end{bmatrix}
+		\begin{bmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \end{bmatrix} \\
+	\end{align*}
+
+	4 dimensional space would be the domain, and this transformation maps it to an
+	output with a 2 dimensional codomain.
+	\[f: \mathbb{R}^2 \to \mathbb{R}^3\]
+\smallskip\hfill$\bullet$\end{example}
+
+\subsection{Matrix Transformation Notation}%
+\label{sub:matrix_transformation}
+
+When you can accomplish what you want to do with just one matrix multiplication:
+	\[w_{(m\times 1)} = A_{(m\times n)}x_{(n\times 1}\]
+
+Then this tranformation is called Matrix Transformation, can use Matrix Transformation Notation
+
+\[T_{A}: R^{n} \to R^{m}\]
+
+\[w = T_{A}(x)\]
+
+\begin{example}[Matrix transformations].
+
+	A)
+	\begin{align*}
+		w_1 &= x_1^2 + 3x_2 + x_3 \\
+		w_2 &= x_1^2 + 3x_2 x_3 \\
+	\end{align*}
+
+	B)
+	\begin{align*}
+		w_1 &=  4x_1 -2x_2 + x_3 \\
+		w_2 &= 5x_1 -7x_2 + 7x_3 \\
+	\end{align*}
+
+	A and B are both $\mathbb{R}^3 \to \mathbb{R}^2$
+
+	A) Very different situation
+	\[\begin{bmatrix} w_1 \\ w_2 \end{bmatrix} = \begin{bmatrix} x_1 & 3 & 1 \\ x_1 & 3 & -1 \end{bmatrix}
+	\begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} \]
+	This is a transformation, but we cannot use matrix multiplication so
+	all we can say is $f: \mathbb{R}^3 \to \mathbb{R}^2$
+
+
+	B)
+
+	\[\begin{bmatrix} w_1 \\ w_2 \end{bmatrix} = \begin{bmatrix} 4 & -2 & 1 \\ 5 & -7 & 7 \end{bmatrix}
+	\begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} \]
+
+	\[T_{A}: \mathbb{R}^3 \to \mathbb{R}^2\]
+	\[A = \begin{bmatrix} 4 & -2 & 1 \\ 5 & -7 & 7 \end{bmatrix} \]
+	\[w = Ax \]
+	\[w = T_{A}(x)\]
+
+\smallskip\hfill$\bullet$\end{example}
+
+
+\begin{example}[matrix transformations]
+	\begin{align*}
+		w_1 &=  6x_1 - 5x_2 + 7 \\
+		w_2 &=  x_2 - 3x_2 + 4 \\
+		w_3 &= x_1 - 7x_2 + 5 \\
+		\mathbb{R}^2 &\to \mathbb{R}^3 \\
+		\begin{bmatrix} w_1 \\w_2 \\w_3 \end{bmatrix} &=
+		\begin{bmatrix} 6 & -5 \\ 1 & -3 \\ 1 & -7 \end{bmatrix}
+		\begin{bmatrix} x_1 \\ x_2 \end{bmatrix} \\
+	\end{align*}
+\smallskip\hfill$\bullet$\end{example}
+
+\begin{theorem}[matrix transformation proporties]
+
+For every matrix A, the matrix transformation $T_{A}: \mathbb{R}^{n}\to\mathbb{R}^{m}$ has
+the following proporties:
+
+\begin{enumerate}
+	\item $T_{A}(0) = 0$
+	\item $T_{A}(kx) = k T_{A}(x)$
+	\item $T_{A}(x_1+x_2) = T_{A}(x_1) + T_{A}(x_2)$
+	\item $T_{A}(x_1 - x_2) = T_{A}(x_1) = T_{A}(x_2)$
+\end{enumerate}
+
+\smallskip\hfill$\bullet$\end{theorem}
+
+You should be able to identify the Domain and Codomain.
+Find matrix of transformation.
+Tell whether or not someting is a matrix transformation.
+
+
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\newpage
+%%%\end{document}
+
+
+%LEAVE EMPTY ROW ABOVE THIS ONE

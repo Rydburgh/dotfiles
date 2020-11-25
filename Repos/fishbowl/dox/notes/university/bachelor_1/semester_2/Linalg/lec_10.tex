@@ -1,0 +1,136 @@
+%%%\documentclass[a4paper,11pt,twoside]{report}
+
+%%%\input{../preamble.tex}
+
+%%%\begin{document}
+
+% cha
+\LARGE\textsc{Date: 2020-09-09} \\ \\ \LARGE\textsc{Announcements:} \\
+\small
+\textbf{Assignment: 1.6 1-19 odd}
+
+\textbf{Turn in posted Friday, due Monday at 4 pm}
+
+\textbf{Text chapter 1: 9/16}
+
+
+\paragraph \hrule \paragraph \\ \fancyhead[R]{Lesson 10} \fancyhead[L]{Week 4}
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+
+\section{More on Linear Systems and Invertible Matrices}%
+\label{sec:1_6}
+
+
+
+\begin{example}[Solving system using the inverse]
+	Solve:
+	\begin{align*}
+		2x + 6y + 6z &= 1 \\
+		2x + 7y + 6z &= 2 \\
+		2x + 7y + 7z &= 3 \\
+	\end{align*}
+
+	\[Ax = b\]
+
+	\[\begin{bmatrix} 2 & 6 & 6 \\ 2 & 7 & 6 \\ 2 & 7 & 7 \end{bmatrix} \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} 1 \\ 2 \\ 3  \end{bmatrix} \]
+
+	If $A^{-1}$ exists, \[A^{-1} Ax = A^{-1}b\]
+	\[x = A^{-1}b\]
+
+	\[ \frac{1}{2} R_1 \to R_1\]
+	\[-R_2 + R_3 \to R_3\]
+
+	\[\begin{bmatrix} 2 & 6 & 6 & | & 1& 0 & 0 \\ 2 & 7 & 6 &  | & 0 & 1 & 1 \\ 2 & 7 & 7 & | & 0 & 0 & 1 \end{bmatrix} \]
+	\[\to \begin{bmatrix} 1 & 3 & 3 & | & \frac{1}{2}& 0 & 0 \\ 2 & 7 & 6 &  | & 0 & 1 & 1 \\ 0 & 0 & 1 & | & 0 & -1 & 0 \end{bmatrix} \]
+
+	\[\to \begin{bmatrix} 1 & 3 & 0 & | & \frac{1}{2}& 3 & -3 \\ 0 & 1 & 0 &  | & -1 & 1 & 0 \\ 0 & 0 & 1 & | & 0 & -1 & 0 \end{bmatrix} \]
+	\[\to \begin{bmatrix} 1 & 0 & 0 & | & \frac{7}{2}& 0 & -3 \\ 0 & 1 & 0 &  | & -1 & 1 & 0 \\ 0 & 0 & 1 & | & 0 & -1 & 0 \end{bmatrix} \]
+	\[A^{-1} = \begin{bmatrix} \frac{7}{2} & 0 & -3 \\ -1 & 1 & 0 \\ 0 & -1 & 0 \end{bmatrix} \]
+
+	\[\begin{bmatrix} \frac{7}{2} & 0 & -3 \\ -1 & 1 & 0 \\ 0 & -1 & 0 \end{bmatrix} \begin{bmatrix} 2 & 6 & 6 \\ 2 & 7 & 6 \\ 2 & 7 & 7 \end{bmatrix} \begin{bmatrix} x \\ y \\ z  \end{bmatrix} = \begin{bmatrix} \frac{7}{2} & 0 & -3 \\ -1 & 1 & 0 \\ 0 & -1 & 0 \end{bmatrix} \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix} \]
+	check
+	\[\begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} -\frac{11}{2} \\ 1 \\ 1 \end{bmatrix}  \]
+	\[\boxed{\left(  -\frac{11}{2}, 1, 1 \right)}\]
+\end{example}
+
+\begin{theorem}[1.6.1]
+	A system of linear equations has zero, one or an infinite number of solutions.
+
+	\[Ax = b\]
+	\begin{description}
+		\item[A] has Reduced Row Eschelon form that is $I_{n}$.
+
+			or
+
+		\item[A] has Reduced Row Eschelon form that is not.
+
+	\end{description}
+	Suppose that $Ax = b$ has \textbf{two} solutions $x_1$ and $x_2$ (proof by contradiction)
+
+	We know
+	\begin{align*}
+		Ax_1 &= b \\
+		Ax_2 &= b \\
+		Ax_1 - Ax_2 &=  A(x_1-x_2) \\
+		b - b &= A (x_1 - x_2) \implies \\
+		A(x_1-x_2) &= 0 \\
+	\end{align*}
+	By equivalence principal, the matrix $x_1-x_2=0$ has only trivial solution $\implies \boxed{x_1 = x_2}$
+
+
+\end{theorem}
+
+If A is an $n \times n$ matrix, the following are equivalent
+\begin{enumerate}
+	\item A is invertible
+	\item $Ax = 0$ has only the trivial solution
+	\item The reduced row eschelon form is I
+	\item A is expressible as a product of Elementary matrices.
+	\item $Ax=b$ is consistent for every $n\times 1$ matrix b. (1 solution or an infinite)
+	\item $Ax = b$ has exactly one solution for every $n\times 1$ matrix b:
+		\begin{align*}
+			Ax &= b \\
+			x &= \boxed{A^{-1}b} \\
+		\end{align*}
+\end{enumerate}
+
+
+\subsection{A Fundamental Problem}%
+\label{sub:a_fundamental_problem}
+
+\begin{example}[A fundamental Problem]
+	Let A be a fixed $m \times n $ matrix. Find all $m\times 1$ matrices b such that
+	the system of equations $Ax = b$ is consistent.
+
+	\begin{align*}
+		 2 + y &=  b_1 \\
+		 -2y + 4z &= b_2 \\
+		 3x -2z &=   b_3\\
+		 \begin{bmatrix}  2 & 1 & 0 & | & b_1 \\0 & -2 & 4  & | & b_2 \\ 3 & 0 & -2 & | & b_3 \end{bmatrix} &\to \\
+		 \frac{1}{2} R_1 &\to R_1 \\
+		 \frac{-1}{2} R_2 &\to R_2 \\
+		 \begin{bmatrix}  1 & \frac{1}{2} & 0 & | &\frac{1}{2} b_1 \\0 & 1 & -2  & | & -\frac{1}{2}b_2 \\ 3 & 0 & -2 & | & b_3 \end{bmatrix} &\to \\
+		 -3 R_1 + R_3 &\to R_3 \\
+		 \begin{bmatrix}  1 & \frac{1}{2} & 0 & | &\frac{1}{2} b_1 \\0 & 1 & -2  & | & -\frac{1}{2}b_2 \\ 0 & -\frac{3}{2} & -2 & | & b_3 - \frac{3}{2}b_1 \end{bmatrix} &\to \\
+		 \begin{bmatrix}  1 & \frac{1}{2} & 0 & | &\frac{1}{2} b_1 \\0 & 1 & -2  & | & -\frac{1}{2}b_2 \\ 0 & 0 & -5 & | & b_3 - \frac{3}{2}b_1 - \frac{3}{4} b_2 \end{bmatrix} &\to \\
+	\end{align*}
+\end{example}
+
+\begin{example}[Different End of Fundamental problem]
+	\[\begin{bmatrix} 1 & 2 & 0 & b_1 \\ 9 & 1 & 0 & 2b_1 - 3b_2\\ 0 & 0 & 0 & b_1 - 3b_2 + b_3 \end{bmatrix} \]
+	\[\to b_1 - 3b_2 + b_3 = 0\]
+	\[\to   b_3 =  3b_2 - b_1 \]
+	\[\boxed{\begin{bmatrix} b_1 \\ b_2 \\ 3b_2 - b_1 \end{bmatrix} }\]
+\end{example}
+
+
+
+
+
+
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\newpage
+%%%\end{document}
+
+
+%LEAVE EMPTY ROW ABOVE THIS ONE

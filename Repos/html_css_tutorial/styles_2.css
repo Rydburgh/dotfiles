@@ -1,0 +1,11 @@
+div{
+	color: lightcoral;
+	border: 1px solid grey;
+	margin: 40px;
+	font-weight: bold;
+}
+/* not all properties are inherited, like border */
+p{
+	border: inherit;
+	margin: inherit;
+}

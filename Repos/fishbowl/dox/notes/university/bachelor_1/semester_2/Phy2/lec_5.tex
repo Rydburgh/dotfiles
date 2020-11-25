@@ -1,0 +1,247 @@
+%%%\documentclass[a4paper,11pt,twoside]{report}
+
+%%%\input{../preamble.tex}
+
+%%%\begin{document}
+
+\chapter{(24) Capacitors and Dielectrics}%
+\label{cha:_24_}
+
+
+\LARGE\textsc{Date: 2020-09-14} \\ \\ \LARGE\textsc{Announcements:} \\
+\small
+
+\textbf{Exam: Can start on Tuesday, (4 hour time limit) Due Sunday 11:59 PM (Chapter 21-23) 23 questions - 14 conceptual 9 problem solving
+	E field for point charges and charge distributions, relationship between force charge and electric field,
+	use gausses law for e field for symmetric charge distribution and find charge distribution, find potential
+	due to point charges, relationship between electric potential and electric potential energy, relationship
+between potential and electric field}
+
+\textbf{Lab: due Sep 21}
+
+\paragraph \hrule \paragraph \\ \fancyhead[R]{Lesson 5} \fancyhead[L]{Week 5}
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+
+
+\section{Capacitors and Capacitance}%
+\label{sec:capacitors_and_capacitance}
+
+\begin{definition}[Capacitor].
+
+	\begin{itemize}
+		\item Two conductors separated y an insulator (or vacume)
+		\item When \textbf{charged}, two conductors have equal magnitude and opposite sign
+		\item Zero net charge
+	\end{itemize}
+\smallskip\hfill$\bullet$\end{definition}
+
+\noteworthy{
+	C = \frac{Q}{V_{ab}}
+}{Capacitance of a capacitor}
+
+\begin{description}
+	\item[Q] Magnitude of charge on each conductor
+	\item[$V_{ab}$] Potential difference between $+Q$ and $-Q$
+\end{description}
+
+\noteworthy{
+	F = \frac{C}{V}
+}{Farad - Unit of Capacitance}
+
+\begin{definition}[Parallel plate capacitors].
+
+	\begin{itemize}
+		\item Two parallel conducting plates separated by a small distance compared to dimensions.
+		\item Uniform field and charge distribution over opposing surfaces.
+	\end{itemize}
+\smallskip\hfill$\bullet$\end{definition}
+
+
+\noteworthy{
+	C = \frac{Q}{V_{ab}} = \epsilon_0 \frac{A}{d}
+}{Capacitance of Parallel Plates}
+
+\begin{description}
+	\item[Q] Magnitude of charge on each plate
+	\item[A] Area of each plate
+	\item[d] Distance between plates
+\end{description}
+
+.
+
+The Electric field of parallel plates:
+\begin{align*}
+	\sigma &=   \:\text{charge}\:/\:\text{area}\:\\
+	E &= \frac{\sigma}{\epsilon_0} \\
+\end{align*}
+
+\section{Capacitors in Series and Parallel}%
+\label{sec:capacitors_in_series_and_parallel}
+
+
+\subsection{Capacitors in Series}%
+\label{sub:capacitors_in_series}
+
+\begin{itemize}
+	\item The capacitors have the same charge Q.
+	\item Their potential differences add:
+		\[V_{ac}+ V_{c b} = V_{ab}\]
+\end{itemize}
+
+\textbf{Finding Equivalent Capacitance: }
+
+The potential drop across both capacitors must be the sum of the potential drop across each.
+The charge on $C_1$ and $C_2$ must be the same for the individual capacitors.
+
+\begin{align*}
+	C &= \frac{Q}{V} \\
+	Q_1 &=  Q_2 \\
+	V_{ab} &=   V_1 + V_2\\
+	V &=  \frac{Q_1}{C_1}+ \frac{Q_2}{C_2} \\
+	V &= Q\left(  \frac{1}{C_1} + \frac{1}{C_2} \right) \\
+	\frac{V}{Q} &=  \frac{1}{C_1} + \frac{1}{C_2} \\
+	\frac{1}{C_{eq}} &=  \frac{1}{C_1} + \frac{1}{C_2} \\
+\end{align*}
+\noteworthy{
+	\frac{1}{C_{eq}}=  \frac{1}{C_1} + \frac{1}{C_2}
+}{Series Equivalent Capacitance}
+
+\subsection{Capacitors in Parallel}%
+\label{sub:capacitors_in_parallel}
+
+\begin{itemize}
+	\item Have same potential drop $V$.
+	\item Charge on each depends on its capacitance:
+		\[Q_1 = C_1V, Q_2 = C_2V\]
+\end{itemize}
+
+\textbf{Finding Equivalent Capacitance: }
+
+The potential drop across both capacitors must be the same. The charge on $C_1$ and $C_2$ must
+sum to the total charge.
+
+\begin{align*}
+	C &= \frac{Q}{V}\\
+	Q &=Q_1 + Q_2  \\
+	V_1 &= V_2 \\
+	Q &= C_1V_1 + C_2V_2 \\
+	C_{eq}V &= C_1V + C_2V \\
+	C_{eq} &= C_1 + C_2 \\
+\end{align*}
+
+\noteworthy{
+	C_{eq} = C_1 + C_2
+}{Parallel Equivalent Capacitance}
+
+\section{Energy Storage in Capacitors and Electric-Field Energy}%
+\label{sec:energy_storage_in_capacitors_and_electric_field_energy}
+
+
+\subsection{Energy Stored in a Capacitor}%
+\label{sub:energy_stored_in_a_capacitor}
+
+
+\noteworthy{
+	U = \frac{Q^2}{2C} = \frac{1}{2} C V^2 = \frac{1}{2}QV
+}{Capacitor Potential Energy}
+
+\begin{description}
+	\item[U] Potential energy stored in a capacitor
+	\item[Q] Magnitude of charge on each plate
+	\item[C] Capacitance
+	\item[V] Potential difference between plates
+\end{description}
+
+\subsubsection{Derivation of Capacitor Potential Energy}%
+\label{ssub:derivation_of_capacitor_potential_energy}
+
+Energy stored in capacitor? $\to$ Calculate work done to charge capacitor.
+
+$V = \frac{Q}{C}$ (Final charge is Q and final potential is V after charging)
+
+$v = \frac{q}{C}$ (v and q at some intermediate time)
+
+\begin{align*}
+	W &=  \Delta u = Q\Delta V \\
+	dW &=  v dq \\
+	\int dW &=  \int_{0}^{Q} \frac{q}{C}dq  \\
+W &=  \frac{q^2}{2C}\biggr\rvert_{0}^{Q}   \\
+W &= \frac{Q^2}{2C} \\
+\end{align*}
+
+\subsection{Electric-Field Energy}%
+\label{sub:electric_field_energy}
+
+energy density $= \frac{\:\text{energy}\:}{\:\text{volume}\:} = \frac{\frac{1}{2}CV^2}{Ad} = \frac{\frac{1}{2}\frac{\epsilon_0 A}{d}}{Ad}=$
+
+\noteworthy{
+	u = \frac{1}{2}\epsilon_0 E^2
+}{Electrical Density in Vacuum}
+
+\begin{description}
+	\item[u] Energy density for a vacuum
+	\item[E] Magnitude of electric field
+\end{description}
+
+
+\section{Dielectrics}%
+\label{sec:dielectrics}
+
+Most capacitors have noncuducting material between plates, such as Mylar.
+
+\subsubsection{Increasing Capacitance}%
+\label{ssub:increasing_capacitance}
+
+\begin{itemize}
+	\item Connect electrometer across a charged capacitor, with magnitude Q on each and potential
+		difference $V_0$
+	\item An uncharged sheet of dielectric between the plates, the potential difference decreases
+		to smaller V value.
+	\item Since Q is unchanged, capacitance $C = \frac{Q}{V}$ \textbf{increased}.
+	\item The field decreases due to \textbf{polarization} within the dielectric,
+		induced surface charges.
+		\[E = \frac{E_0}{K}\]
+		\begin{description}
+			\item[E] Decreased E-field
+		\end{description}
+		\begin{description}
+			\item[K] dielectric constant, unitless
+		\end{description}
+		\[V = Ed\]
+		\[\implies V = \frac{V_0}{K}\]
+		\[\implies C = KC_0\]
+\end{itemize}
+
+\noteworthy{
+\epsilon = K \epsilon_0
+}{Permitivity of a Dielectric}
+		\begin{description}
+			\item[K] dielectric constant, unitless
+		\end{description}
+
+
+\noteworthy{
+C = K C_0 = K \epsilon_0 \frac{A}{d = \epsilon \frac{A}{d}}
+}{Capacitance of parallel-plate capacotor, dielectric between plates}
+
+
+\noteworthy{
+u = \frac{1}{2}K \epsilon_0 E^2 = \frac{1}{2} \epsilon  E^2
+}{Electric energy density in a dielectric}
+
+
+
+
+
+
+
+
+
+
+
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\newpage
+%%%\end{document}
+
+
+%LEAVE EMPTY ROW ABOVE THIS ONE

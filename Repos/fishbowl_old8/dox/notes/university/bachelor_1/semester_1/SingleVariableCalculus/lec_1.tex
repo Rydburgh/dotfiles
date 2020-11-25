@@ -1,0 +1,139 @@
+%%%
+\documentclass[a4paper,11pt,twoside]{report}
+%%%
+\input{../preamble.tex}
+%%%
+\begin{document}
+\chapter{Unit 1: Differentiation}%
+\label{cha:unit_1_differentiation}
+
+
+\LARGE\textsc{Date: 2020-06-01} \\ \LARGE\textsc{Announcements:}
+
+
+
+\paragraph \hrule \paragraph \\ \fancyhead[R]{Lesson 1} \fancyhead[L]{Week 1}
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\section{A. What is a derivative?}%
+\label{sec:a_what_is_a_derivative_}
+
+\begin{itemize}
+	\item Geometric interpretation
+	\item Physical interpretation
+	\item Importance of derivatives to all measurements
+		\begin{itemize}
+			\item Science
+			\item Enineering
+			\item Econ
+			\item PolSci
+		\end{itemize}
+
+\end{itemize}
+\section{B. How to differentiate anything}%
+\label{sec:b_how_to_differentiate_anything}
+Example: $e^{x \arctan(x)}$
+
+\subsection{Geometric interpretation:}%
+\label{sub:geometric_interpretation_}
+
+Find the tangent line to $y = f(x)$ at $P = (x_0,y_0)$
+
+The tangent line is defined by the equation $y-y_0=m(x-x_0)$
+
+Point: $y_0=f(x_0)$
+
+Slope: $m=f'(x_0)$
+
+\begin{definition}[Derivative]
+	$f'(x_0)$, the derivative of $f$ at $x_0$, is the slope
+	of the tangent line to $y=f(x)$ at the point $P$
+\end{definition}
+
+Taken for granted the geometric interpretation, we know the line through a point,
+but we want to annalytically describe the tangent in a way that a machine could reproduce.
+
+First grasp this with language.
+
+$y-y_0 = m(x-x_0$
+
+point \[
+	y_0 = f(x_0)
+.\]
+
+slope: \[
+	m = f'(x_0)
+.\]
+
+\begin{definition}[Derivativ]
+	$f'(x_0)$, the derivative of $f$ at $x_0$, si the slope of the tangent line to
+	$y=f(x)$ at P.
+\end{definition}
+
+\begin{definition}[Tangent Line]
+	Limit of the secant lines $PQ$ as $Q\to P$ (P fixed)
+\end{definition}
+
+\subsection{Finding the Slope}%
+\label{sub:finding_the_slope}
+
+To find the slope between P and Q, we denote the horizontal distance as $\Delta x$,
+and the height as $\Delta f$
+
+The slope of the secand line is $\frac{\Delta  f}{\Delta x}$
+ The slope of the tangent line is
+
+ \noteworthy{
+m = \lim_{\Delta x \to 0 } \frac{\Delta f}{\Delta x}
+}{Slope of the tangent line}
+
+So we redefine the points P and Q to make this formula more usable, \[
+	P = (x_0,f(x_0)
+.\] \[
+Q = (x_0 + \Delta x, f(x_0+\Delta x)
+.\]
+\noteworthy{
+f'(x_0) = \lim_{\Delta x \to 0}\frac{f(x_0+\Delta x) - f(x_0)}{\Delta x}
+}{Limit definition of derivative}
+
+\begin{example}[Example 1]
+	$f(x) = \frac{1}{x}$
+\end{example}
+\begin{solution}[Example 1]
+	\begin{align*}
+		\frac{\Delta f}{\Delta x} &= \frac{\frac{1}{x_0+\Delta x}- \frac{1}{x_0}}{\Delta x} \\
+								  &= \frac{1}{\Delta x}\left( \frac{x_0-(x_0+\Delta x}{(x_0+\Delta x)x_0} \right) \\
+								  &= \frac{-1}{(x_0+\Delta x)x_{0}} \to (\Delta x \to 0) \to \\
+								  &= \frac{-1}{x_0^2}
+\end{align*}
+\end{solution}
+
+Note: The calculus part of calculus is easy, but it is made hard by the putting it in the
+context of everything learned up to that point.
+
+\begin{example}[Geometry problem]
+	Find areas of triangles enclosed by the axes and tangent to $y = \frac{1}{x}$
+\end{example}
+\begin{solution}[Geometry problem]
+	$y = \frac{1}{x}$
+
+	Pick a point $(x_0,y_0$ on this curve, and we must find the base and the height. Find the
+	formula for the tangent line:\[
+		y - y_0 = \frac{-1}{x_0^2}(x-x_0)
+	.\]
+	Find the x-intercept:
+	\begin{align*}
+		(y&= 0) \\
+		0- \frac{1}{x_0}&= \frac{-1}{x_0^2}(x-x_0) \\
+		&= \frac{-x}{x_0^2} + \frac{1}{x_0} \\
+		\frac{x}{x_0^2} &= \frac{2}{x_0} \\
+		&= 2x_0
+	\end{align*}
+\end{solution}
+
+
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\newpage
+%%%
+\end{document}
+
+%LEAVE EMPTY ROW ABOVE THIS ONE

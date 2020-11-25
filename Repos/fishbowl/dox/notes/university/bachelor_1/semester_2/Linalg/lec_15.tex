@@ -1,0 +1,81 @@
+%%%\documentclass[a4paper,11pt,twoside]{report}
+
+%%%\input{../preamble.tex}
+
+%%%\begin{document}
+
+
+\LARGE\textsc{Date: 2020-09-23} \\ \\ \LARGE\textsc{Announcements:} \\
+\small
+
+\textbf{Oct2 , Friday, Test CH2: 2.1, 2.2, 2.3}
+
+\textbf{HW: 2.2 1-21 Odd}
+
+
+\paragraph \hrule \paragraph \\ \fancyhead[R]{Lesson 15} \fancyhead[L]{Week 6}
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+
+\begin{example}[Determinant of 4x4]
+\[det(A) = |A|\]
+	\[A = \begin{bmatrix} 1 & 2 & 0 & 1 \\
+	2 & 0 & -1 & 5 \\ 3 & 0 & 1 & 4 \\
+ 	0 & 1 & 2 & -1\end{bmatrix} \]
+	\[\begin{bmatrix} + & - & & & \\ & + & & \\ & - & & \\ & + & & \end{bmatrix} \]
+
+	\[det(a) = -2\begin{bmatrix} 2 & -1 & 5 \\ 3 & 1 & 4 \\ 0 & 2 & -1 \end{bmatrix} + 0 = 0 +
+	1 \begin{bmatrix} 1 & 0 & 1 \\ 2 & -1 & 5 \\ 3 & 1 & 4 \end{bmatrix} \]
+	\[ = -2\left[ 0 -2(8 - 15) -1(2+3)  \right] 1\left[   1(-4-5) -0 +1(2 +3) \right] \]
+	\[= -2(14-5) + (-9+5) = -22\]
+\smallskip\hfill$\bullet$\end{example}
+
+\begin{theorem}[Determinant of triangular matrix]
+	If $A$ is an $n\times n$ triangular matrix (upper, lower, diagonal), then the $det(A)$ is the
+	product of the entries on the main diagonal.
+	\[detA = a_{11}a_{22}a_{33}\ldots a_{nn}\]
+\smallskip\hfill$\bullet$\end{theorem}
+
+\section{Evaluating Determinants by Row Reduction}%
+\label{sec:evaluating_determinants_by_row_reduction}
+
+\begin{theorem}[]
+	Let $A$ be an $n\times n$ matrix. If $A$ has a row of zeros, then $detA = 0$
+\smallskip\hfill$\bullet$\end{theorem}
+
+\begin{theorem}[]
+	Let $A$ be an $n\times n$ matrix. Then $detA = det(A^{T})$
+\smallskip\hfill$\bullet$\end{theorem}
+
+\begin{theorem}[]
+	Let $A$ be an $n\times n$ matrix.
+	\begin{enumerate}
+		\item If $B$ is the matrix that results when a single row or single column of
+			$A$ is multiplied by a scalar $k$, then
+			\[ detB = k detA.\]
+			\item If $B$ is the matrix that results when two rows or two columns
+				of $A$ are interchanged, then
+			\[ detB = - detA.\]
+			\item If $B$ is the matrix obtained when a multiple of one row or
+				one column is added to another, then
+				\[det B = det A\]
+	\end{enumerate}
+\smallskip\hfill$\bullet$\end{theorem}
+
+\begin{example}[]
+	\[A = \begin{bmatrix} 1 & 2 & 3 & 4  \\ 3 & 6 & 7 & 1 \\
+	4 & 8 & 9 & 2 \\ 5 & 3 & 1 & 7\end{bmatrix} \]
+	find $detA$
+\smallskip\hfill$\bullet$\end{example}
+
+
+
+
+
+
+
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\newpage
+%%%\end{document}
+
+
+%LEAVE EMPTY ROW ABOVE THIS ONE

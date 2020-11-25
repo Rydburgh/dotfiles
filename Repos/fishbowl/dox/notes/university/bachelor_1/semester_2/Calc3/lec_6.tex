@@ -1,0 +1,105 @@
+%%%\documentclass[a4paper,11pt,twoside]{report}
+
+%%%\input{../preamble.tex}
+
+%%%\begin{document}
+
+\LARGE\textsc{Date: 2020-09-11} \\ \\ \LARGE\textsc{Announcements:} \\
+\small
+
+
+
+\paragraph \hrule \paragraph \\ \fancyhead[R]{Lesson 6} \fancyhead[L]{Week 2}
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\section{13.3 Arc Length and Curvature}%
+\label{sec:13_3_arc_length_and_curvature}
+\subsection{Review}%
+\label{sub:review}
+
+
+\begin{description}
+	\item[dx form]
+		\[s = \int_{a}^{b} \sqrt{1 + (\frac{dy}{dx})^2}  dx\]
+	\item[dy form]
+		\[s = \int_{c}^{d} \sqrt{1 +(\frac{dx}{dy})^2} dy \]
+	\item[dt form]
+		\[s = \int_{t_0}^{t_1} \sqrt{(\frac{dx}{dt})^2 + (\frac{dy}{dt})^2} dt \]
+\end{description}
+
+\subsection{Calc 3 Version}%
+\label{sub:calc_3_version}
+
+
+
+\begin{definition}[Arclength of a Space Curve] .
+
+	\begin{description}
+		\item[Larange form]
+			\[s = \int_{t_0}^{t_1} \sqrt{(f'(t))^2 + (g'(t))^2 + (h'(t))^2} dt \]
+		\item[Leibnitz form]
+			\[s = \int_{t_0}^{t_1} \sqrt{(\frac{dx}{dt})^2 + (\frac{dy}{dt})^2 + (\frac{dz}{dt})^2} dt \]
+		\item[Vector form]
+			\begin{align*}
+				\overline{r}(t) &=  \left<f(t), g(t),h(t) \right> \implies \\
+				\overline{r}'(t) &=  \left<f'(t), g'(t),h'(t) \right> \implies \\
+				\left|   \overline{r}'(t) \right|&= \sqrt{  f'(t)^2+ g'(t)^2+h'(t)^2  }\\
+				s &= \int_{t_0}^{t_1} \left| \overline{r}' \right| dt  \\
+			\end{align*}
+	\end{description}
+\end{definition}
+
+\begin{example}[Find arclength$0 \le t \le 1$]
+	\begin{align*}
+		\overline{r}'(t) &=  \left<2, 2t, t^2 \right> \\
+		\left| \overline{r}'(t) \right| &= \sqrt{4 + 4t^2 +t^4}  \\
+										&= \sqrt{(t^2+2)^2}  \\
+										&= t^2 + 2 \\
+		s &= \int_{0}^{1} t^2 + 2 dt \\
+		  &= \frac{1}{3}t^3 + 2t \biggr\rvert_{0}^{1}   \\
+		  &= \boxed{\frac{7}{3}} \\
+	\end{align*}
+\end{example}
+
+\begin{definition}[Unit Vector]
+	\noteworthy{
+	\overline{T}(t) = \frac{1}{\left| \overline{r}'(t) \right| } \overline{r}'(t)
+}{Unit (Tangent) Vector}
+\smallskip\hfill$\bullet$\end{definition}
+
+\begin{definition}[Principle Unit Normal Vector]
+	\noteworthy{
+	\overline{N}(t) = \frac{1}{\left| \overline{T}'(t) \right| } \overline{T}'(t)
+	}{Normal Vector}
+\smallskip\hfill$\bullet$\end{definition}
+
+\begin{definition}[Binormal Vector]
+	\noteworthy{
+	\overline{B}(t) = \overline{T}(t) \times \overline{N}(t)
+	}{Binormal Vector}
+\smallskip\hfill$\bullet$\end{definition}
+
+\begin{example}[]
+	\[\overline{r}(t) = \left<2t, t^2, \frac{1}{3}t^3 \right>\]
+	\[\overline{r}'(t) = \left<2, 2t, t^2 \right>\]
+	\[\left|  \overline{r}'(t) \right| = t^2 +2\]
+	\[\overline{T}(t) = \frac{1}{t^2+2}\left<2,2t,t^2 \right>\]
+
+	\[\overline{T}'(t) = \frac{1}{t^2+2} \left<0, 2, 2t \right> -(t^2+2)^{-2}(2t)\left<2, 2t, t^2 \right>\]
+
+	\[\overline{T}'(t) = \left<0, \frac{2}{t^2+2}, \frac{2t}{t^2+2} \right> + \left< -\frac{4t}{(t^2+2)^2}, -\frac{4t^2}{(t^2+2)^2},-\frac{2t^3}{(t^2+2)^2}\right>\]
+	\[\overline{T}'(t) =\left< -\frac{4t}{(t^2+2)^2}, -\frac{-2t^2+4}{(t^2+2)^2},\frac{4t}{(t^2+2)^2}\right>\]
+	\[\overline{T}'(t) = \frac{1}{(t^2+2)^2}\left< -4t, -2t^2+4, 4t \right>\]
+
+\smallskip\hfill$\bullet$\end{example}
+
+
+
+
+
+
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\newpage
+%%%\end{document}
+
+
+%LEAVE EMPTY ROW ABOVE THIS ONE

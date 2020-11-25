@@ -1,0 +1,15 @@
+<main>
+for the main content of a webpage, unique to that page
+
+<section>
+Defines a certain section
+
+<article>
+defines a bit of content which makes up an article.
+
+<aside>
+defines some content related to something else, eg similar blogs
+
+<header> for the header of a site, continues nav/ title
+
+<footer>

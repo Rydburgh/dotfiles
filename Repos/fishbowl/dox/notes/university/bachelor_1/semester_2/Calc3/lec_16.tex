@@ -1,0 +1,72 @@
+%%%
+\documentclass[a4paper,11pt,twoside]{report}
+%%%
+\input{../preamble.tex}
+%%%
+\begin{document}
+
+\LARGE\textsc{Date: 2020-09-22} \\ \\ \LARGE\textsc{Announcements:} \\
+\small
+
+
+
+\paragraph \hrule \paragraph \\ \fancyhead[R]{Lesson 16} \fancyhead[L]{Week 4}
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\section{The Chain Rule}%
+\label{sec:the_chain_rule}
+
+\[y = f(g(x))\]
+
+let
+\begin{align*}
+	u = g(x) &\to \frac{\partial u}{\partial x} = g'(x) \\
+	y = f(u) &\to \frac{\partial y}{\partial u} = f'(u) \\
+\end{align*}
+
+\subsection{The Chain Rule (Case 1)}%
+\label{sub:the_chain_rule_case_1_}
+
+Suppose $z = f(x,y)$ is a differentiable function of $x$ and $y$, where $x$ and $y$ are
+differentiable functions of $t$, Then $z$ is a differentiable function of $t$ and \[
+\frac{dz}{dt} = \frac{\partial z}{\partial x} \cdot \frac{d x}{d t} + \frac{\partial z}{\partial y}\cdot \frac{d y}{d t} \]
+
+
+\begin{example}[Case 1 Chain Rule]
+	\begin{align*}
+	z&= x^2y + 3x^3y^{4} \\
+	x&= e^{2t} \\
+	y&= \cos t \\
+	\end{align*}
+	\begin{align*}
+		\frac{\partial z}{\partial x} &=  2xy + 9 x^2 y^{4} \\
+		\frac{\partial z}{\partial y} &=  x^2 + 12 x^3 y^{3} \\
+	\end{align*}
+	\begin{align*}
+		\frac{dx}{dt}&= 2e^{2t}\\
+		\frac{dy}{dt}&= -\sin t \\
+	\end{align*}
+
+	\begin{align*}
+		\frac{dz}{dt} &= (2xy + 9x^2y^{4})2e^{2t} + (x^2 + 12x^3y^3)\cdot -\sin t \\
+	\end{align*}
+\smallskip\hfill$\bullet$\end{example}
+
+\subsection{The Chain Rule (Case 2)}%
+\label{sub:the_chain_rule_case_2_}
+
+Suppose $z = f(x,y)$ is a differentiable function of $x$ and $y$, where $x= g(s,t)$ and $y = h(s,t)$ are
+differentiable functions of $t$, Then $z$ is a differentiable function of $s$ and $t$, Then
+
+
+
+
+
+
+
+
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\newpage
+%%%
+\end{document}
+
+%LEAVE EMPTY ROW ABOVE THIS ONE

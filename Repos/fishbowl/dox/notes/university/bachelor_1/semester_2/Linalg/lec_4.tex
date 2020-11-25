@@ -1,0 +1,192 @@
+%%%\documentclass[a4paper,11pt,twoside]{report}
+
+%%%\input{../preamble.tex}
+
+%%%\begin{document}
+
+
+
+\LARGE\textsc{Date: 2020-08-26} \\ \\ \LARGE\textsc{Announcements:} \\
+\small
+
+\textbf{Assignment: Set 1.3 (1-6, 11-16, 23, 24) }
+
+
+\paragraph \hrule \paragraph \\ \fancyhead[R]{Lesson 4} \fancyhead[L]{Week 2}
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+
+\section{Matrices and Matrix opperations}%
+\label{sec:matrices}
+
+
+\begin{definition}[Matrix]
+	A rectangular array of numbers.
+\end{definition}
+
+\[A = \begin{bmatrix}  1 & 3 & 5 \\ 4 & 7 & 9 \end{bmatrix}
+\]
+
+\[B = \begin{bmatrix} 1 & 2 \\ 3 & 4 \\ 5 & 6  \end{bmatrix} \]
+
+
+Size: \# Rows x \# Columns
+
+A : 2x3
+
+B : 3x2
+
+\begin{example}[A General matrix]
+
+
+A is $m \times n$ elements
+
+m-rows
+
+n-columns
+
+\[A = \begin{bmatrix} a_{11} & a_{12} & a_{13} & \ldots & a_1n \\
+a_{21} & a_{22} & a_{23} & \ldots & a_2n \\
+\ldots & \ldots & \ldots & \ldots & \ldots\\
+a_{m_1} & a_{m_2} & a_{m_3} & \ldots & a_{mn}\end{bmatrix} \]
+
+\end{example}
+
+\subsection{Square matrix}%
+\label{sub:square_matrix}
+
+\begin{definition}[Square Matrix]
+	a matrix where \#rows = \#columns
+
+	\[\begin{bmatrix} a_{11} & a_{22} & \ldots &a 1n \\
+	a_{21} & a_{22} & \ldots & a_{2n} \\
+\ldots & \ldots & \ldots & \ldots \\
+a_{m_1} & a_{m_2} & \ldots & a_{mn}\end{bmatrix} \]
+
+where $a_{11} \to a_{mn}$ is the main diagonal
+\end{definition}
+
+\subsection{Matrix Opperations}%
+\label{sub:matrix_opperations}
+
+
+
+\begin{theorem}[Matrix equality]
+	Two matrices are defined to be equal if they have the same size and their corresponding entries are equal.
+\end{theorem}
+
+\subsection{addition and subtraction}%
+\label{sub:addition_and_subtraction}
+
+\begin{theorem}[]
+The sum of matrices A and B is written $A + B$ and it is the matrix obtained by adding corresponding
+entries of two matrices of the same size.
+\end{theorem}
+
+\begin{example}[matrix addition]
+
+	\[\begin{bmatrix} 1& 2 & 3&4 \\5&6&7&8 \end{bmatrix} + \begin{bmatrix} -3&4&-7&8 \\ -1& 0 & 5 & 9 \end{bmatrix}  \]
+	\[= \begin{bmatrix}  -2 & 6 & -4 & 12 \\ 4 & 6 & 12 & 17 \end{bmatrix} \]
+\end{example}
+
+\subsubsection{Notation}%
+\label{ssub:notation}
+
+\begin{description}
+	\item[A -] entire matrix
+		\item[$a_{ij}$ -] individual entries
+		\item[$(A+B)_{ij}$ -] notation of entry addition $(A)_{ij} + (B)_{ij}$
+		\item[$(A-B)_{ij}$ -] $(A)_{ij - (B)_{ij}}$
+\end{description}
+
+
+\begin{example}[Matrix addition]
+	\[\begin{bmatrix}  1&3&4 \end{bmatrix} + \begin{bmatrix} -5&-7&9 \end{bmatrix} = \begin{bmatrix} -4&-4&13 \end{bmatrix} \]
+	\[\begin{bmatrix}  1&3&4 \end{bmatrix} - \begin{bmatrix} -5&-7&9 \end{bmatrix} = \begin{bmatrix} 6&10&-5 \end{bmatrix} \]
+\end{example}
+
+
+\subsection{Product of a scalar, c, and a Matrix, A}%
+\label{sub:product_of_a_scalar_c_and_a_matrix_a}
+
+The product of a scalar and a matrix, cA, is produced by multiplying each entry of A by c.
+
+\[(cA)_{ij} = c(A)_{ij}\]
+
+\begin{example}[]
+	\[A = \begin{bmatrix}  1 & 2 \\ 3 & 4 \\ 5 & 6 \end{bmatrix} \]
+	\[ B = \begin{bmatrix} -1 & 5 \\ -3 & 0 \\ 9 & 7 \end{bmatrix} \]
+	\[3A-B\]
+	\[   \begin{bmatrix} 3 & 6 \\ 9 & 12 \\ 15 & 18 \end{bmatrix} - \begin{bmatrix} -1 & 5 \\ -3 & 0 \\ 9 & 7 \end{bmatrix}  = \begin{bmatrix} 4 & 1 \\ 12 & 12 \\ 6 & 11 \end{bmatrix}     \]
+\end{example}
+
+
+\subsection{Product of matrices}%
+\label{sub:product_of_matrices}
+
+\begin{definition}[]
+	The producto of two matrices A and B, written AB, is only defined when the number of columns
+	of matrix A is equal to the number of rows of matrix B.
+	\[A_{m \times r} B_{r\times n}\]
+
+	The size of the product will be the rows of A by the columns of B.
+
+	\[C_{m \times n}\]
+\end{definition}
+
+\begin{example}[]
+	\[A_{3 \times 5} \:\text{and}\: B_{5\times 3}\]
+
+	5 and 5: this can be done.
+
+	3 and 3: the size of the result
+\end{example}
+
+\subsubsection{Getting the entries}%
+\label{ssub:getting_the_entries}
+
+To find the entries in Row i and Column j of AB, single out the ith row of A and the jth column of
+B, multiply their corresponding entries and add the results.
+
+
+\begin{example}[]
+	\[\begin{bmatrix} 3 & 4 \\ 2 & 1 \\ 3 & 2 \end{bmatrix}_{3\times 2}  \begin{bmatrix} -1 & 1 & 2 & 3 \\ 1 & 5 & -2 & 2 \end{bmatrix}_{2\times 4}\]
+\end{example}
+
+\begin{solution}[]
+	\[\begin{bmatrix} 3 \cdot -1 + 4 \cdot 1 & 3 \cdot 1 + 4 \cdot 5 & 3 \cdot 2 + 4 \cdot 2 & 9 + 8 \\ -2 + 1 & 2 + 5 & 4 + 2 & 6 + 2 \\
+	-3 + 2 & 3 + 10 & 6 + 4 & 9 + 4\end{bmatrix} \]
+	\[\begin{bmatrix} 1 & 23 & 14 & 17 \\ -1 & 7 & 6 & 8  \\ -1 & 13 & 10 & 13  \end{bmatrix} \]
+\end{solution}
+
+\begin{example}[]
+	\[A = \begin{bmatrix} 2 & 1 &3 \\ 4 & -1 & 7 \\ 2 & 1 & 9 \end{bmatrix} \]
+	\[X = \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} \]
+	\[Ax\]
+\end{example}
+\begin{solution}[]
+	\[Ax = \begin{bmatrix} 2x_1 + x_2 + 3x_3 \\ 4x_1 - x_2 +7 x_3 \\ 2x_1 + x_2 +9 x_3\end{bmatrix} \]
+\end{solution}
+
+
+\begin{definition}[Transpose of a matrix]
+	$A^T$ is the matrix obtained when the rows and columns of A are interchanged.
+\end{definition}
+
+\begin{example}[]
+	\[A = \begin{bmatrix}  1 & 2 & 5 \\ 9 & 3 & 1 \end{bmatrix} \]
+\end{example}
+\begin{solution}[]
+	$A^T = \begin{bmatrix} 1 & 9 \\ 2 & 3 \\ 5 & 1 \end{bmatrix} $
+\end{solution}
+
+
+
+
+
+
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\newpage
+%%%\end{document}
+
+
+%LEAVE EMPTY ROW ABOVE THIS ONE

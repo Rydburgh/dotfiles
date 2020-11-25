@@ -1,0 +1,99 @@
+%%%\documentclass[a4paper,11pt,twoside]{report}
+
+%%%\input{../preamble.tex}
+
+%%%\begin{document}
+
+
+
+\LARGE\textsc{Date: 2020-08-28} \\ \\ \LARGE\textsc{Announcements:} \\
+\small
+
+Exam date will be updeated on Blackboard today.
+\textbf{Assignmtent: first homework due Wednesday}
+
+\paragraph \hrule \paragraph \\ \fancyhead[R]{Lesson 5} \fancyhead[L]{Week 2}
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+
+
+
+\subsection{Trace of a Matrix}%
+\label{sub:trace_of_a_matrix}
+
+
+
+\begin{definition}[Trace]
+	If A is a square matrix, then the trace of the matrix, dentoed by $tr(A)$ is the
+	sum of the entries on the main diagonal.
+\end{definition}
+\[A = \begin{bmatrix}  1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix} \]
+\[tr(A) = 15\]
+\[A = \begin{bmatrix}  2 & 3 & 4 \\ 1 & 5 & 9 \end{bmatrix} \]
+\[tr(A) \:\text{not defined}\:\]
+
+\subsection{Linear Combinations}%
+\label{sub:linear_combinations}
+
+
+
+\begin{definition}[Linear combination]
+	If $A_1, A_2, \ldots, A_{r}$ are matrices of the same size and if $C_1, C_2, \ldots, C_{r}$ are
+	scalars, then an expression of the form \[ C_1A_1 + C_2A_2 + \ldots + C_rA_{r}\] is called
+	a linear combination of $A_1, A_2,\ldots,A_{r}$ with coefficients $C_1, C_2, \ldots, C_{r}$.
+\end{definition}
+
+
+\begin{theorem}[1.3.1]
+If A is an $m\times n$ matrix and if $x$ is an $n\times 1$ column vector, then
+the product $Ax$ can be expressed as a linear combination of the
+column vectors in $A$ in which the coefficients are the entries
+of $x$.
+\end{theorem}
+
+\[\begin{bmatrix} 1& 2 & 3 \\ 4 & 5 & 6 \end{bmatrix}  \begin{bmatrix} 3 & 1 \\ -1 & 2 \\ 5 & 9 \end{bmatrix} \]
+\[= \begin{bmatrix} 16 & 32 \\ 37 & 68 \end{bmatrix} \]
+
+We begin thinking about this in different ways.
+
+\[= \begin{bmatrix} 16 & 32 \\ 37 & 68 \end{bmatrix} \implies \begin{bmatrix} A_{b_1} & A_{b_2} \end{bmatrix}  \]
+
+In general: \[AB = A[b_1 b_2 \ldots b_{n}] = [Ab_1 Ab_2 \ldots Ab_{n}]\]
+
+Nothing says you can't partition differently.
+
+\[\begin{bmatrix} 1& 2 & 3 \\ 4 & 5 & 6 \end{bmatrix}  \begin{bmatrix} 3 & 1 \\ -1 & 2 \\ 5 & 9 \end{bmatrix} \]
+\[\implies \begin{bmatrix} a_1 \\ a_2 \end{bmatrix} B \]
+\[= \begin{bmatrix} a_1B \\ a_2B \end{bmatrix} \]
+
+\section{Inverse and Algebraic Properties of Matrices}%
+\label{sec:inverse_and_algebraic_properties_of_matrices}
+
+
+
+The idea behind this section is we want to see these matrices like numbers in arithmetic.
+
+\begin{definition}[zero matrix]
+	a matrix of all zero's.
+\end{definition}
+
+\begin{definition}[identity matrix]
+	An $n\times n$ identity matrix is a square matrix with 1's on the main diagonal and
+	0's everywhere else.
+\end{definition}
+
+\begin{definition}[Additive inverse]
+	\[A + (-A) = 0\]
+\end{definition}
+
+\begin{definition}[multiplication inverse]
+	$A^{-1}$
+\end{definition}
+
+
+
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\newpage
+%%%\end{document}
+
+
+%LEAVE EMPTY ROW ABOVE THIS ONE

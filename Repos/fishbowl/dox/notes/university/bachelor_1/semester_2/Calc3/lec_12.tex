@@ -1,0 +1,114 @@
+%%%\documentclass[a4paper,11pt,twoside]{report}
+
+%%%\input{../preamble.tex}
+
+%%%\begin{document}
+
+\chapter{(14) Partial Derivatives}%
+\label{cha:_14_partial_derivatives}
+
+
+\LARGE\textsc{Date: 2020-09-20} \\ \\ \LARGE\textsc{Announcements:} \\
+\small
+
+
+
+\paragraph \hrule \paragraph \\ \fancyhead[R]{Lesson 12} \fancyhead[L]{Week 3}
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\section{Functions of Several Variables}%
+\label{sec:functions_of_several_variables}
+
+A function of two variables is a rule that assigns to each ordered pair $(x,y)$ in a set
+$D$ a unique real number denoted by $f(x,y)$. The set $D$ is the Domain of $f$ and its
+Range is the set of values that $f$ takes on, that is $\{f(x,y) | (x,y) \in D\}$.
+
+\subsubsection{Single Variables}%
+\label{ssub:single_variables}
+
+
+\[y = f(x)\]
+\[(x,y)\]
+
+\[f(x) = x^2 - 2x + 3\]
+\[f(-3) = (-3)^2 -2(-3) + 3 = 18\]
+\[(-3,18)\]
+\subsubsection{Two Variables}%
+\label{ssub:two_variables}
+
+\[z = f(x,y)\]
+\[(x,y,z)\]
+
+\[f(x,y) = x^2y + xy\]
+\[f(-3,2) = (-3)^2(2) + (-3)(2) = 12\]
+
+\[(-3,2,12)\]
+
+
+These are both polynomial functions.
+
+A. Domain (1 variable): $(-\infty,\infty)$, All real numbers.
+
+B. Domain (2 variables): $\mathbb{R}^2$
+
+\[f(x) = \frac{\sqrt{x-3} }{x-7}\]
+need $x \ge 3$, $x \neq 7$
+\[[3,7)\cup (7,\infty)\]
+
+\[f(x,y) = \frac{\sqrt{x + y -1} }{x-y} \]
+need $y \ge -x +1$, $x \neq y$
+
+You could graph this domain in the x,y-plane
+
+\[f(x,y,z) = \ln (1 -x^2 -y^2 -z^2)\]
+need $x^2 + y^2 + z^2 < 1$
+
+Recognize special quadric surface, an elipsoid that is a sphere, and graph it
+
+with dotted surface to represent the domain.
+
+\subsection{Level Curve}%
+\label{sub:level_curve}
+
+The level curves of a function of two variables are the curves with equations $f(x,y) = k$ where
+$k$ is a constant in the Range of $f$.
+
+\begin{definition}[Contour Map]
+	A 2-d representation of a surface drawn with level curves.
+\smallskip\hfill$\bullet$\end{definition}
+
+\begin{example}[Unfamiliar surface]
+	\[f(x,y) = e^{x-y}\]
+	This will never output a value of 0 or negative.
+
+	\[1 = e^{x-y}\]
+	\[\ln1 = x-y\]
+	\[y=x\]
+
+	\[2 = e^{x-y}\]
+	\[\ln2 = x-y\]
+	\[y=x - \ln2\]
+
+	The larger the value $k$ gets, the more negative the y-intercept gets.
+
+	This resembles a slide that slopes towards the x-y plane.
+\smallskip\hfill$\bullet$\end{example}
+
+\begin{example}[]
+	\[f(x,y,z) = \sqrt{x^2+y^2-z} \]
+\textbf{Level surfaces}
+	\[0 = \sqrt{x^2+y^2-z} \]
+\[z = x^2 + y ^2 \]
+(paraboloid that maps to zero in 4-D) $(x,y,z,0)$
+	\[1 = \sqrt{x^2+y^2-z} \]
+\[z = x^2 + y ^2 -1 \]
+(paraboloid that maps to one in 4-D) $(x,y,z,1)$
+This paraboloid would shift down from input 0, and this could continue\ldots
+\[(x,y,z,k)\]
+\smallskip\hfill$\bullet$\end{example}
+
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\newpage
+%%%\end{document}
+
+
+%LEAVE EMPTY ROW ABOVE THIS ONE

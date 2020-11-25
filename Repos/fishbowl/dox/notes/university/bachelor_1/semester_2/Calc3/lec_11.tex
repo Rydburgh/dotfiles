@@ -1,0 +1,198 @@
+%%%\documentclass[a4paper,11pt,twoside]{report}
+
+%%%\input{../preamble.tex}
+
+%%%\begin{document}
+
+
+\LARGE\textsc{Date: 2020-09-12} \\ \\ \LARGE\textsc{Announcements:} \\
+\small
+
+
+
+\paragraph \hrule \paragraph \\ \fancyhead[R]{Lesson 11} \fancyhead[L]{Week 2}
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\section{13.4 Motion in Space}%
+\label{sec:13_4_motion_in_space}
+
+\subsection{Velcocity and Acceleration}%
+\label{sub:velcocity_and_acceleration}
+
+\begin{description}
+	\item[$\overline{r}(t)$] position
+	\item[$\overline{r}'(t)= \overline{v}(t)$] velocity
+	\item[$\overline{r}''(t) = \overline{v}'(t)=\overline{a}(t)$] acceleration
+		\item[$\left| \overline{v} \right| $] speed
+\end{description}
+
+
+\begin{example}[velocity]
+	givem $\overline{r}(t) = \left<t^2, 2t, \ln t \right>$, find $\overline{v}(t)$
+\smallskip\hfill$\bullet$\end{example}
+
+\begin{solution}[velocity]
+	\[\overline{v}(t) = \overline{r}'(t) = \left<2t, 2, \frac{1}{t} \right>\]
+\smallskip\hfill$\bullet$\end{solution}
+
+\begin{example}[speed]
+	Find speed
+\smallskip\hfill$\bullet$\end{example}
+
+\begin{solution}[speed]
+
+	\[\left| \overline{v}(t) \right| = \sqrt{4t^2 + 4 +\frac{1}{t^2}} \]
+	\[= \left| 2t + \frac{1}{t} \right| \]
+	Note: we need the absolute value unless we know the domain
+
+	Domain $\overline{r}(t)$ $t>0$ $(0,\infty)$
+	\[\boxed{2t + \frac{1}{t}}\]
+\smallskip\hfill$\bullet$\end{solution}
+
+\begin{example}[acceleration]
+	Find acceleration.
+\smallskip\hfill$\bullet$\end{example}
+
+\begin{solution}[acceleration]
+	\[\overline{a}(t) = \overline{v}'(t) = \left< 2, 0, -\frac{1}{t^2} \right>\]
+\smallskip\hfill$\bullet$\end{solution}
+
+\begin{example}[find position and velocity given acceleration]
+	Given $\overline{A}(t) = \left<t, e^{t}, e^{-t} \right>$ and $\overline{v}(0) = \left<0, 0, 1 \right>$, and
+	$\overline{r}(0) = \left< 0, 1, 1 \right>$, Find $\overline{v}(t)$ and $\overline{r}(t)$
+\smallskip\hfill$\bullet$\end{example}
+
+\begin{solution}[find position and velocity given acceleration]
+	\[\overline{v}(t) = \int \overline{a}(t) dt\]
+	\[= \left< \frac{1}{2}t^2, e^{t},-e^{-t} \right> + \left< c_1, c_2, c_3 \right>\]
+
+	Find constants:
+
+	\[\left<0, 0, 1 \right> = \left<0, 1, -1 \right> + \left<c_1, c_2, c_3 \right>\]
+	\[\left<0, 0, 1 \right> =\left<c_1, 1+c_2, -1 +c_3 \right>\]
+	\[\implies c_1=0, c_2=-1, c_3=2\]
+	\[\overline{v}(t) = \boxed{\left<\frac{1}{2}t^2, e^{t}-1, -e^{-t}+2 \right> }\]
+
+	\[\overline{r}(t) = \int \overline{v}(t) dt\]
+	\[=\left<\frac{1}{6}t^{3}, e^{t} - t, e^{-t + 2t} \right>+ \left<c_1,c_2,c_3 \right>\]
+	\[\left<0,1,1 \right> = \left<0, 1, 1 \right> + \left< c_1, c_2,c_3 \right>\]
+	\[\implies c_1=0,c_2=0, c_3=0\]
+	\[\overline{r}(t) = \boxed{\left<\frac{1}{6}t^{3}, e^{t} - t, e^{-t + 2t} \right> }\]
+\smallskip\hfill$\bullet$\end{solution}
+
+\subsection{Acceleration Vector}%
+\label{sub:acceleration_vector}
+
+\[\overline{T} = \frac{1}{\left| \overline{r}' \right| }\overline{r}'\]
+\[\overline{r}' = \left| \overline{r}' \right| \overline{T}\]
+\[\overline{v} = \left| \overline{v} \right| \overline{T}\]
+\[\overline{a} = \overline{v}'(t) = \left| \overline{v} \right| \overline{T}' + \left| \overline{v} \right|' \overline{T} \]
+We are trying to manufacture the unit normal vector for $\overline{T}'$
+
+\[\left| \overline{v} \right| \overline{T}' = \left| \overline{v} \right| \frac{\left| \overline{T}' \right| }{\left| \overline{T}' \right| }\overline{T}'\]
+\[\overline{N} = \frac{\overline{T}'}{\left| \overline{T}' \right| }\]
+
+\[\implies \overline{a} = \left| \overline{v} \right| \left| \overline{T}' \right| \overline{N} + \left| \overline{v} \right| ' \overline{T}\]
+We have a scalar times unit vector plus a scalar times a unit vector. Therefore, you can take the acceleration
+and break into two components, $a_{\overline{N}}$ which is the size of the acceleration that goes in the
+direction of the unit normal vector, and $a_{\overline{T}}$ which goes in the direction of
+the unit tangent vector.
+\[\to \overline{a} = a_{\overline{N}}\overline{N} + a_{\overline{T}}\overline{T}\]
+
+\subsubsection{$a_{\overline{N}}$}%
+\label{ssub:_a__n_}
+
+\[a_{\overline{N}} = \left| \overline{v} \right| \left| \overline{T}' \right| \]
+
+Going back to curvature:
+\[\kappa = \frac{\left| \overline{T}' \right| }{\left| \overline{r}' \right| } = \frac{\left| \overline{r}' \times \overline{r}'' \right| }{\left| \overline{r}' \right|^3}\]
+
+\[\left| \overline{T}' \right| = \frac{\left| \overline{r}' \times \overline{r}'' \right| }{\left| \overline{r}' \right|^2} \]
+
+\[a_{\overline{N}} =
+\left| \overline{r}' \right|
+\frac{\left|   \overline{r}' \times  \overline{r}''\right|}{\left| \overline{r}' \right|^2 }\]
+
+\noteworthy{
+a_{\overline{N}} =
+\frac{\left|   \overline{r}' \times  \overline{r}''\right|}{\left| \overline{r}' \right| }
+}{Normal component of the acceleration}
+
+
+\[\implies \overline{a} = \left| \overline{v} \right| \left| \overline{T}' \right| \overline{N} + \left| \overline{v} \right| ' \overline{T}\]
+
+What if we dot the velocity with the acceleration?
+
+\begin{align*}
+\overline{v} \cdot \overline{a} &=  \overline{v} \cdot \left( \left| \overline{v} \right| \left| \overline{T}' \right| \overline{N} + \left| \overline{v} \right| ' \overline{T} \right) \\
+&= \left| \overline{v} \right|
+\left| \overline{T}' \right|
+\left( \overline{v} \cdot \overline{N} \right)
++ \left| \overline{v} \right| '
+\left( \overline{v} \cdot \overline{T} \right)\\
+\end{align*}
+
+$\left( \overline{v} \cdot \overline{N} \right) \to \overline{r}' \cdot \overline{N}$
+$\to \frac{\left| \overline{r}' \right| }{\left| \overline{r}' \right| } \overline{r}' \cdot \overline{N}$
+$\to \left| \overline{r}' \right| \overline{T} \cdot \overline{N}$
+
+\begin{align*}
+	&= \left| \overline{r}' \right|^2 \left| \overline{T}' \right| \left( \overline{T} \cdot \overline{N} \right)
++ \left| \overline{v} \right| '
+\left( \overline{v} \cdot \overline{T} \right)\\
+	&= 0 + \left| \overline{v} \right| ' \left( \overline{v} \cdot \overline{T} \right)\:\text{(Tan and normal vectors orthagonal)}\: \\
+\overline{v} \cdot \overline{a}	&= \left| \overline{V} \right| ' \left( \overline{v} \cdot \overline{T} \right)  \\
+	\overline{r}' \cdot \overline{r}''&= \left| \overline{V} \right| ' \left( \overline{v} \cdot \overline{T} \right)  \\
+	\overline{r}' \cdot \overline{r}''&= \left| \overline{V} \right| ' \left( \overline{r}' \cdot \overline{T} \right)  \\
+\end{align*}
+$\overline{r}' \cdot \overline{T} \to \frac{\left| \overline{r}' \right| }{\left| \overline{r}' \right| } \overline{r} \cdot \overline{T}$
+$\to \left| \overline{r}' \right| \overline{T} \cdot \overline{T}$
+
+\begin{align*}
+	\overline{r}' \cdot \overline{r}''&= \left| \overline{V} \right| '  \left|   \overline{r}' \right|\overline{T} \cdot \overline{T}  \\
+	\overline{r}' \cdot \overline{r}''&= \left| \overline{V} \right| ' \left|   \overline{r}' \right| \left| \overline{T} \right|^2 \\
+\end{align*}
+$\left| \overline{T} \right|^2 = 1$
+
+\begin{align*}
+	\overline{r}' \cdot \overline{r}'' &=  \left| \overline{v} \right|' \left| \overline{r}' \right|  \\
+	\frac{\overline{r}' \cdot \overline{r}''}{\left| \overline{r}' \right| } &= \left| \overline{v} \right| ' \\
+\end{align*}
+
+\noteworthy{
+a_{\overline{T}} = \frac{\overline{r}' \cdot \overline{r}''}{\left| \overline{r}' \right| }
+}{Tangential component of acceleration}
+
+
+\begin{example}[Find components of acceleration]
+	Given $\overline{r}(t) = \left<t, 2e^{2t}, e^{-2t} \right>$, find tangential and normal components
+	of acceleration
+\smallskip\hfill$\bullet$\end{example}
+
+\begin{solution}[Find components of acceleration]
+	\begin{align*}
+		\overline{r}'(t) &=  \left<1, 4e^{2t}, -2e^{-25} \right>\\
+		\overline{r}''(t) &=  \left< 0, 8e^{2t}, 4e^{-2t} \right> \\
+		\overline{r}' \cdot \overline{r}'' &= 0 + 32 e^{4t} - 8e^{-4t} \\
+		&= 32 e^{4t }- 8e^{-4t} \\
+		&= 8e^{-4t}\left( 4e^{8t}-1 \right)  \\
+		\overline{r}' \times \overline{r}'' &= \begin{bmatrix} \hat{i} & \hat{j} & \hat{k} \\ 1 & 4e^{2t} & -2e^{-2t} \\
+		0 & 8e^{2t} & 4e^{-2t}\end{bmatrix}  \\
+		  &= \left<16 +16, -(4e^{-2t}), 8e^{2t}-0 \right> \\
+		  &= \left<32, -4e^{-2t}, 8e^{2t} \right> \\
+		  \left| \overline{r}' \times  \overline{r} ''  \right| &= \sqrt{32^2 + 16e^{-4t} + 64e^{4t}}  \\
+		  &=  \sqrt{16(64 + e^{-4t} + 4e^{4t}}\\
+		  &= 4 \sqrt{4e^{4t} + 64 + e^{-4t}}  \\
+		  \left| \overline{r}' \right| &= \sqrt{1^2 + (4e^{2t})^2 + (-2e^{-2t})^2}  \\
+		  &= \sqrt{1 + 16e^{4t}+ 4e^{-4t}}  \\
+	\end{align*}
+
+	\[\implies a_{\overline{T}}= \frac{  8 e^{-4t}(4e^{8t}-1) }{\sqrt{1 + 16e^{4t} + 4e^{-4t}} }\]
+	\[\implies a_{\overline{N}}= \frac{4\sqrt{4e^{4t}+64 + e^{-4t}} }{\sqrt{1 + 16e^{4t} + 4e^{-4t}} }\]
+\smallskip\hfill$\bullet$\end{solution}
+
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\newpage
+%%%\end{document}
+
+
+%LEAVE EMPTY ROW ABOVE THIS ONE

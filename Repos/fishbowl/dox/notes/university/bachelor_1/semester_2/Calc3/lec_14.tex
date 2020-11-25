@@ -1,0 +1,65 @@
+%%%\documentclass[a4paper,11pt,twoside]{report}
+
+%%%\input{../preamble.tex}
+
+%%%\begin{document}
+
+\LARGE\textsc{Date: 2020-09-20} \\ \\ \LARGE\textsc{Announcements:} \\
+\small
+
+
+
+\paragraph \hrule \paragraph \\ \fancyhead[R]{Lesson 14} \fancyhead[L]{Week 3}
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\section{Partial Derivatives}%
+\label{sec:partial_derivatives}
+
+\begin{definition}[Partial Derivative]
+\[z = f(x,y)\]
+
+The partial derivative of $f$ with respect to $x$
+\[f_{x} =  \frac{\partial f}{\partial x} = \frac{\partial z}{\partial x} = z_{x}\]
+
+How the output $z$ changes with respect to $x$ - the $y$ stays constant.
+
+\[\frac{\partial z}{\partial x} =\lim_{h \to 0} \frac{f(x +h, y) - f(x,y)}{h}\]
+\smallskip\hfill$\bullet$\end{definition}
+
+\begin{example}[Partial Derivative]
+	\[z = f(x,y) = x^2y^3\]
+	\[\frac{\partial z}{\partial x} = \lim_{h \to 0} \frac{(x+h)^2 y^3 - x^2y^3}{h}\]
+	\[= \lim_{h \to 0} \frac{y^3\left(  (x+h)^2 - x^2\right) }{h}\]
+	\[= y^3\lim_{h \to 0} \frac{  x^2+ 2xh +h^2 - x^2 }{h}\]
+	\[= y^3\lim_{h \to 0} \frac{ h( 2x +h ) }{h}\]
+	\[= y^3\lim_{h \to 0}  2x +h  = \boxed{2xy^3}\]
+\smallskip\hfill$\bullet$\end{example}
+
+\subsection{Higher Order Derivatives}%
+\label{sub:higher_order_derivatives}
+
+\begin{theorem}[Clairaut's Theorem]
+	Suppose that $f$ is defined on a disk $D$ that contains the point (a,b). If the
+	function $f_{xy}$ and $f_{yx}$ are both continuous on $D$, then the \[
+	f_{xy}(a,b) = f_{yx}(a,b)\]
+\smallskip\hfill$\bullet$\end{theorem}
+
+\begin{corollary}[Clairaut's Corollary]
+	\[f_{ x x y} = f_{xyx}= f_{yx x}\]
+	\[f_{ y y x} = f_{yxy}= f_{xy y}\]
+
+\smallskip\hfill$\bullet$\end{corollary}
+
+
+
+
+
+
+
+
+
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\newpage
+%%%\end{document}
+
+
+%LEAVE EMPTY ROW ABOVE THIS ONE

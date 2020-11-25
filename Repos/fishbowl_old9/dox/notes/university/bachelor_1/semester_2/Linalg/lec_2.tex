@@ -1,0 +1,287 @@
+%%%\documentclass[a4paper,11pt,twoside]{report}
+
+%%%\input{../preamble.tex}
+
+%%%\begin{document}
+
+\chapter{Systems of Linear Equations and Matrices (Cont'd)}%
+\label{cha:systems_of_linear_equations_and_matrices_cont_d_}
+
+
+\LARGE\textsc{Date: 2020-08-19} \\ \\ \LARGE\textsc{Announcements:} \\
+\small
+
+20 minutes missed in lecture time will be posted as a video later today on blackboard.
+
+\textbf{Assignment: Section 1.2 Numbers 5, 6, 7, 8
+}
+
+\paragraph \hrule \paragraph \\ \fancyhead[R]{Lesson 2} \fancyhead[L]{Week 1}
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\section{Introduction}%
+\label{sec:introduction}
+
+Working towards solving systems of equations in a systematic way, vs. the algebra days when
+you attack it at any angle with substitution and elimination. This systematic way is setting up
+for the theoretical
+\begin{example}[1]
+
+\begin{enumerate}
+	\item take a system of equation like this
+		\[
+			3x + 3y -2z = 13
+		\]
+		\[
+			6x + 2y -5z = 13
+			\] \[
+			7x + 5y - 3z = 26
+		\]
+	\item Use the algebraic operations:
+		\begin{enumerate}
+			\item Multiply an equation by a nonzero constant
+			\item  Interchange any equation
+			\item Add a constant times one equation to another equation
+		\end{enumerate}
+		$-1  E2 + E3 \to E3$
+		\begin{align*}
+			-6x - 2y + 5z &= 13 \\
+			7x + 5y - 3z &= 26\\
+			\cline{1-2} \\
+			x + 3y + 2z &= 13
+		\end{align*}
+
+
+		to get a variable in the first position with a coeficient of 1 (The equation you add to [ E3 ]
+		is always the equation you replace.)
+		\[
+			6x + 2y - 5z = 13
+			\] \[
+			3x + 3y - 2z = 13
+			\]	\[
+			x + 3y + 2z = 13
+		\]
+		Interchange to get the equation with coeficient 1 on top, denoted like this:
+
+		$E 1 \leftrightarrow E 3$
+		\[
+			x + 3y + 2z = 13
+			\]\[
+			6x + 2y - 5z = 13
+			\]\[
+			3x + 3y - 2z = 13
+		\]
+	\item Use the x to eliminate the x's from the other equations below.
+
+		$-6  E 1 + E 2 \to E 3$
+
+		$-3 E 1 + E 3 \to E 3$
+
+		\begin{align*}
+			x + 3y + 2z &= 13 \\
+			-16y - 17z &= -65 \\
+			-6y - 8z &= -26
+		\end{align*}
+
+	\item Get the next variable in column 2 with coeficient 1.
+
+		$\frac{-1}{16}E 2 \to E 2$
+		\begin{align*}
+			x + 3y& + 2z = 13 \\
+			y& + \frac{17}{16}z =  \frac{65}{16} \\
+			-6y& - 8z =  -26 \\
+		\end{align*}
+	\item Use the y to elimintate the y's from below.
+		\[
+			6 E 1 + E 3 \to E 3
+		\]
+		\begin{align*}
+			x + 3y + 2z& = 13 \\
+			y + \frac{17}{16}z& = \frac{65}{16} \\
+			-\frac{13}{8}z& =  -\frac{13}{8}\\
+		\end{align*}
+
+	\item Get the last variable in column 3 with coeficient 1. (Continue until diagonal of coeficient 1)
+
+		$\frac{-8}{13}E 3 \to E 3$
+		\begin{align*}
+			x + 3y + 2z& = 13 \\
+			y + \frac{17}{16}z& = \frac{65}{16} \\
+			z& =  1\\
+		\end{align*}
+	\item Work to eliminate variables from the bottom up.
+
+			$-\frac{17}{16}E 3 + E 2 \to E 2$
+
+		$-2 E 3 + E 1 \to E 1$
+		\begin{align*}
+			x + 3y &= 11 \\
+			y &= 3 \\
+			z &= 1
+		\end{align*}
+
+			$-3 E 2 + E 1 \to E 1$
+		\begin{align*}
+			x &= 2 \\
+			y &= 3 \\
+			z &= 1
+		\end{align*}
+
+	\item Write solution as ordered tripple: $(2,3,1)$
+
+\end{enumerate}
+
+\end{example}
+Because this system of equations could be written in this way, it has \textbf{only one} solution. There are
+other cases where there are problems in solving the system this way, a situation where there is no soution
+or infinite solutions.
+
+\begin{example}[2]
+
+	Solve:
+	\begin{align*}
+		x + y + z &= 1 \\
+		-2x + y + z &= -2 \\
+		3x + 6y + 6z &= 5
+	\end{align*}
+
+	$2E_1 + E_2 \to E_2$
+
+	$-3E_1 + E_3 \to E_3$
+
+
+	\begin{align*}
+		x + y + z &= 1 \\
+		 3y + 3z &= 0 \\
+		3y + 3z &= 2
+	\end{align*}
+
+	$\frac{1}{3}E_2 \to E_2$
+
+	\begin{align*}
+		x + y + z &= 1 \\
+		 y + z &= 0 \\
+		3y + 3z &= 2
+	\end{align*}
+
+	$-3E_2+E_3 \to E_3$
+
+	\begin{align*}
+		x + y + z &= 1 \\
+		 y + z &= 0 \\
+		 0 &= 2  \leftarrow \:\text{false, no solution}\:
+	\end{align*}
+
+	You could make the determination of no solution eariler, as soon as you catch the false statement.
+\end{example}
+
+\begin{example}[3]
+	\begin{align*}
+		2x -y _ z &= -1 \\
+		x +3y -2z &= 2 \\
+		-5x + 6y -5z &= 5 \\
+	\end{align*}
+
+	$E_1 \leftrightarrow E_2$
+
+	\begin{align*}
+		x +3y -2z &= 2 \\
+		2x -y + z &= -1 \\
+		-5x + 6y -5z &= 5 \\
+	\end{align*}
+
+
+$-2E_1 + E_2 \to E_2$
+
+$5E_1+E_3 \to E_3$
+
+	\begin{align*}
+		x +3y -2z &= 2 \\
+		-7y + 5z &= -5 \\
+		21y -5z &= 15 \\
+	\end{align*}
+
+	$\frac{-1}{7}E_2 \to E_2$
+
+	\begin{align*}
+		x +3y -2z &= 2 \\
+		y - \frac{5}{7}z &= \frac{5}{7} \\
+		21y -5z &= 15 \\
+	\end{align*}
+
+	$- 21 E_2 + E_3 \to E_3$
+
+	\begin{align*}
+		x +3y -2z &= 2 \\
+		y - \frac{5}{7}z &= \frac{5}{7} \\
+		0 &= 0 \\
+	\end{align*}
+
+Where the last equation is a \textbf{true} statement, but there is no coeficient of 1,
+is a situation where there are \textbf{infinite solutions}. You must continue to elimintate up with
+what you got.
+
+$ -3E_2+ E_1 \to E_1$
+
+	\begin{align*}
+		x + \frac{1}{7}z &= - \frac{1}{7} \\
+		y - \frac{5}{7}z &= \frac{5}{7} \\
+		0 &= 0 \\
+	\end{align*}
+
+	This is now in as few variables as possible, and can give us a final solution
+
+	\begin{align*}
+		x + \frac{1}{7}z = - \frac{1}{7} & \to \boxed{x = - \frac{1}{7} z - \frac{1}{7}}\\
+		y - \frac{5}{7}z =  \frac{5}{7} & \to \boxed{y =  \frac{5}{7} z + \frac{5}{7}}\\
+		0 &= 0
+	\end{align*}
+
+	$ \boxed{(x,y,z) = \left( - \frac{1}{7}z - \frac{1}{7}, \frac{5}{7}z + \frac{5}{7}, z \right)} $
+\end{example}
+
+Thinking about this solution in terms of vectors, $z(-\frac{1}{7}, \frac{5}{7}, 1) + (-\frac{1}{7},
+\frac{5}{5}, 0)$, this describes a line.
+
+\begin{example}[4]
+
+	\begin{align*}
+		x + 3y + 4z &= 1 \\
+		2x + 6y + 8z &= 2 \\
+		3x + 9y + 12z &= 3 \\
+	\end{align*}
+
+$ -2 E_1 + E_2 \to E_2$
+
+$-E_1+E_3\to E_3$
+
+	\begin{align*}
+		x + 3y + 4z &= 1 \\
+		0 &= 0 \\
+		0 &= 0 \\
+	\end{align*}
+
+	both equations with no variables are ture equations, therefore \textbf{infinite solutions}, and
+	we have one equations to solve for x.
+
+
+	$x + 3y + 4z = 1 \to x = -3y -4z +1$
+
+	$\boxed{\left( x,y,z \right) = \left( -3y + 4z +1, y, z \right) }$
+
+
+\end{example}
+
+	You can look at this as the sum of three vectors,
+
+	$(-3y, y, 0) + (-4z, 0, z) + (1, 0, 0)$
+	or $y(-3, 1, 0) + z(-4, 0, 1 ) + (1, 0, 0)$
+
+	This is just a geometric interpretation, whatever it means, but it is not a line
+
+
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\newpage
+%%%\end{document}
+
+
+%LEAVE EMPTY ROW ABOVE THIS ONE

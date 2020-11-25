@@ -1,0 +1,142 @@
+%%%\documentclass[a4paper,11pt,twoside]{report}
+
+%%%\input{../preamble.tex}
+
+%%%\begin{document}
+
+\chapter{Systems of Linear Equations and Matrices}%
+\label{cha:introduction}
+
+
+\LARGE\textsc{Date: 2020-08-17} \\  \\ \LARGE\textsc{Announcements:} \\
+\small
+\begin{itemize}
+	\item[Instructor -] Kathleen Kane
+	\item[Office Hours -] MWF 11:30am - 12:30pm TR 8:00am - 9:00 am
+		\item[Email -] kkane@ccac.edu
+		\item[Phone -] (412) 237-4511
+			\item[Book -] Elementary Linear Algebra: Applications Version by Howard Anton and Chris Rorries, 11th edition 9781118434413
+
+\end{itemize}
+\textbf{Assignment(Aug 19 08:50): practice uploading 3 scanned pages in a single pdf}
+
+
+\paragraph \hrule \paragraph \\ \fancyhead[R]{Lesson 1} \fancyhead[L]{Week 1}
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\section{Policies and Procedures}%
+\label{sec:policies_and_procedures}
+
+
+\subsection{Learning Outcomes}%
+\label{ssec:learning_outcomes}
+
+\begin{enumerate}
+	\item Perform basic operations with vectors in n-dimensional space.
+		\item Perform basic operations with matrices.
+			\item Solve a system of m linear equations in n unknowns.
+\item Prove basic theorems in a vector space.
+	\item Perform basic operations with vectors in the standard matrix spaces and function space.
+		\item Find the matrix repersentation of a linear transformation between two vector spaces.
+		\item Find eigenvalues and eigenvectors for a given matrix.
+			\item Perform basic operations in an inner product space
+				\item Prove basic theorems in an inner product space.
+\end{enumerate}
+\subsection{Evaluation}%
+\label{ssec:evaluation}
+
+\begin{enumerate}
+	\item Assignments (10\%)
+	\item Testes (70\%)
+	\item Final (weighted) (20\%)
+\end{enumerate}
+
+\subsection{Testing}%
+\label{sub:testing}
+
+\begin{enumerate}
+	\item Required to scan test and submit via pdf
+	\item 50 minutes each test and 10 minutes to submit test
+	\item No make up tests
+	\item One test may be substituted with final exam grade
+	\item Missing final is automatic F.
+\end{enumerate}
+
+\section{Introduction to Systems of Linear Equations and Matrices}%
+\label{sec:systems_of_linear_equations_and_matric}
+
+\begin{example}[One solution]
+
+Solve:
+\begin{align*}
+	3x + y &= 6 \\
+	5x -3y &= 10
+\end{align*}
+\end{example}
+
+\begin{solution}[]
+	\begin{align*}
+		3x + y &= 6 \implies \\
+		9x + 3y &= 18 \\
+		+[5x -3y &= 10] \\
+		\cline{1-2}
+		14x &= 28 \implies \\
+			&\boxed{x = 2}
+	\end{align*}
+\end{solution}
+\begin{figure}[ht]
+    \centering
+    \incfig{one-solution}
+    \caption{one solution}
+    \label{fig:one-solution}
+\end{figure}
+
+\begin{example}[Infinite solutions]
+	Solve:
+\begin{align*}
+	2x - y &= 7 \\
+4x - 2y &= 14
+\end{align*}
+
+\end{example}
+
+\begin{solution}[]
+	\begin{align*}
+		4x - 2y &= 14 \implies \\
+	2x - y &= 7 \\
+	-[2x - y &= 7] \\
+	\cline{1-2}
+			 &\boxed{0=0}\:\text{(no solution)}\:
+	\end{align*}
+\end{solution}
+\begin{figure}[ht]
+    \centering
+    \incfig{infinite-solutions}
+    \caption{infinite solutions}
+    \label{fig:infinite-solutions}
+\end{figure}
+
+\begin{example}[No solutions]
+	\begin{align*}
+		2x - y &= 6 \\
+		4x - 2y &= 6
+	\end{align*}
+\end{example}
+
+\begin{solution}[]
+	\begin{align*}
+		[4x - 2y &= 6] \implies \\
+		2x - y &= 3 \\
+		-[2x - y &= 6] \\
+		\cline{1-2}
+				 &\boxed{0=-3}\:\text{(false equation)}\:
+	\end{align*}
+\end{solution}
+
+
+
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\newpage
+%%%\end{document}
+
+
+%LEAVE EMPTY ROW ABOVE THIS ONE

@@ -1,0 +1,96 @@
+%%%\documentclass[a4paper,11pt,twoside]{report}
+
+%%%\input{../preamble.tex}
+
+%%%\begin{document}
+
+% cha
+\LARGE\textsc{Date: 2020-09-04} \\ \\ \LARGE\textsc{Announcements:} \\
+\small
+\textbf{Assignment: section 1.5 (1-20)}
+
+Watch weekend video.
+
+
+
+\paragraph \hrule \paragraph \\ \fancyhead[R]{Lesson 8} \fancyhead[L]{Week 3}
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+
+\section{Elementary Matrices and Methods for Finding $A^{-1}$}%
+\label{sec:elementary_matrices_and_methods_for_finding_a_1_}
+
+
+
+\begin{definition}[Row Equivalent]
+	Matrices A and B are called Row Equivalent if either is obtained
+	from the other by a sequence of row operations.
+\end{definition}
+
+\begin{definition}[Elementary Matrix]
+	A matrix E is called an elementary matrix if it can be obtained
+	from the identity matrix by performing one row operation.
+\end{definition}
+
+\[\begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix} \]
+
+\[E = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 1 \end{bmatrix} \]
+
+The product $EA$, the result is the same as performing the elementary
+row operation on a yourself.
+\[A = \begin{bmatrix}  1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 &  9 \end{bmatrix} \]
+\[2R_2\to R_2\]
+\[A = \begin{bmatrix}  1 & 2 & 3 \\ 8 & 10 & 12 \\ 7 & 8 &  9 \end{bmatrix} \]
+Is the same as:
+\[\begin{bmatrix} 1 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 1 \end{bmatrix} \begin{bmatrix}  1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 &  9 \end{bmatrix} \]
+
+\begin{theorem}[]
+	Every elementary matrix is invertible and its inverse is also an
+	elementary matrix.
+\end{theorem}
+
+\subsubsection{Equivalent Statements Theorem}%
+\label{ssub:equivalent_statements}
+
+\begin{theorem}[]
+If A is an $n\times n$ matrix, then the following are equivalent, that is all
+are true or all are false,
+\begin{enumerate}[label=\Alph*]
+	\item A is invertible.
+	\item $Ax = 0$ has only the solution $c\begin{bmatrix} 0 \\ 0 \\ \ldots \\ 0  \end{bmatrix} $ (trivial solution).
+		\item The reduced row echelon form of A is $I_{n}$.
+			\item A is expressible as a product of elementary matrices.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}[Proof: equivalent statements]
+
+	\begin{itemize}
+		\item Assume A true $\to$ B true $\to$ C true $\to$ D true $\to$ A true
+	\item Assume A is invertible $\to$ $A^{-1}$ exists and $A A^{-1} = A^{-1}A = I_{n}$
+	\item $Ax = 0$
+	\item $(A^{-1}Ax = A^{-1}0 \to Ix = \begin{bmatrix}  0 \\ 0 \\ .. \\ 0 \end{bmatrix} $
+	\item $\begin{bmatrix} a_{11} & a_{12} & \ldots & a_{1n} & | & 0 \\a_{21} & a_{22} & \ldots & a_{2n} & | & 0 \\a_{n1} & a_{n2} & \ldots & a_{nn} & | & 0 \\ \end{bmatrix} $
+	$\begin{bmatrix} x_1 &  &  &  & | & 0 \\ & x_2 &  &  & | & 0 \\ &  & x_3 &  & | & 0 \\ \end{bmatrix} $
+
+	\item $[A|0]$, perform row operations and get $[I | 0]$
+		\[E_{n} \ldots E_2E_1 A = I\]
+		\[E_1^{-1}E_2^{-1}\ldots E_{n-1}^{-1}E_{n}^{-1}E_{n}\ldots E_2E_1A = E_1^{-1}E_2^{-1}\ldots E_{n-1}^{-1} E_{n}^{-1} I\]
+
+	\item (theorem) If A and B are invertible then $(AB)$ is invertible $\to$ \[(AB)^{-1} = B^{-1}A^{-1}\]
+		\item $\to$ A is true.
+	\end{itemize}
+
+
+
+
+\end{proof}
+
+
+
+
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\newpage
+%%%\end{document}
+
+
+%LEAVE EMPTY ROW ABOVE THIS ONE

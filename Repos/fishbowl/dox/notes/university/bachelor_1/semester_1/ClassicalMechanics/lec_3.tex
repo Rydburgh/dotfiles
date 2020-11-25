@@ -1,0 +1,66 @@
+%%%
+\documentclass[a4paper,11pt,twoside]{report}
+%%%
+\input{../preamble.tex}
+%%%
+\begin{document}
+\chapter{Two-dimensional projectile motion}%
+\label{cha:two_dimensional_projectile_motion}
+
+
+\LARGE\textsc{Date: 2020-05-25} \\ \LARGE\textsc{Announcements:}
+
+\paragraph \hrule \paragraph \\ \fancyhead[R]{Lesson 3} \fancyhead[L]{Week 2}
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\section{Horizontally launched projectile}%
+\label{sec:horizontally_launched_projectile}
+\begin{figure}[ht]
+    \centering
+    \incfig{horizontally-launched-projectile}
+    \caption{Horizontally launched projectile}
+    \label{fig:horizontally-launched-projectile}
+\end{figure}
+For example, a cliff diver runs off a cliff at $5 \frac{m}{s}$ from a height of $30 m$. How far
+do they travel in the x-direction before landing? The key is that the vertical and horizontal
+components of the velocity are independent. Their horizontal velocity is always  $5 \frac{m}{s}$, but
+the vertical starts at 0 and accelerates due to gravity. This is how we write it up: \[
+\begin{array}{l | l}
+	x & y \\
+	v_{0x} = 5 \frac{m}{s} & \Delta y = -30 m \\
+	dx = ? & a_{y} = 09.8 \frac{m}{s^2} \\
+		   & V_{oy} = 0 \frac{m}{s}
+\end{array}
+.\]
+We need to find the time on the y side of the table.\[
+	\Delta y = v_{oy}t + \frac{1}{2} a_{y} t^2
+.\]\[
+	-30 m = 0 + \frac{1}{2} (-9.8 \frac{m}{s^2}) t^2
+.\] \[
+	t = \sqrt{\frac{(-30m)(2)}{-9.8 \frac{m}{s^2}}} = 2.47 s
+.\]
+We could take this, the time to displace $30 m$ vertically, and use it in the x direction: \[
+\Delta x = V_{ox}t + \frac{1}{2} a_{x}t^2
+\] \[
+5 \frac{m}{s} dx = (5 \frac{m}{s})(2.47 s)
+\] \[
+dx = 12.4 m
+.\]
+
+\section{Visualizing vectors in 2 dimensions}%
+\label{sec:visualizing_vectors_in_2_dimensions}
+
+In classical mechanics, you deal with up to 3 dimensions. How do vectors add?
+
+\begin{figure}[ht]
+    \centering
+    \incfig{single-key-test}
+    \caption{single key test}
+    \label{fig:single-key-test}
+\end{figure}
+
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\newpage
+%%%
+\end{document}
+
+%LEAVE EMPTY ROW ABOVE THIS ONE

@@ -1,0 +1,433 @@
+%%%
+\documentclass[a4paper,11pt,twoside]{report}
+%%%
+\input{../preamble.tex}
+%%%
+\begin{document}
+\fancyhead[R]{2020-08-19} \fancyhead[C]{MAT-253-AC01}\fancyhead[L]{Jasper Runco}
+\begin{table}[htpb]
+	\centering
+	\large
+	\begin{tabular}{| p{7.6cm} | p{3.9cm} | p{3cm} |}
+		\hline
+		Assignment: Set 1.1 (5-10) Set 1.2 (1-22) &	Assigned: 2020-08-19   & Due: n/a \\
+	\hline \end{tabular}
+\end{table}
+\small
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+
+\subsubsection{Set 1.1}%
+\label{ssub:set_1_1}
+
+\noindent Question 5-6: find the linear system in the unknowns $x_1, x_2\ldots$. \\ \hrule
+
+\paragraph{5a}%
+
+$\begin{bmatrix} 2 & 0 & 0 \\ 3 & -4 & 0 \\ 0 & 1 & 1 \end{bmatrix}$
+
+\begin{align*}
+	2x_1 &= 0 \\
+	3x_1 -4x_2 &=  0 \\
+	x_2 &= 1 \\
+\end{align*}
+
+\paragraph{5b}%
+
+$\begin{bmatrix} 3 & 0 & -2 & 5 \\ 7 & 1 & 4 & -3 \\ 0 & -2 & 1 & 7 \end{bmatrix} $
+
+\begin{align*}
+	3x_1 -2x_3 &= 5 \\
+	7x_1 + x_2 + 4x_3 &= -3 \\
+	-2x_2 + x_3 &= 7 \\
+\end{align*}
+
+\paragraph{6a}%
+
+$\begin{bmatrix} 0 & 3 & -1 & -1 & -1 \\ 5 & 2 & 0 & -3 & -6 \end{bmatrix} $
+
+\begin{align*}
+	3x_2 - x_3 - x_4 &= -1 \\
+	5x_1 +2 x_2 -3 x_4 &= -6 \\
+\end{align*}
+
+\paragraph{6b}%
+
+$\begin{bmatrix} 3 & 0 & 1 & -4 & 3 \\ -4 & 0 & 4 & 1 & -3 \\ -1 & 3 & 0 & -2 & -9 \\ 0 & 0 & 0 & -1 & -2 \end{bmatrix} $
+
+\begin{align*}
+	3x_1 + x_3 -4 x_4 &= 3 \\
+	-4x_1 + 4 x_3 +x_4 &= -3 \\
+	-x_1 + 3x_2 - 2x_4 &= -9 \\
+	-x_4 &= -2 \\
+\end{align*}
+
+\break
+\noindent Question 7-8: find the augmented matrix. \\ \hrule
+
+\paragraph{7(a)} \
+
+$-2x_1 = 6$
+
+$3x_1 = 8$
+
+$9x_2 = -3$
+
+\[\begin{bmatrix} -2 & 6 \\ 3 & 8 \\ 9 & -3 \end{bmatrix} \]
+
+\paragraph{7(b)} \
+
+$6x_1 - x_2 + 3x_3 = 4$
+
+$5x_2 - x_3 = 1$
+
+\[\begin{bmatrix} 6 & -1 & 3 & 4 \\ 0 & 5 & -1 & 1 \end{bmatrix} \]
+
+\paragraph{8(a)} \
+
+$3x_1 - 2x_2 = -1$
+
+$4x_1 + 5x_2 = 3$
+
+$7x_1 + 3x_2 = 2$
+
+\[\begin{bmatrix} 3 & -2 & -1 \\ 4 & 5 & 3 \\ 7 & 3 & 2 \end{bmatrix} \]
+
+\paragraph{8(b)} \
+
+$2x_1 + 2x_3 = 1$
+
+$3x_1 - x_2 + 4x_3 = 7$
+
+$6x_1 + x_2 - x_3 = 0$
+
+\[\begin{bmatrix} 2 & 0 & 2 & 1 \\ 3 & -1 & 4 & 7 \\ 6 & 1 & -1 & 0 \end{bmatrix} \]
+
+
+\noindent Question 9: determine whether 3-tuple is a solution of the linear system. \\ \hrule
+
+\begin{align*}
+	2x_1 - 4x_2 - x_3 &= 1 \\
+	x_1 - 3x_2 + x_3 &= 1 \\
+	3x_1 - 5x_2 - 3x_3 &= 1 \\
+\end{align*}
+
+\paragraph{9(a)} $(3,1,1)$
+
+\begin{align*}
+	2(3) - 4(1) - (1) &= 1  [true]\\
+	(3) - 3(1) + (1) &= 1 [true]  \implies \boxed{\:\text{Is a solution}\:}\\
+	3(3) - 5(1) - 3(1) &= 1 [true] \\
+\end{align*}
+
+\paragraph{9(b)} $(3, -1, 1)$
+
+\begin{align*}
+	2(3) - 4(-1) - (1) &= 1  [false]\\
+	(3) - 3(-1) + (1) &= 1 [false]  \implies \boxed{\:\text{Is not a solution}\:}\\
+	3(3) - 5(-1) - 3(1) &= 1 [false] \\
+\end{align*}
+
+\paragraph{9(c)} $(13, 5, 2)$
+
+\begin{align*}
+	2(13) - 4(5) - (2) &= 1  [false]\\
+	(13) - 3(5) + (2) &= 1 [false]  \implies \boxed{\:\text{Is not a solution}\:}\\
+	3(13) - 5(5) - 3(2) &= 1 [false] \\
+\end{align*}
+
+\paragraph{9(d)} $\left( \frac{13}{2},\frac{5}{2},2 \right) $
+
+\begin{align*}
+	2\left( \frac{13}{2} \right)  - 4 \left( \frac{5}{2} \right)   - (2) &= 1  [true]\\
+	\left( \frac{13}{2} \right)  - 3\left( \frac{5}{2} \right)  + (2) &= 1 [true]  \implies \boxed{\:\text{Is not a solution}\:}\\
+	3\left( \frac{13}{2} \right)  - 5\left( \frac{5}{2} \right)  - 3(2) &= 1 [false] \\
+\end{align*}
+
+
+\noindent Question 10: determine whether 3-tuple is a solution of the linear system. \\ \hrule
+
+\begin{align*}
+	x + 2y - 2z &=  3 \\
+	3x - y + z &= 1 \\
+	-x + 5y - 5z &= 5 \\
+\end{align*}
+
+\paragraph{10(a)} $\left( \frac{5}{7}, \frac{8}{7}, 1 \right) $
+
+\begin{align*}
+	\left( \frac{5}{7} \right)  + 2\left( \frac{8}{7} \right)  - 2(1) &=  3 [false] \implies \boxed{\:\text{Is not a solution}\:} \\
+	3\left( \frac{5}{7} \right) - \left( \frac{8}{7} \right) +(1) &= 1 \\
+	-\left( \frac{5}{7} \right) + 5\left( \frac{8}{7} \right) - 5(1) &= 5 \\
+\end{align*}
+
+\paragraph{10(b)} $\left( \frac{5}{7}, \frac{8}{7}, 0 \right) $
+
+\begin{align*}
+	\left( \frac{5}{7} \right)  + 2\left( \frac{8}{7} \right)  - 2(0) &=  3 [true] \\
+	3\left( \frac{5}{7} \right) - \left( \frac{8}{7} \right) +(0) &= 1 [true]\\
+	-\left( \frac{5}{7} \right) + 5\left( \frac{8}{7} \right) - 5(0) &= 5 [true] \implies \boxed{\:\text{Is a solution}\:}\\
+\end{align*}
+
+\paragraph{10(c)} $(5,8,1)$
+
+\begin{align*}
+	(5) + 2(8) - 2(1) &=  3 [false] \implies \boxed{\:\text{Is not a solution}\:} \\
+	3(5) - (8) + (1) &= 1 \\
+	-(5) + 5(8) - 5(1) &= 5 \\
+\end{align*}
+
+\paragraph{10(d)} $\left( \frac{5}{7}, \frac{10}{7}, \frac{2}{7} \right) $
+
+\begin{align*}
+	\left( \frac{5}{7} \right)  + 2 \left( \frac{10}{7} \right)  - 2\left( \frac{2}{7} \right)  &=  3 [true]\\
+	3\left( \frac{5}{7} \right)  - \left( \frac{10}{7} \right) + \left( \frac{2}{7} \right) &= 1[true] \\
+	-\left( \frac{5}{7} \right)  + 5\left( \frac{10}{7} \right) - 5\left( \frac{2}{7} \right) &= 5[true] \implies \boxed{\:\text{Is a solution}\:}\\
+\end{align*}
+
+\paragraph{10(e)} $\left( \frac{5}{7}, \frac{22}{7}, 2 \right) $
+
+\begin{align*}
+	\left( \frac{5}{7} \right)  + 2\left( \frac{22}{7} \right)  - 2(2) &=  3[true] \\
+	3\left( \frac{5}{7} \right) - \left( \frac{22}{7} \right) + (2) &= 1[true] \\
+	-\left( \frac{5}{7} \right) + 5\left( \frac{22}{7} \right) - 5(2) &= 5[true] \implies \boxed{\:\text{Is a solution}\:} \\
+\end{align*}
+
+\subsubsection{Set 1.2}%
+\label{ssub:set_1_2}
+
+\noindent Question 1-2: Determine if in row eschelon, reduced row, both, or neither. \\ \hrule
+
+\paragraph{1(a)} Both
+
+\paragraph{1(b)} Both
+
+\paragraph{1(c)} Both
+
+\paragraph{1(d)} Both
+
+\paragraph{1(e)} Row eschelon form
+
+\paragraph{1(f)} Both
+
+\paragraph{1(g)} Row eschelon form
+
+\paragraph{2(a)} Row eschelon form
+
+\paragraph{2(b)} Neither
+
+\paragraph{2(c)} Both
+
+\paragraph{2(d)} Row Eschelon
+
+\paragraph{2(e)} Neither
+
+\paragraph{2(f)} Neither
+
+\paragraph{2(g)} Both
+
+\noindent Question 3-4: Solve the System. \\ \hrule
+
+\paragraph{3(a)} $\begin{bmatrix} 1 & -3 & 4 & 7 \\ 0 & 1 & 2 & 2 \\ 0 & 0 & 1 & 5 \end{bmatrix} $
+\[-2E_3 + E_2 \to E_2\]
+\[ \begin{bmatrix} 1 & -3 & 4 & 7 \\ 0 & 1 & 0 & -8 \\ 0 & 0 & 1 & 5 \end{bmatrix}\]
+\[-4E_3 + E_1 \to E_1\]
+\[ \begin{bmatrix} 1 & -3 & 0 & -13 \\ 0 & 1 & 0 & -8 \\ 0 & 0 & 1 & 5 \end{bmatrix}\]
+
+\[3E_2 + E_1 \to E_1\]
+\[ \begin{bmatrix} 1 & 0 & 0 & -37 \\ 0 & 1 & 0 & -8 \\ 0 & 0 & 1 & 5 \end{bmatrix}\]
+
+\[\boxed{(-37,-8,5)}\]
+
+\paragraph{3(b)}
+$\begin{bmatrix} 1 & 0 & 8 & -5 & -6 \\ 0 & 1 & 4 & -9 & 3 \\ 0 & 0 & 1 & 1 & 2 \end{bmatrix}  \\$
+
+\[-4E_3+E_2 \to E_2\]
+\[\begin{bmatrix} 1 & 0 & 8 & -5 & -6 \\ 0 & 1 & 0 & -13 & -5 \\ 0 & 0 & 1 & 1 & 2 \end{bmatrix}  \\\]
+
+\[-8E_3 + E_1 \to E_1\]
+\[\begin{bmatrix} 1 & 0 & 0 & -13 & -22 \\ 0 & 1 & 0 & -13 & -5 \\ 0 & 0 & 1 & 1 & 2 \end{bmatrix}  \\\]
+\[\boxed{(-22+13x_4, -5 + 13 x_4, 2 - x_4, x_4)}\]
+
+\paragraph{3(c)}
+$\begin{bmatrix} 1 & 7 & -2 & 0 & -8 & -3 \\ 0 & 0 & 1 & 1 & 6 & 5 \\ 0 & 0 & 0 & 1 & 3 & 9 \\ 0 & 0 & 0 & 0 & 0 & 0 \end{bmatrix} $
+
+\[-E_3+ E_2 \to E_2\]
+\[\begin{bmatrix} 1 & 7 & -2 & 0 & -8 & -3 \\ 0 & 0 & 1 & 0 & 3 & -4 \\ 0 & 0 & 0 & 1 & 3 & 9 \\ 0 & 0 & 0 & 0 & 0 & 0 \end{bmatrix} \]
+
+\[2E_2 + E_1 \to E_1\]
+\[\begin{bmatrix} 1 & 7 & 0 & 0 & -2 & -11 \\ 0 & 0 & 1 & 0 & 3 & -4 \\ 0 & 0 & 0 & 1 & 3 & 9 \\ 0 & 0 & 0 & 0 & 0 & 0 \end{bmatrix} \]
+
+\[\boxed{(-11+2x_4-7x_2, x_2, -4 -3x_4, 9-3x_4, x_5)}\]
+
+\paragraph{3(d)}
+$\begin{bmatrix} 1 & -3 & 7 & 1 \\ 0 & 1 & 4 & 0 \\ 0 & 0 & 0 & 1  \end{bmatrix} $
+
+\[\boxed{\:\text{No solution}\:}\]
+
+\paragraph{4(a)}
+$\begin{bmatrix} 1 & 0 & 0 & -3 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 7 \end{bmatrix} $
+\[\boxed{(-3, 0, 7)}\]
+
+\paragraph{4(b)}
+$\begin{bmatrix} 1 & 0 & 0 & -7 & 8 \\ 0 & 1 & 0 & 3 & 2 \\ 0 & 0 & 1 & 1 & -5 \end{bmatrix} $
+\[\boxed{(8+7x_4, 2 - 3x_4, -5 - x_4, x_4)}\]
+
+\paragraph{4(c)}
+$\begin{bmatrix} 1 & -6 & 0 & 0 & 3 & -2 \\ 0 & 0 & 1 & 0 & 4 & 7 \\ 0 & 0 & 0 & 1 & 5 & 8 \\ 0 & 0 & 0 & 0 & 0 & 0 \end{bmatrix} $
+
+\[\boxed{-2 + 6x_2 -3 x_5, x_2, 7 - 4x_5, 8 - 5x_5, x_5)}\]
+
+\paragraph{4(d)}
+$\begin{bmatrix}  1 & -3 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1  \end{bmatrix} $
+\[\boxed{\:\text{No solution}\:}\]
+
+\noindent Question 5-8: solve by Gaussian elimination. \\ \hrule
+
+\paragraph{5}
+
+\[\begin{bmatrix} 1 & 1 & 2 & 8 \\ -1 & -2 & 3 & 1 \\ 3 & -7 & 4 & 10 \end{bmatrix} \]
+
+\[E_1 + E_2 \to E_2\]
+\[-3E_1 + E_3 \to E_3\]
+
+\[\begin{bmatrix} 1 & 1 & 2 & 8 \\ 0 & -1 & 5 & 9 \\ 0 & -10 & -2 & -14 \end{bmatrix} \]
+
+\[-E_2 \to E_2\]
+
+\[\begin{bmatrix} 1 & 1 & 2 & 8 \\ 0 & 1 & -5 & -9 \\ 0 & -10 & -2 & -14 \end{bmatrix} \]
+
+\[10E_2 + E_3 \to E_3\]
+
+\[\begin{bmatrix} 1 & 1 & 2 & 8 \\ 0 & 1 & -5 & -9 \\ 0 & 0 & -52 & -104 \end{bmatrix} \]
+
+\[-\frac{1}{52}E_3 \to E_3\]
+
+\[\begin{bmatrix} 1 & 1 & 2 & 8 \\ 0 & 1 & -5 & -9 \\ 0 & 0 & 1 & 2 \end{bmatrix} \]
+
+\[5E_3 + E_2 \to E_2\]
+\[-2 E_3 + E_1 \to E_1\]
+
+\[\begin{bmatrix} 1 & 1 & 0 & 4 \\ 0 & 1 & 0 & 1 \\ 0 & 0 & 1 & 2 \end{bmatrix} \]
+
+\[-E_2 + E_1 \to E_1\]
+
+\[\begin{bmatrix} 1 & 0 & 0 & 3 \\ 0 & 1 & 0 & 1 \\ 0 & 0 & 1 & 2 \end{bmatrix} \]
+
+\[\boxed{(3,1,2,x_4)}\]
+
+
+
+
+
+
+
+
+
+
+\paragraph{6}
+
+\paragraph{7}
+
+\paragraph{8}
+
+
+
+
+
+
+
+\noindent Question 5: Solve equations\\ \hrule
+\begin{align*}
+	x_1 + x_2 + 2x_3 &=  8 \\
+	-x_1 - 2x_2 + 3x_3 &= 1 \\
+	3x_1-7x_2+4x_3 &=  10
+\end{align*}
+$E 1 + E 2 \to E 2$
+\begin{align*}
+	x_1+x_2+2x_3 &= 8 \\
+	+[-x_1 -2x_2+3x_3 &= 1] \\
+	\cline{1-2}
+	-x_2 + 5x_3 &= 9 \\
+\end{align*}
+$-1(E 2) \to E 2$
+\[
+	x_2 - 5x_3 = -9
+\]
+$E 3 - 3(E 1) \to E 3$
+\begin{align*}
+	3x_1-7x_2+4x_3 &=  10 \\
+	-3[x_1 + x_2 + 2x_3 &=  8]\\
+	\cline{1-2}
+	-10x_2 - 2x_3 &= -12 \\
+\end{align*}
+$-\frac{1}{10}E 3 \to E 3$
+
+\begin{align*}
+	x_1 + &x_2 + 2x_3 =  8 \\
+		  &x_2 - 5x_3 = -9 \\
+		  &x_2 + \frac{1}{5}x_3 = \frac{6}{5}
+\end{align*}
+$E 3 - E 2 \to E 3$
+
+\begin{align*}
+		  x_2 + \frac{1}{5}x_3 &= \frac{6}{5} \\
+		  -[x_2 - 5x_3 &= -9 ] \\
+	\cline{1-2}
+		  \frac{26}{5}x_3 &= \frac{51}{5}
+\end{align*}
+$(\frac{5}{26})E 3 \to E 3$
+
+\begin{align*}
+	x_1 + x_2 + 2x_3 &=  8 \\
+	x_2 - 5x_3 &= -9 \\
+		  x_3 &= \frac{51}{26}
+\end{align*}
+$E 2 + 5 (E 3) \to E 2$
+
+\begin{align*}
+	x_2 - 5x_3 &= -9 \\
+		  +5[x_3 &= \frac{51}{26}] \\
+	\cline{1-2}
+		  x_2 &= \frac{21}{26}
+\end{align*}
+
+\begin{align*}
+	x_1 + x_2 + 2x_3 &=  8 \\
+		  x_2 &= \frac{21}{26}\\
+		  x_3 &= \frac{51}{26}
+\end{align*}
+$E 1 - E 2 - 2(E 3) \to E 1$
+
+
+\begin{align*}
+	x_1 + x_2 + 2x_3 &=  8 \\
+		  -[x_2 &= \frac{21}{26}] \\
+		  -2[x_3 &= \frac{51}{26}] \\
+	\cline{1-2}
+		  x_1 &= 8 - \frac{21}{26} - \frac{102}{26} \\
+		  x_1 &= \frac{85}{26}
+	  \end{align*}
+
+
+\begin{align*}
+		  x_1 &= \frac{85}{26}\\
+		  x_2 &= \frac{21}{26}\\
+		  x_3 &= \frac{51}{26}
+\end{align*}
+$\boxed{\left(  \frac{85}{26},\frac{21}{26},\frac{51}{26}\right) }$ \\
+
+\break \break \noindent Question 2: solve equations. \\ \hrule
+\begin{align*}
+	2x_1+2x_2+2x_3 &= 0 \\
+	-2x_1+5x_2+2x_3 &= 1 \\
+	8x_1+x_2+4x_3 &= -1 \\
+\end{align*}
+
+
+
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\newpage
+%%%
+\end{document}
+
+%LEAVE EMPTY ROW ABOVE THIS ONE

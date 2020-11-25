@@ -1,0 +1,24 @@
+/* HAS A FUNCTION PROTOTYPE BEFORE MAIN AND AN IMPLEMENTATION OF THE FUNCTION AFTER MAIN. */
+/* FUNCTION TO BE IMPLEMENTED IS COIN TOSS SIMULATION USING THE RANDOM NUMBER GENERATOR. */
+/* FUNCTION SHOULD RETURN 1 OR TRUE 50% OF THE TIME AND 0 OR FALSE 50% OF THE TIME. */
+/* USE SRAND AND THE SYSTEM TIME TO MAKE THE PROGRAM RUN DIFFERENTLY EACH TIME. */
+/* (srand(time(NULL));) */
+/* TRACK NUMBER OF HEAD AND TAILS FOR 10, 100, 1000, 10,000, 100,000 AND 10,000,000 TRIALS. */
+/* OUTPUT THE NUMBER OF HEADS AND TAILS AND NUMBER OF EACH AS A PERCENTAGE OF THE TOTAL. */
+/* SHOULD GET MORE ACCURATE. */
+// Author: Jasper Runco
+// Project: <++>
+// Compiler: GCC
+
+#include <stdio.h>
+#pragma warning(disable: 4996)
+#include<string>
+#include<stdlib.h>
+#include<time.h>
+
+// project description
+int main( void )
+{
+
+	system("pause"); //before return in main
+} // end class main

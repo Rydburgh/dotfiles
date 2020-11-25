@@ -1,0 +1,83 @@
+% ____  ____  _____    _    __  __ ____  _     _____
+%|  _ \|  _ \| ____|  / \  |  \/  | __ )| |   | ____|
+%| |_) | |_) |  _|   / _ \ | |\/| |  _ \| |   |  _|
+%|  __/|  _ <| |___ / ___ \| |  | | |_) | |___| |___
+%|_|   |_| \_\_____/_/   \_\_|  |_|____/|_____|_____|
+%
+% last updated: 2020-05-21
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% PACKAGES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\pdfminorversion=7						% to prevent errors when building pdf
+
+% some basic packages
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{mhchem}						% for chemical symbols
+\usepackage{url}						% to format hyperlink text
+\usepackage{float}						% for custom figure/table environment
+\usepackage{xifthen}					% to handle tests
+\usepackage{booktabs}					% for table commands and optimisation
+\usepackage{enumitem}					% to format enumerate, itemize, and description
+\usepackage{textcomp}					% to support different glyphs
+\usepackage{graphicx}					% to support \includegraphics
+\usepackage[T1]{fontenc}				% for unicode encoding
+\usepackage[utf8]{inputenc}				% for unicode input
+\setlength{\headheight}{13.6pt}
+\usepackage[top=1.5in,bottom=1in,right=1in,left=1in,headheight=45pt]{geometry}
+\usepackage{fancyhdr}					% for adding different headers
+\pagestyle{fancy}
+% for list of equations
+\usepackage{tocloft}					% for custom lists
+\usepackage{ragged2e} 					% to undo \centering
+\usepackage{hyperref} 					% to make references hyperlinks
+\usepackage{glossaries}
+
+% for figures
+\usepackage{import}						% for file control
+\usepackage{pdfpages}					% for pdf, graphics, and hypertext
+\usepackage{transparent}				% for color stack transparency
+\usepackage{xcolor}						% for arbitrary color mixing
+
+
+
+\author{Jasper Runco}
+\date{2020 // Fall}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Commands
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% to make a new figure
+\newcommand{\incfig}[2][scale=1]{%
+	% \def\svgwidth{#1\columnwidth}
+	\import{./figures/}{#2.pdf_tex}
+}
+\pdfsuppresswarningpagegroup=1
+
+% define list of equations
+\newcommand{\listequationsname}{\Large{List of Equations}}
+\newlistof{myequations}{equ}{\listequationsname}
+\newcommand{\myequations}[1]{
+	\phantomsection
+	\addcontentsline{equ}{myequations}{\protect\numberline{\theequation}#1}
+}
+
+\setlength{\cftmyequationsnumwidth}{2.3em}
+\setlength{\cftmyequationsindent}{1.5em}
+
+% command to box, label, reference, and include
+% noteworthy equations in list of equations
+\newcommand{\noteworthy}[2]{
+\begin{align} \label{#2} \ensuremath{\boxed{#1}} \end{align}
+\myequations{#2} \centering \textit{#2} \justify}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{example}{Example}
+\newtheorem{solution}{Solution}
+\newtheorem{constant}{Constant}
+\newtheorem{note}{Note}

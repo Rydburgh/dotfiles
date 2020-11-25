@@ -1,0 +1,66 @@
+/* class starts with a dot: */
+
+
+
+
+/* styles only p tags: */
+p.error{
+	color: red;
+}
+.error{
+	color: red;
+}
+p.success{
+	color: green;
+}
+p.success.feedback{
+	border: 1px dashed green;
+}
+#content{
+	/* background-color: #ebebeb; */
+	padding: 20px;
+}
+
+
+
+/* decenden selectors: p(child) if within div(parent)*/
+div p{
+	background-color: #ebebeb;
+}
+
+/* class error if within div */
+div .error{
+	background-color: #ebeb1b;
+}
+div#content{
+	background-color: #ebebeb;
+	padding: 20px;
+}
+
+/* ATTRIBUTE SELECTORS */
+
+a[href="https://runco.xyz"]{
+	background-color: #3dd13d;
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+/* anchor tag that includes: */
+a[href*="google"]{
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+/* anchor tag that ends with: */
+a[href$=".com"]{
+	background-color: red;
+}
+
+/* all anchor tags */
+/* a[href]{ */
+/* 	background-color: grey; */
+/* } */

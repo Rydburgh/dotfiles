@@ -1,0 +1,105 @@
+%%%\documentclass[a4paper,11pt,twoside]{report}
+
+%%%\input{../preamble.tex}
+
+%%%\begin{document}
+
+
+\LARGE\textsc{Date: 2020-09-12} \\ \\ \LARGE\textsc{Announcements:} \\
+\small
+
+
+
+\paragraph \hrule \paragraph \\ \fancyhead[R]{Lesson 7} \fancyhead[L]{Week 2}
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\subsection{Curvature}%
+\label{sub:curvature}
+
+\begin{definition}[Curvature].
+
+	\begin{itemize}
+		\item A measure of how quickly the curve changes direction at that point
+			\item The magnitude of the rate of change of the unit tangent vector with respect to
+				arc length.
+	\end{itemize}
+
+	\[\kappa = \left| \frac{d\overline{T}}{ds} \right| \]
+
+
+
+\smallskip\hfill$\bullet$\end{definition}
+
+	Problem: don't want to use the arclength.
+
+	\[\overline{T}(t) \to \frac{d\overline{T}}{dt}\]
+
+	\[\frac{d\overline{T}}{dt} \cdot \frac{dt}{ds} \to \]
+	\[\left| \frac{d\overline{T}}{dt} \right| \]
+	\[ \frac{\frac{d\overline{T}}{ds}}{\frac{ds}{dt}}\]
+
+	\[\implies \kappa = \frac{\frac{d\overline{T}}{dt}}{\frac{ds}{dt}}\]
+
+	Arclength so far function:
+
+	\[ s = \int_{a}^{t} \left| \overline{r}'(u) \right| du \]
+	\[\frac{ds}{st} = \left| \overline{r}'(t) \right| \]
+	\[\left|   \frac{ds}{st} \right|= \left| \overline{r}'(t) \right| \]
+
+	\begin{definition}[Curvature]
+		\[\kappa = \frac{\left| \overline{T}'(t) \right| }{\left| \overline{r}'(t) \right| }\]
+	\smallskip\hfill$\bullet$\end{definition}
+
+	\begin{example}[Curvature]
+		\[\overline{r}(t) = \left<3t+2, t, t-7 \right>\] , find $\kappa$
+	\smallskip\hfill$\bullet$\end{example}
+
+	\begin{solution}[Curvature]
+		\[ r'(t) = \left<3, 1, 1 \right>\]
+		\[\left| r'(t) \right|= \sqrt{9 + 1 + 1}   = \sqrt{11} \]
+		\[\overline{T} = \frac{1}{\sqrt{11} } \left<3, 1, 1 \right>\]
+		\[\overline{T}' = \frac{1}{\sqrt{11} } \left<0, 0, 0 \right>\]
+		\[\overline{T}' =\left<0, 0, 0 \right>\]
+		\[\left|  \overline{T}' \right| =0\]
+		\[\kappa = \frac{0}{\sqrt{11} } = 0\]
+	\smallskip\hfill$\bullet$\end{solution}
+
+	\begin{example}[Curvature]
+		let $\overline{r}(t) = \left< \sqrt{2} t, e^{t}, e^{-t} \right>$, Find $\kappa$
+	\smallskip\hfill$\bullet$\end{example}
+
+	\begin{solution}[Curvature]
+		\[r'(t) = \left<\sqrt{2} , e^{t}, -e^{-t} \right>\]
+		\[\left|  r'(t) \right| = \sqrt{2 + e^{2t} + e^{-2t}} \]
+		\[\left|  r'(t) \right| = \sqrt{e^{2t} + 2 + e^{-2t}} \]
+		\[\left|  r'(t) \right| = \sqrt{(e^{t} + e^{-t})^2} \]
+		\[\left|  r'(t) \right| = e^{t} + e^{-t} \]
+		\[\overline{T}(t) = \frac{1}{e^{t} + e^{-t}}\left<\sqrt{2} , e^{t}, -e^{-t} \right>\]
+		\[\overline{T}(t) = \frac{e^{t}}{e^{2t} + 1}\left<\sqrt{2} , e^{t}, -e^{-t} \right>\]
+		\[\overline{T}(t) = \frac{1}{e^{2t} + 1}\left<\sqrt{2}e^{t} , e^{2t}, -1 \right>\]
+		\[\overline{T}'(t) = \frac{1}{e^{2t}+1}\left<\sqrt{2} e^{t}, 2e^{2t}, 0 \right> +
+		-1(e^{2t}+1)^{-2}2e^{2t}\left<\sqrt{2} e^{t},e^{2t}, -1 \right>\]
+		\[\overline{T}'(t) = \left< \frac{\sqrt{2} e^{t}}{e^{2t}+1}, \frac{2e^{2t}}{e^{2t+1}}, 0 \right> +
+		\left<\frac{-2\sqrt{2} e^{3t}}{(e^{2t}+1)^2}, \frac{-2e^{4t}}{(e^{2t}+1)^2}, \frac{2e^{2t}}{(t^{2t + 1)^2}}\right>\]
+		\[\overline{T}'(t) = \left< \frac{\sqrt{2} e^{3t} + \sqrt{2} e^{t }- 2\sqrt{2} e^{3t}}{(e^{2t} +1)^2} , \ldots\right>\]
+		\[\overline{T}'(t) = \left< \frac{-\sqrt{2} e^{3t} + \sqrt{2} e^{t}}{(e^{2t} +1)^2} , \ldots\right>\]
+		\[\overline{T}'(t) = \left< \frac{-\sqrt{2} e^{3t} + \sqrt{2} e^{t}}{(e^{2t} +1)^2} , \frac{2e^{2t}}{(e^{2t}+1)^2}, \frac{2e^{2t}}{(e^{2t}+1)^2}\right>\]
+		\[\overline{T}'(t)  = \frac{\sqrt{2} e^{t}}{(e^{2t}+1)^2}\left<1-e^{2t}, \sqrt{2} e^{t}, \sqrt{2} e^{t} \right>\]
+		\[\left| c \overline{V} \right| = \left| c \right| \left| \overline{v} \right|  \]
+		\[\left|   \overline{T}'(t)\right|  = \frac{\sqrt{2} e^{t}}{(e^{2t}+1)^2}\sqrt{1 - 2e^{2t} + e^{4t} + 2e^{2t} + 2e^{2t}} \]
+		\[\left|   \overline{T}'(t)\right|  = \frac{\sqrt{2} e^{t}}{(e^{2t}+1)^2}\sqrt{e^{4t}+2e^{2t}+1} \]
+		\[\left|   \overline{T}'(t)\right|  = \frac{\sqrt{2} e^{t}}{(e^{2t}+1)^2}\sqrt{(e^{2t}+1)^2} \]
+		\[\left|   \overline{T}'(t)\right|  = \frac{\sqrt{2} e^{t}}{e^{2t}+1} \]
+		\[\kappa = \frac{\frac{\sqrt{2} e^{t}}{e^{2t}+1}}{e^{t}+e^{-t}}\]
+		\[\kappa = \frac{\frac{\sqrt{2} e^{2t}}{e^{2t}+1}}{e^{2t}+1}\]
+	\[\kappa = \frac{\sqrt{2} e^{2t}}{(e^{2t}+1)^2}\]
+	\smallskip\hfill$\bullet$\end{solution}
+
+	This example worked, but is a contrived textbook version of the problem. A better formula is still needed..
+
+
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\newpage
+%%%\end{document}
+
+
+%LEAVE EMPTY ROW ABOVE THIS ONE

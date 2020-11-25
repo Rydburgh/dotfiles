@@ -1,0 +1,82 @@
+%%%\documentclass[a4paper,11pt,twoside]{report}
+
+%%%\input{../preamble.tex}
+
+%%%\begin{document}
+
+
+\LARGE\textsc{Date: 2020-09-22} \\ \\ \LARGE\textsc{Announcements:} \\
+\small
+
+
+
+\paragraph \hrule \paragraph \\ \fancyhead[R]{Lesson 15} \fancyhead[L]{Week 4}
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\section{Tangent Planes and Linear Approximations}%
+\label{sec:tangent_planes_and_linear_approximations}
+
+
+\begin{example}[Tangent Plane]
+	\[f(x,y) = x^2 \sqrt{y} \]
+
+\smallskip\hfill$\bullet$\end{example}
+
+	Finding $f(2,9)$ would be easy.
+
+	Finding $f(1.98,9.03)$ by hand would be hard.
+
+	\textbf{Approximate} $f(2,9)$. Do better than $(12)$.
+
+	At the point on the surface at $(2,9)$, there is a tangent plane that touches at $(2,9,12)$.
+
+	The "old" z value is $12$ and there will be a change in the x and y to afect z.
+
+	\[\:\text{old z-value}\: + \frac{\:\text{change in z}\:}{\:\text{change in x}\:}(\:\text{change in x}\:)
+	+ \frac{\:\text{change in z}\:}{\:\text{change in y}\:}(\:\text{change in y}\:)\]
+	\[12 + \frac{\partial z}{\partial x} (x-2) + \frac{\partial y}{\partial x}(y-9) \]
+\begin{theorem}[]
+	Suppose $f$ has continuous partial derivatives. An equation of the tangetn plane to the surface
+	$z=f(x,y)$ at the point $(x_0,y_0,z_0)$ is
+	\noteworthy{
+	z = z_0 + f_{x}(x_0,y_0)(x-x_0) + f_{y}(x_0,y_0)(y-y_0)
+	}{Tangent Plane}
+\smallskip\hfill$\bullet$\end{theorem}
+\begin{example}[Tangent Plane Cont'd]
+
+	Approximate $f(1.98,9.03)$ using the equation of the tangent plane at $(2,9,12)$.
+
+	\[f(x,y) = x^2 \sqrt{y} \]
+	\begin{enumerate}
+		\item $f(2,9) = 12$
+		\item $f_{x}(x,y) = 2x \sqrt{y} \to f_{x}(2,9) = 2(2)\sqrt{9} = 12$
+		\item $f_{y}(x,y) = \frac{1}{2}x^2 y^{-\frac{1}{2}} \to f_{y}(2,9) = \frac{2^2}{2\sqrt{9} }= \frac{2}{3}$
+			\item Tangent Plane
+	\[z = 12 + 12(x-2) + \frac{4}{9}(y-9)\]
+	\item Solve for approximation
+		\begin{align*}
+		f(1.98,9.03) &\approx 12 + 12(1.98-2) + \frac{2}{3}(9.03 - 9) \\
+					 &\approx 12 + 12(\frac{-2}{100}) + \frac{2}{3}(\frac{3}{100})\\
+					 &\approx 12 -\frac{24}{100} + \frac{2}{100}\\
+					 &\approx 12 -0.22 \\
+					 &\approx \boxed{11.78}
+		\end{align*}
+	\end{enumerate}
+
+
+\smallskip\hfill$\bullet$\end{example}
+
+
+
+
+
+
+
+
+
+
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\newpage
+%%%\end{document}
+
+
+%LEAVE EMPTY ROW ABOVE THIS ONE

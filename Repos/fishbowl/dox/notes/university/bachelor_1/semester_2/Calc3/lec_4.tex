@@ -1,0 +1,118 @@
+%%%\documentclass[a4paper,11pt,twoside]{report}
+
+%%%\input{../preamble.tex}
+
+%%%\begin{document}
+
+
+\LARGE\textsc{Date: 2020-09-06} \\ \\ \LARGE\textsc{Announcements:} \\
+\small
+
+
+
+\paragraph \hrule \paragraph \\ \fancyhead[R]{Lesson 4} \fancyhead[L]{Week 1}
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\section{Derivatives and Integrals of Vector Functions}%
+\label{sec:derivatives_and_integrals_of_vector_functions}
+
+\subsubsection{Definition of the Derivative}%
+\label{ssub:definition_of_the_derivative}
+
+\begin{definition}[Derivative]
+	\[\frac{d \overline{r}}{dt} = \overline{r}'(t) = \lim_{h \to 0}\frac{\overline{r}(t+h)- \overline{r}(t)}{h}\]
+\end{definition}
+
+\[\overline{r}(t) = \left< f(t), g(t), m(t) \right>\]
+
+\begin{enumerate}
+	\item $\overline{r}(t+h) = \left<r(t+h), g(t+h), m(t+h) \right>$
+	\item $\overline{r}(t+h) - \overline{r}(t)$
+\[= \left<f(t+h) - f(t),g(t+h) - g(t), m(t+h) - m(t) \right>\]
+\item multiply $\frac{1}{h}$
+\[= \frac{1}{h}\left<f(t+h) - f(t),g(t+h) - g(t), m(t+h) - m(t) \right>\]
+\[= \left<\frac{f(t+h)- f(t)}{h}  ,\frac{g(t+h)- g(t)}{h}, \frac{m(t+h)- m(t)}{h} \right>\]
+\item $\overline{r}'(t) = $
+	\[\lim_{h \to 0} \left<\frac{f(t+h)- f(t)}{h}  ,\frac{g(t+h)- g(t)}{h}, \frac{m(t+h)- m(t)}{h} \right>\]
+\[= \left< \lim_{h \to 0}\frac{f(t+h)- f(t)}{h}  ,\lim_{h \to 0}\frac{g(t+h)- g(t)}{h}, \lim_{h \to 0}\frac{m(t+h)- m(t)}{h} \right>\]
+	\[\boxed{ \overline{r}'(t)= \left< f'(t), g'(t), m'(t) \right>}\]
+\end{enumerate}
+
+\begin{example}[Tangent line]
+	find the parametric equation for the line tangent to \[\overline{r}(t) = \left< t^2+1, 4\sqrt{t}, e^{t^2-t} \right>\]
+	at the point $(2,4,1)$
+\end{example}
+
+\begin{solution}[Tangent line]
+	Need:
+	\begin{enumerate}
+		\item point $(2,4,1)$
+			\item direction vector
+	\[\overline{r}'(t) = \left<2t, 2t^{-\frac{1}{2}}, e^{t^2-t}(2t-1) \right>\]
+	\item parameter value
+		\[\overline{r}(t) = (2,4,1) \implies t = 1 \implies\]
+		\[\overline{r}'(1) = \left<2,2,1 \right>\]
+		\[\boxed{\left<2, 4, 1 \right> + t \left<2, 2, 1 \right>}\]
+		\[\boxed{\left<2 + 2t, 4 + 2t, 1 + t \right>}\:\text{(vector)}\:\]
+		\begin{align*}
+			 x &= 2+ 2t \\
+			y &=  4 + 2t \\
+			z &= 1 + t \\
+		\end{align*}
+	\end{enumerate}
+\end{solution}
+
+\subsection{The Unit Tangent Vector}%
+\label{sub:the_unit_tangent_vector}
+
+\begin{definition}[Unit Tangent Vector]
+	\[\overline{T}(t) = \frac{1}{\left| \overline{r}'(t) \right| }\overline{r}'(t)\]
+\end{definition}
+
+\begin{example}[Unit Tangent Vector]
+	\[\overline{r}(t) = \left<t^2 + 3t, 3t - 8, t^3 -1 \right>\]
+	Find $\overline{T}(2)$
+\end{example}
+
+\begin{solution}[Unit Tangent Vector]
+	\[\overline{r}'(t) = \left<2t+3, 3, 3t^2 \right>\]
+	\[\overline{r}'(2) = \left<7, 3, 12 \right>\]
+\[\left|  \overline{r}'(2) \right| = \sqrt{ 49 + 9 + 144} \]
+\[\left|  \overline{r}'(2) \right| = \sqrt{202} \]
+\[\overline{T}(2) =  \frac{1}{\sqrt{202} }\left<7,3,12 \right>\]
+\[\overline{T}(2) = \boxed{\left< \frac{7}{\sqrt{202} }, \frac{3}{\sqrt{202} }, \frac{12}{\sqrt{202} } \right>}\]
+\end{solution}
+
+\begin{theorem}[]
+	Suppose that $\overline{u}$ and $\overline{v}$ are differentiable vector functions,
+
+	c is a scalar, and f is a real valued function
+	\begin{enumerate}
+		\item $\frac{d}{dt}[\overline{u}(t) + \overline{v}(t)] = \overline{u}'(t) + \overline{v}'(t)$
+		\item $\frac{d}{dt}[c \overline{u}(t)] = c \overline{u}'(t) $
+		\item $\frac{d}{dt}[f(t) \overline{u}(t)] = \left< f(t)u_1'(t) + f'(t)u_1(t), f(t)u_2'(t) + f'(t)u_2(t),f(t)u_3'(t) + f'(t)u_3(t)\right>$
+			\[= f(t) \overline{u}'(t) + f'(t)\overline{u}(t)\]
+		\item $\frac{d}{dt}\left[ \overline{u}(t) \cdot \overline{v}(t) \right] = \frac{d}{dt}\left[ u_1(t)v_1(t) + u_2(t)v_2(t)+u_3(t)v_3(t) \right] $
+			\[= \overline{u}(t) \cdot \overline{v}'(t) + \overline{u}'(t) \cdot \overline{v}(t)\]
+		\item $\frac{d}{dx} \left[ \overline{u}(t) \times  \overline{v}(t) \right] = \overline{u}(t) \times \overline{v}'(t) + \overline{u}'(t)\times \overline{v}(t)$
+		\item $\frac{d}{dt}\left[ \overline{u}(f(t) \right] = f'(t) \overline{u}'(f(t))$
+
+	\end{enumerate}
+\end{theorem}
+\begin{example}[Prove the vector differentiation theorems]
+Exercise for the reader.
+\end{example}
+
+
+
+
+
+
+
+
+
+%  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %  %
+\newpage
+%%%\end{document}
+
+
+%LEAVE EMPTY ROW ABOVE THIS ONE
